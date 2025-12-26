@@ -14,6 +14,7 @@ fi
 # Färger
 # =========================
 CYAN='\033[0;36m'
+BLUE='\033[0;34m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
@@ -34,7 +35,7 @@ show_intro() {
     echo -e "${CYAN}${BOLD}======================================================================="
     echo -e "              LimeSeeker - Hardware, OS & Network Scanner"
     echo -e "=======================================================================${NC}"
-    echo -e "${RED}${BOLD}   IMPORTANT:${NC}${RED} Only scan networks you own or have permission to test.${NC}"
+    echo -e "${RED}${BOLD}   IMPORTANT:${NC}${CYAN} Only scan networks you own or have permission to test.${NC}"
     echo
     echo -e "${GREEN}${BOLD}▶ Date:${NC} $(date "+%Y-%m-%d   %H:%M:%S")"
     echo -e "${GREEN}${BOLD}▶ Logged in user:${NC} $(whoami)"
@@ -105,7 +106,7 @@ while true; do
 
    echo
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ SYSYEM UPTIME:${NC} $(uptime -p)"
+    echo -e "${GREEN}${BOLD}▶ SYSTEM UPTIME:${NC} $(uptime -p)"
 
     echo
     sleep 0.5
@@ -198,28 +199,41 @@ while true; do
     # =========================
     echo -e "${GREEN}${BOLD}▶ ROOT SSH LOGIN:${NC}"
 
-    if grep -qi "^PermitRootLogin yes" /etc/ssh/sshd_config 2>/dev/null; then
-	    echo -e "${RED}Root SSH login is ENABLED${NC}"
-    else
-	    echo -e "${GREEN}Root SSH login is disabled${NC}"
-    fi
-    echo
+    ROOT_SSH=$(sshd -T 2>/dev/null | awk '/permitrootlogin/ {print $2}')
 
+    case "$ROOT_SSH" in
+	    yes)
+		    echo -e "${RED}Root SSH login ENABLED (password allowed)${NC}"
+                    ;;
+    prohibit-password|without-password)
+                    echo -e "${YELLOW}Root SSH login allowed via SSH key only${NC}"
+                    ;;
+    forced-commands-only)
+                    echo -e "${YELLOW}Root SSH login restricted (forced commands)${NC}"
+                    ;;
+            no)
+		    echo -e "${GREEN}Root SSH login DISABLED${NC}"
+                    ;;
+            *)
+		    echo -e "${YELLOW}Unknown SSH root login state: $ROOT_SSH${NC}"
+                    ;;
+    esac
+    echo
     # =========================
-    # Missing security updates
+    # Missing system updates
     # =========================
-    echo -e "${GREEN}${BOLD}▶ SECURITY UPDATES:${NC}"
+    echo -e "${GREEN}${BOLD}▶ AVAILABLE SYSTEM UPDATES:${NC}"
     if command -v apt &>/dev/null; then
         sudo apt update -qq
-        UPDATES=$(apt list --upgradable 2>/dev/null | grep -i security)
+	UPDATES=$(apt list --upgradable 2>/dev/null | sed 1d)
         if [ -n "$UPDATES" ]; then
-            echo -e "${RED}Security updates available:${NC}"
+            echo -e "${RED}System updates available:${NC}"
             echo "$UPDATES"
         else
-            echo -e "${GREEN}No security updates pending${NC}"
+            echo -e "${GREEN}No system  updates pending${NC}"
         fi
     elif command -v dnf &>/dev/null; then
-        sudo dnf updateinfo list security || echo "No security updates pending"
+        sudo dnf updateinfo list security || echo "No system  updates pending"
     else
         echo "Package manager not supported"
     fi
