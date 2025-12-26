@@ -71,7 +71,7 @@ confirm_network_scan() {
 # Sudo-kontroll
 # =========================
 if ! sudo -n true 2>/dev/null; then
-    echo -e "${YELLOW}Sudo privileges required.${NC}"
+    echo -e "${YELLOW}LimeSeeker requiers sudo privileges to run.${NC}"
     sudo true || exit 1
 fi
 
