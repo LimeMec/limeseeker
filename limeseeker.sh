@@ -118,6 +118,46 @@ network_vuln_scan() {
 }
 
 # =========================
+# WIRELESS SECURITY SCAN
+# =========================
+wireless_scan() {
+    clear
+    echo -e "${CYAN}${BOLD}======================================================================="
+    echo -e "                 SCANNING: WIRELESS NETWORKS"
+    echo -e "=======================================================================${NC}"
+    echo
+
+    if ! command -v iw &>/dev/null; then
+        echo -e "${RED}iw not installed${NC}"
+        pause_and_return
+	return
+    fi
+
+    WLAN_IFACES=$(iw dev 2>/dev/null | awk '$1=="Interface"{print $2}')
+
+    if [ -z "$WLAN_IFACES" ]; then
+        echo -e "${YELLOW}No wireless interface detected${NC}"
+        pause_and_return
+	return
+    fi
+
+    for IFACE in $WLAN_IFACES; do
+        echo -e "${GREEN}${BOLD}▶ Interface:${NC} $IFACE"
+        sudo ip link set "$IFACE" up 2>/dev/null
+
+        sudo iw dev "$IFACE" scan 2>/dev/null | \
+        awk '
+            /BSS/     {bssid=$2}
+            /signal/  {signal=$2}
+            /SSID/    {print "SSID:", $2, "| BSSID:", bssid, "| Signal:", signal}
+        '
+        echo
+    done
+
+    pause_and_return
+}
+
+# =========================
 # Sudo-kontroll
 # =========================
 if ! sudo -n true 2>/dev/null; then
@@ -135,10 +175,11 @@ while true; do
     echo "  1) Local inventory scan"
     echo "  2) Local security scan"
     echo "  3) Network vulnerability scan"
-    echo "  4) Quit"
+    echo "  4) Wireless inventory scan"
+    echo "  5) Quit"
     echo
 
-    read -rp "Select option [1-4]: " choice
+    read -rp "Select option [1-5]: " choice
     echo
 
     case "$choice" in
@@ -377,10 +418,18 @@ while true; do
         show_intro
     fi
     ;;
+
+# =========================
+# WIRELESS SECURITY SCAN
+# =========================
+4)
+   wireless_scan
+   ;;
+
 # =========================
 # QUIT
 # =========================
-4)
+5)
     echo -e "${YELLOW}Quit...${NC}"
     exit 0
     ;;
