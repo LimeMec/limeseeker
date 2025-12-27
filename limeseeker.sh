@@ -118,6 +118,46 @@ network_vuln_scan() {
 }
 
 # =========================
+# WIRELESS SECURITY SCAN
+# =========================
+wireless_scan() {
+    clear
+    echo -e "${CYAN}${BOLD}======================================================================="
+    echo -e "                 SCANNING: WIRELESS NETWORKS"
+    echo -e "=======================================================================${NC}"
+    echo
+
+    if ! command -v iw &>/dev/null; then
+        echo -e "${RED}iw not installed${NC}"
+        pause_and_return
+	return
+    fi
+
+    WLAN_IFACES=$(iw dev 2>/dev/null | awk '$1=="Interface"{print $2}')
+
+    if [ -z "$WLAN_IFACES" ]; then
+        echo -e "${YELLOW}No wireless interface detected${NC}"
+        pause_and_return
+	return
+    fi
+
+    for IFACE in $WLAN_IFACES; do
+        echo -e "${GREEN}${BOLD}▶ Interface:${NC} $IFACE"
+        sudo ip link set "$IFACE" up 2>/dev/null
+
+        sudo iw dev "$IFACE" scan 2>/dev/null | \
+        awk '
+            /BSS/     {bssid=$2}
+            /signal/  {signal=$2}
+            /SSID/    {print "SSID:", $2, "| BSSID:", bssid, "| Signal:", signal}
+        '
+        echo
+    done
+
+    pause_and_return
+}
+
+# =========================
 # Sudo-kontroll
 # =========================
 if ! sudo -n true 2>/dev/null; then
@@ -135,10 +175,11 @@ while true; do
     echo "  1) Local inventory scan"
     echo "  2) Local security scan"
     echo "  3) Network vulnerability scan"
-    echo "  4) Quit"
+    echo "  4) Wireless inventory scan"
+    echo "  5) Quit"
     echo
 
-    read -rp "Select option [1-4]: " choice
+    read -rp "Select option [1-5]: " choice
     echo
 
     case "$choice" in
@@ -174,10 +215,12 @@ while true; do
     echo "HW Architecture: $(uname -m)"
 
     echo
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ GPU: ${NC}"
     command -v lspci &>/dev/null && lspci | grep -i vga || echo "lspci not installed"
 
     echo
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ CPU: ${NC}"
     lscpu | grep -E "Model name|Vendor ID|Architecture|CPU\(s\)|Core\(s\) per socket|Thread\(s\) per core|Socket\(s\)"
 
@@ -186,14 +229,17 @@ while true; do
     awk 'NR==1{min=$1} END{print "Min MHz:", min "\nMax MHz:", $1}'
 
     echo
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ MEMORY: ${NC}"
     free -h
 
     echo
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ DISK SPACE: ${NC}"
     df -h --exclude-type=tmpfs --exclude-type=devtmpfs
 
     echo
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ NETWORK: ${NC}"
     IFACE=$(ip route | awk '/default/ {print $5}' | head -n 1)
 
@@ -214,16 +260,17 @@ while true; do
 # =========================
 2)
     clear
+    sleep 0.5
     echo -e "${CYAN}${BOLD}======================================================================="
     echo -e "                    SCANNING: LOCAL SECURITY"
     echo -e "=======================================================================${NC}"
     echo
     echo
-    sleep 0.5
 
     # =========================
     # Kernel & OS
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ KERNEL & OS:${NC}"
     echo "Kernel: $(uname -r)"
     echo "OS:     $(uname -o)"
@@ -232,6 +279,7 @@ while true; do
     # =========================
     # Sudo users
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ USERS WITH SUDO ACCESS:${NC}"
 
     SUDO_USERS=$(getent group sudo 2>/dev/null | cut -d: -f4)
@@ -247,6 +295,7 @@ while true; do
     # =========================
     # Root SSH login
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ ROOT SSH LOGIN:${NC}"
 
     ROOT_SSH=$(sshd -T 2>/dev/null | awk '/permitrootlogin/ {print $2}')
@@ -272,6 +321,7 @@ while true; do
     # =========================
     # Missing system updates
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ AVAILABLE SYSTEM UPDATES:${NC}"
     if command -v apt &>/dev/null; then
         sudo apt update -qq
@@ -292,6 +342,7 @@ while true; do
     # =========================
     # Running risky services
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ RUNNING SERVICES (RISKY):${NC}"
     RISKY_SERVICES=$(systemctl list-units --type=service --state=running 2>/dev/null | \
         grep -Ei "ssh|telnet|ftp|rpc|nfs|smb")
@@ -307,6 +358,7 @@ while true; do
     # =========================
     # Listening ports & Process Security
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ LISTENING PORTS & SECURITY:${NC}"
     
         sudo ss -tulnpH | grep LISTEN | while read -r line; do
@@ -321,6 +373,7 @@ while true; do
     # =========================
     # World-writable files
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ WORLD-WRITABLE FILES (TOP 10):${NC}"
     sudo find / -xdev -type f -perm -0002 2>/dev/null | head -n 10
     echo
@@ -328,6 +381,7 @@ while true; do
     # =========================
     # SUID binaries
     # =========================
+    sleep 0.5
     echo -e "${GREEN}${BOLD}▶ SUID BINARIES (TOP 10):${NC}"
     sudo find / -xdev -perm -4000 -type f 2>/dev/null | head -n 10
 
@@ -336,7 +390,7 @@ while true; do
     #========================
     # CVE-check
     # =======================
-    
+    sleep 0.5    
     OPENSSL=$(openssl version 2>/dev/null | awk '{print $2}')
     SSHD=$(sshd -V 2>&1 | head -n1 | awk '{print $1,$2}')
     KERNEL=$(uname -r)
@@ -377,10 +431,18 @@ while true; do
         show_intro
     fi
     ;;
+
+# =========================
+# WIRELESS SECURITY SCAN
+# =========================
+4)
+   wireless_scan
+   ;;
+
 # =========================
 # QUIT
 # =========================
-4)
+5)
     echo -e "${YELLOW}Quit...${NC}"
     exit 0
     ;;
