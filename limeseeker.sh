@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# LimeSeeker - Hardware, OS & Network Scanner
-# Linux + Vim + Bash
+# LimeSeeker - System & Network Security Scanner
+# Linux + Vim + Bash (Kali)
 
 # =========================
 # Bash-kontroll
@@ -33,7 +33,7 @@ show_intro() {
     clear
     echo
     echo -e "${CYAN}${BOLD}======================================================================="
-    echo -e "              LimeSeeker - Hardware, OS & Network Scanner"
+    echo -e "              LimeSeeker - System & Network Security Scanner"
     echo -e "=======================================================================${NC}"
     echo -e "${RED}${BOLD}   IMPORTANT:${NC}${CYAN} Only scan networks you own or have permission to test.${NC}"
     echo
@@ -64,8 +64,57 @@ confirm_network_scan() {
     echo "This action requires authorization."
     echo
     read -rp "Type YES to continue (10s timeout): " -t 10 ANSWER
-
     [[ "$ANSWER" == "YES" ]]
+}
+
+# =========================
+# NETWORK VULNERABILITY SCAN
+# =========================
+network_vuln_scan() {
+
+    clear
+    echo -e "${CYAN}${BOLD}======================================================================="
+    echo -e "               SCANNING: NETWORK VULNERABILITIES"
+    echo -e "=======================================================================${NC}"
+    echo
+
+    IFACE=$(ip route | awk '/default/ {print $5}' | head -n 1)
+    IP_RANGE=$(ip -o -f inet addr show "$IFACE" | awk '{print $4}')
+
+    # Säkerhetskontroll – endast privata nät
+    if [[ ! "$IP_RANGE" =~ ^(10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[0-1])) ]]; then
+        echo -e "${RED}ERROR: Public IP range detected ($IP_RANGE)${NC}"
+        pause_and_return
+        return
+    fi
+
+    echo -e "${GREEN}${BOLD}▶ Interface:${NC} $IFACE"
+    echo -e "${GREEN}${BOLD}▶ Target network:${NC} $IP_RANGE"
+    echo
+
+    echo -e "${GREEN}${BOLD}▶ Discovering active hosts...${NC}"
+    HOSTS=$(nmap -sn "$IP_RANGE" | awk '/Nmap scan report/{print $NF}')
+
+    if [ -z "$HOSTS" ]; then
+        echo -e "${RED}No active hosts found${NC}"
+        pause_and_return
+        return
+    fi
+
+    for HOST in $HOSTS; do
+        echo
+        echo -e "${BLUE}${BOLD}▶ Analyzing host: $HOST${NC}"
+
+        echo -e "${GREEN}• Open ports & services${NC}"
+        nmap -sS -sV --open -T3 "$HOST"
+
+        echo -e "${YELLOW}• Vulnerability checks${NC}"
+        nmap --script vuln "$HOST"
+    done
+
+    echo
+    echo -e "${GREEN}${BOLD}Network vulnerability scan completed.${NC}"
+    pause_and_return
 }
 
 # =========================
@@ -85,7 +134,7 @@ while true; do
     echo -e "${BOLD}Choose your scan:${NC}"
     echo "  1) Local inventory scan"
     echo "  2) Local security scan"
-    echo "  3) Network scan"
+    echo "  3) Network vulnerability scan"
     echo "  4) Quit"
     echo
 
@@ -104,7 +153,7 @@ while true; do
     echo -e "=======================================================================${NC}"
     echo
 
-   echo
+    echo
     sleep 0.5
     echo -e "${GREEN}${BOLD}▶ SYSTEM UPTIME:${NC} $(uptime -p)"
 
@@ -159,6 +208,7 @@ while true; do
     pause_and_return
 
     ;;
+
 # =========================
 # LOCAL SECURITY SCAN
 # =========================
@@ -280,45 +330,53 @@ while true; do
     # =========================
     echo -e "${GREEN}${BOLD}▶ SUID BINARIES (TOP 10):${NC}"
     sudo find / -xdev -perm -4000 -type f 2>/dev/null | head -n 10
-    echo
 
-    pause_and_return
-    ;;
+    echo -e "${GREEN}${BOLD}▶ CVE CHECK (COMMON PACKAGES):${NC}"
 
-# =========================
-# NETWORK SCAN
-# =========================
-3)
-    if ! confirm_network_scan; then
-        show_intro
-        continue
+    #========================
+    # CVE-check
+    # =======================
+    
+    OPENSSL=$(openssl version 2>/dev/null | awk '{print $2}')
+    SSHD=$(sshd -V 2>&1 | head -n1 | awk '{print $1,$2}')
+    KERNEL=$(uname -r)
+
+    check_cve() {
+	    if ! command -v searchsploit &>/dev/null; then
+		    echo -e "${YELLOW}searchsploit not installed – skipping CVE checks${NC}"
+            return
     fi
 
-    clear
-    echo -e "${CYAN}${BOLD}======================================================================="
-    echo -e "                          SCANNING NETWORK"
-    echo -e "=======================================================================${NC}"
+	    local name="$1"
+            local version="$2"
+
+            if searchsploit "$name" "$version" | grep -qi cve; then
+		    echo -e "${RED}[!] CVEs found for $name $version${NC}"
+                    searchsploit "$name" "$version" | head -n 5
+            else
+		    echo -e "${GREEN}[OK] No CVEs found for $name $version${NC}"
+            fi
+    }
+
+    check_cve "openssl" "$OPENSSL"
+    check_cve "openssh" "$SSHD"
+    check_cve "linux kernel" "$KERNEL"
     echo
 
-    IFACE=$(ip route | awk '/default/ {print $5}' | head -n 1)
-    IP_RANGE=$(ip -o -f inet addr show "$IFACE" | awk '{print $4}')
-
-    echo -e "${YELLOW}Using range: ${BOLD}$IP_RANGE${NC}"
-    echo "Network scan in progress..."
-    echo
-
-    ACTIVE_HOSTS=$(sudo nmap -sn "$IP_RANGE" | awk '/Nmap scan report/{print $NF}' | tr -d '()')
-
-    for IP in $ACTIVE_HOSTS; do
-        echo -e "${GREEN}${BOLD}▶ ANALYZING HOST: $IP${NC}"
-        sudo nmap -A -T4 --version-intensity 5 "$IP"
-        echo "--------------------------------------------------"
-    done
-
-    echo -e "${GREEN}${BOLD}Scanning complete!${NC}"
     pause_and_return
     ;;
 
+# =========================
+# NETWORK VULNERABILITY SCAN
+# =========================
+3)
+    if confirm_network_scan; then
+        network_vuln_scan
+        show_intro
+    else
+        show_intro
+    fi
+    ;;
 # =========================
 # QUIT
 # =========================
@@ -328,8 +386,8 @@ while true; do
     ;;
 
 *)
-    echo -e "${RED}Invalid choice. Please select 1-4.${NC}"
-    sleep 1.5
+    echo -e "${RED}Invalid choice.${NC}"
+    sleep 1
     show_intro
     ;;
     esac
