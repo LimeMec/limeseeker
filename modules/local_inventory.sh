@@ -2,19 +2,32 @@
 
 local_inventory() {
 
-    clear
-    echo -e "${CYAN}${BOLD}======================================================================="
-    echo -e "                  SCANNING: OS & HARDWARE"
-    echo -e "=======================================================================${NC}"
+    # Rensa terminalen (UI-only, loggas ej)
+    if declare -F ui_clear >/dev/null; then
+        ui_clear
+    fi
+
+    # ===== SECTION HEADER =====
+    #clear
+    sleep 0.3
+    echo
+    echo
+    ui_echo "${CYAN}${BOLD}Scanning local inventory...${NC}"
+    log_to_file "▶ Scanning local inventory..."
+    echo
     echo
 
-    sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ SYSTEM UPTIME:${NC}"
+    # ===== SYSTEM UPTIME =====
+    sleep 1
+    ui_echo "${GREEN}${BOLD}▶ SYSTEM UPTIME:${NC}"
+    log_to_file "▶ SYSTEM UPTIME:"
     uptime -p
     echo
 
+    # ===== BIOS =====
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ BIOS / FIRMWARE:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ BIOS / FIRMWARE:${NC}"
+    log_to_file "▶ BIOS / FIRMWARE:"
     if command -v dmidecode &>/dev/null; then
         dmidecode -t bios 2>/dev/null | grep -E "Vendor|Version|Release Date"
     else
@@ -22,8 +35,10 @@ local_inventory() {
     fi
     echo
 
+    # ===== OS =====
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ OPERATING SYSTEM:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ OPERATING SYSTEM:${NC}"
+    log_to_file "▶ OPERATING SYSTEM:"
     echo "OS:               $(uname -o)"
     echo "Nodename:         $(uname -n)"
     echo "Kernel release:   $(uname -r)"
@@ -31,8 +46,10 @@ local_inventory() {
     echo "Architecture:     $(uname -m)"
     echo
 
+    # ===== GPU =====
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ GPU:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ GPU:${NC}"
+    log_to_file "▶ GPU:"
     if command -v lspci &>/dev/null; then
         lspci | grep -i vga
     else
@@ -40,8 +57,10 @@ local_inventory() {
     fi
     echo
 
+    # ===== CPU =====
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ CPU:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ CPU:${NC}"
+    log_to_file "▶ CPU:"
     lscpu | grep -E "Model name|Vendor ID|Architecture|CPU\(s\)|Core\(s\) per socket|Thread\(s\) per core|Socket\(s\)"
     echo
 
@@ -49,18 +68,24 @@ local_inventory() {
         awk 'NR==1{min=$1} END{print "Min MHz:", min "\nMax MHz:", $1}'
     echo
 
+    # ===== MEMORY =====
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ MEMORY:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ MEMORY:${NC}"
+    log_to_file "▶ MEMORY:"
     free -h
     echo
 
+    # ===== DISK =====
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ DISK SPACE:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ DISK SPACE:${NC}"
+    log_to_file "▶ DISK SPACE:"
     df -h --exclude-type=tmpfs --exclude-type=devtmpfs
     echo
 
+    # ===== NETWORK =====
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ NETWORK:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ NETWORK:${NC}"
+    log_to_file "▶ NETWORK:"
 
     IFACE=$(ip route | awk '/default/ {print $5}' | head -n 1)
 
@@ -73,9 +98,10 @@ local_inventory() {
     else
         echo "No active network interface found"
     fi
-    
+
     echo
-    echo
-    log "Local inventory scan completed"
+    sleep 0.5
+    ui_echo "${GREEN}${BOLD}✔ Local inventory scan completed${NC}"
+    log_to_file "▶ Local inventory scan completed"
 }
 

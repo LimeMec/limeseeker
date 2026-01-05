@@ -1,24 +1,32 @@
 wifi_discovery() {
+    
     clear
-    echo -e "${CYAN}${BOLD}======================================================================="
-    echo -e "                 SCANNING: WIRELESS NETWORKS"
-    echo -e "=======================================================================${NC}"
     echo
-
+    echo
+    sleep 0.5
+    ui_echo "${CYAN}${BOLD}▶ WIFI discovery scan...${NC}"
+    log_to_file "▶ WIFI discovery scan..."
+    echo
+    
+    sleep 0.5
     if ! command -v iw &>/dev/null; then
-        echo -e "${RED}iw not installed${NC}"
+        ui_echo "${RED}iw not installed${NC}"
+	log_to_file "iw not installed"
 	return
     fi
 
     WLAN_IFACES=$(iw dev 2>/dev/null | awk '$1=="Interface"{print $2}')
-
+    
+    sleep 0.5
     if [ -z "$WLAN_IFACES" ]; then
-        echo -e "${YELLOW}No wireless interface detected${NC}"
+        ui_echo "${YELLOW}No wireless interface detected${NC}"
+	log_to_file "No wireless interface detected"
 	return
     fi
-
+    
     for IFACE in $WLAN_IFACES; do
-        echo -e "${GREEN}${BOLD}▶ Interface:${NC} $IFACE"
+        ui_echo "${GREEN}${BOLD}▶ Interface:${NC} $IFACE"
+	log_to_file "▶ Interfaces: $IFACE"
         sudo ip link set "$IFACE" up 2>/dev/null
 
         sudo iw dev "$IFACE" scan 2>/dev/null | \
@@ -32,5 +40,4 @@ wifi_discovery() {
 
      echo
      echo
-     log "Wifi discovery scan completed"
 }

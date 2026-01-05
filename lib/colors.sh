@@ -1,10 +1,24 @@
 #!/usr/bin/env bash
 
-CYAN='\033[0;36m'
-BLUE='\033[0;34m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-BOLD='\033[1m'
-NC='\033[0m'
+# Använd färger om vi har en riktig terminal
+if [[ -t 1 || -t 2 || -e /dev/tty ]]; then
+    RED="\e[31m"
+    GREEN="\e[32m"
+    YELLOW="\e[33m"
+    BLUE="\e[34m"
+    MAGENTA="\e[35m"
+    CYAN="\e[36m"
+    BOLD="\e[1m"
+    NC="\e[0m"
+else
+    RED=""
+    GREEN=""
+    YELLOW=""
+    BLUE=""
+    MAGENTA=""
+    CYAN=""
+    BOLD=""
+    NC=""
+fi
+
 

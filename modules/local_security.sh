@@ -1,47 +1,62 @@
-local_security() {
+#!/usr/bin/env bash
 
-
-    check_cve() {
+# =========================
+# CVE helper (GLOBAL)
+# =========================
+check_cve() {
 
     if ! command -v searchsploit &>/dev/null; then
-        echo -e "${YELLOW}searchsploit not installed – skipping CVE checks${NC}"
+        ui_echo "${YELLOW}searchsploit not installed – skipping CVE checks${NC}"
+        log_to_file "searchsploit not installed - skipping CVE checks"
         return
     fi
 
     local name="$1"
     local version="$2"
 
-    echo -e "${BLUE}${BOLD}[*] CVE scan:${NC} $name (installed: $version)"
+    ui_echo "${BLUE}${BOLD}[*] CVE scan:${NC} $name (installed: $version)"
+    log_to_file "[*] CVE scan: $name (installed: $version)"
 
-    # Hämta endast riktiga CVE-IDn, minska brus
     local results
     results=$(searchsploit --cve "$name" 2>/dev/null | \
-              grep -E "CVE-[0-9]{4}-[0-9]{4,7}" | \
-              head -n 10)
+        grep -E "CVE-[0-9]{4}-[0-9]{4,7}" | head -n 10)
 
     if [ -z "$results" ]; then
-        echo -e "${GREEN}[OK] No CVEs found in local database${NC}"
+        ui_echo "${GREEN}[OK] No CVEs found in local database${NC}"
+        log_to_file "[OK] No CVEs found in local database"
         return
     fi
 
-    echo -e "${RED}[!] Potential vulnerabilities detected for $name${NC}"
+    ui_echo "${RED}[!] Potential vulnerabilities detected for $name${NC}"
+    log_to_file "[!] Potential vulnerabilities detected for $name"
     echo "$results"
-    echo -e "${YELLOW}    → Manual validation required (version & config dependent)${NC}"
+    ui_echo "${YELLOW}    → Manual validation required${NC}"
+    log_to_file "    → Manual validation required"
 }
 
-    clear
-    sleep 0.5
-    echo -e "${CYAN}${BOLD}======================================================================="
-    echo -e "                    SCANNING: LOCAL SECURITY"
-    echo -e "=======================================================================${NC}"
+# =========================
+# MAIN MODULE
+# =========================
+local_security() {
+
+    if declare -F ui_clear >/dev/null; then
+        ui_clear
+    fi
+    
+    sleep 0.3
+    echo
+    echo
+    ui_echo "${CYAN}${BOLD}Scanning local security...${NC}"
+    log_to_file "▶ Scanning local security..."
     echo
     echo
 
     # =========================
     # Kernel & OS
     # =========================
-    sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ KERNEL & OS:${NC}"
+    sleep 1
+    ui_echo "${GREEN}${BOLD}▶ KERNEL & OS:${NC}"
+    log_to_file "▶ KERNEL & OS:"
     echo "Kernel: $(uname -r)"
     echo "OS:     $(uname -o)"
     echo
@@ -50,16 +65,19 @@ local_security() {
     # Sudo users
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ USERS WITH SUDO ACCESS:${NC}"
-
+    ui_echo "${GREEN}${BOLD}▶ USERS WITH SUDO ACCESS:${NC}"
+    log_to_file "▶ USERS WITH SUDO ACCESS:"
+    
     local SUDO_USERS
     SUDO_USERS=$(getent group sudo 2>/dev/null | cut -d: -f4)
 
     if [ -n "$SUDO_USERS" ]; then
-        echo -e "${YELLOW}Users with sudo privileges:${NC}"
+        ui_echo "${YELLOW}Users with sudo privileges:${NC}"
+	log_to_file "Users with sudo privileges"
         echo "$SUDO_USERS" | tr ',' '\n'
     else
-        echo -e "${GREEN}No users found in sudo group${NC}"
+        ui_echo "${GREEN}No users found in sudo group${NC}"
+	log_to_file "No users found in sudo group"
     fi
     echo
 
@@ -67,35 +85,42 @@ local_security() {
     # Root SSH login
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ ROOT SSH LOGIN:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ ROOT SSH LOGIN:${NC}"
+    log_to_file "▶ ROOT SSH LOGIN:"
 
     local ROOT_SSH
     ROOT_SSH=$(sshd -T 2>/dev/null | awk '/permitrootlogin/ {print $2}')
 
     case "$ROOT_SSH" in
         yes)
-            echo -e "${RED}Root SSH login ENABLED (password allowed)${NC}"
+            ui_echo "${RED}Root SSH login ENABLED (password allowed)${NC}"
+	    log_to_file "Root SSH login ENABLED (password allowed)"
             ;;
         prohibit-password|without-password)
-            echo -e "${YELLOW}Root SSH login allowed via SSH key only${NC}"
+            ui_echo "${YELLOW}Root SSH login allowed via SSH key only${NC}"
+	    log_to_file "Root SSH login allowed via SSH key only"
             ;;
         forced-commands-only)
-            echo -e "${YELLOW}Root SSH login restricted (forced commands)${NC}"
+            ui_echo "${YELLOW}Root SSH login restricted (forced commands)${NC}"
+	    log_to_file "Root SSH login restricted (forced commands)"
             ;;
         no)
-            echo -e "${GREEN}Root SSH login DISABLED${NC}"
+            ui_echo "${GREEN}Root SSH login DISABLED${NC}"
+	    log_to_file "Root SSH login DISABLED"
             ;;
         *)
-            echo -e "${YELLOW}Unknown SSH root login state: $ROOT_SSH${NC}"
+            ui_echo "${YELLOW}Unknown SSH root login state: $ROOT_SSH${NC}"
+	    log_to_file "Unknown SSH root login state: $ROOT_SSH"
             ;;
     esac
     echo
 
     # =========================
-    # Missing system updates
+    # System updates
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ AVAILABLE SYSTEM UPDATES:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ AVAILABLE SYSTEM UPDATES:${NC}"
+    log_to_file "▶ AVAILABLE SYSTEM UPDATES:"
 
     if command -v apt &>/dev/null; then
         apt update -qq
@@ -103,10 +128,12 @@ local_security() {
         UPDATES=$(apt list --upgradable 2>/dev/null | sed 1d)
 
         if [ -n "$UPDATES" ]; then
-            echo -e "${RED}System updates available:${NC}"
+            ui_echo "${RED}System updates available:${NC}"
+	    log_to_file "System updates available:"
             echo "$UPDATES"
         else
-            echo -e "${GREEN}No system updates pending${NC}"
+            ui_echo "${GREEN}No system updates pending${NC}"
+	    log_to_file "No system updates pending"
         fi
 
     elif command -v dnf &>/dev/null; then
@@ -117,20 +144,23 @@ local_security() {
     echo
 
     # =========================
-    # Running risky services
+    # Risky services
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ RUNNING SERVICES (RISKY):${NC}"
+    ui_echo "${GREEN}${BOLD}▶ RUNNING SERVICES (RISKY):${NC}"
+    log_to_file "▶ RUNNING SERVICES (RISKY):"
 
     local RISKY_SERVICES
     RISKY_SERVICES=$(systemctl list-units --type=service --state=running 2>/dev/null | \
         grep -Ei "ssh|telnet|ftp|rpc|nfs|smb")
 
     if [ -n "$RISKY_SERVICES" ]; then
-        echo -e "${YELLOW}Potentially risky services detected:${NC}"
+        ui_echo "${YELLOW}Potentially risky services detected:${NC}"
+	log_to_file "Potentially risky services detected:"
         echo "$RISKY_SERVICES"
     else
-        echo -e "${GREEN}No obvious risky services running${NC}"
+        ui_echo "${GREEN}No obvious risky services running${NC}"
+	log_to_file "No obvious risky services running"
     fi
     echo
 
@@ -138,13 +168,16 @@ local_security() {
     # Listening ports & process security
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ LISTENING PORTS & SECURITY:${NC}"
+    ui_echo "${GREEN}${BOLD}▶ LISTENING PORTS & SECURITY:${NC}"
+    log_to_file "▶ LISTENING PORTS & SECURITY:"
 
     while read -r line; do
         if [[ $line == *"uid:0"* ]]; then
-            echo -e "${RED}[ROOT]${NC} $line"
+            ui_echo "${RED}[ROOT]${NC} $line"
+	    log_to_file "[ROOT] $line"
         else
-            echo -e "${BLUE}[USER]${NC} $line"
+            ui_echo "${BLUE}[USER]${NC} $line"
+	    log_to_file "[USER] $line"
         fi
     done < <(ss -tulnpH | grep LISTEN)
 
@@ -154,7 +187,8 @@ local_security() {
     # World-writable files
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ WORLD-WRITABLE FILES (TOP 10):${NC}"
+    ui_echo "${GREEN}${BOLD}▶ WORLD-WRITABLE FILES (TOP 10):${NC}"
+    log_to_file "▶ WORLD-WRITABLE FILES (TOP 10):"
     find / -xdev -type f -perm -0002 2>/dev/null | head -n 10
     echo
 
@@ -162,7 +196,8 @@ local_security() {
     # SUID binaries
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ SUID BINARIES (TOP 10):${NC}"
+    ui_echo "${GREEN}${BOLD}▶ SUID BINARIES (TOP 10):${NC}"
+    log_to_file "▶ SUID BINARIES (TOP 10):"
     find / -xdev -perm -4000 -type f 2>/dev/null | head -n 10
     echo
 
@@ -170,7 +205,8 @@ local_security() {
     # CVE CHECK
     # =========================
     sleep 0.5
-    echo -e "${GREEN}${BOLD}▶ CVE CHECK (COMMON PACKAGES):${NC}"
+    ui_echo "${GREEN}${BOLD}▶ CVE CHECK (COMMON PACKAGES):${NC}"
+    log_to_file "▶ CVE CHECK (COMMON PACKAGES):"
 
     OPENSSL=$(openssl version 2>/dev/null | awk '{print $2}')
     SSHD=$(sshd -V 2>&1 | head -n1 | awk '{print $1,$2}')
@@ -182,6 +218,7 @@ local_security() {
     
     echo
     echo
-    log "Local security scan completed"
+    ui_echo "${GREEN}${BOLD}✔ Local security scan completed${NC}"
+    log_to_file "Local security scan completed"
 }
 

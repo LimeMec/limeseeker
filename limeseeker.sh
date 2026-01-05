@@ -2,22 +2,40 @@
 
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 
+# KRÄV SUDO FÖRST (innan ALLT)
+source "$BASE_DIR/lib/privileges.sh"
+require_sudo "$@"
+
+# 1. Skapa rapport (EN gång)
+REPORT_DIR="$BASE_DIR/reports"
+mkdir -p "$REPORT_DIR"
+export REPORT_FILE="$REPORT_DIR/LimeSeeker_$(date +%Y%m%d_%H%M%S).txt"
+
+# 2. Starta global loggning
+exec > >(tee -a "$REPORT_FILE") 2>&1
+
+# 3. Startheader (EN gång)
+echo "==========================================================="
+echo "      LimeSeeker Report: $(date)"
+echo "==========================================================="
+
+# 4. Ladda bibliotek
 source "$BASE_DIR/lib/colors.sh"
 source "$BASE_DIR/lib/logging.sh"
 source "$BASE_DIR/lib/utils.sh"
 source "$BASE_DIR/lib/ui.sh"
 source "$BASE_DIR/lib/menu.sh"
-source "$BASE_DIR/lib/privileges.sh"
 
-# Load modules
+# 5. Ladda moduler
+shopt -s nullglob
 for module in "$BASE_DIR"/modules/*.sh; do
     source "$module"
 done
+shopt -u nullglob
 
-trap 'echo -e "\n${YELLOW}Exiting LimeSeeker...${NC}"; exit 0' SIGINT
+trap 'ui_echo "\n${YELLOW}Exiting LimeSeeker...${NC}"' SIGINT
 
 require_bash
-require_sudo "$@"
 
 show_intro
 main_menu

@@ -15,7 +15,10 @@ require_root() {
 }
 
 pause() {
-    read -rp "Press Enter to continue..."
+    if declare -F ui_read >/dev/null; then
+        ui_read -rp "Press Enter to continue..."
+    else
+        read -rp "Press Enter to continue..."
+    fi
 }
-
 

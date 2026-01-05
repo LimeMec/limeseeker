@@ -1,29 +1,33 @@
-#!/usr/bin/env bash
-
 main_menu() {
     while true; do
-        echo -e "${BOLD}Choose scan:${NC}"
-	echo "1) Local inventory scan"
-        echo "2) Local security scan"
-        echo "3) Network vulnerability scan"
-        echo "4) Wireless scan"
-        echo "5) Quit"
+        log_pause     # ⛔ STOPPA LOGGNING
 
-	echo
-        read -rp "Select option [1-5]:  " choice
-        echo
+        ui_echo "${BOLD}${GREEN}Choose scan:${NC}"
+        ui_echo "1) Local inventory scan"
+        ui_echo "2) Local security scan"
+        ui_echo "3) Network vulnerability scan"
+        ui_echo "4) Wireless scan"
+        ui_echo "5) Quit"
+        ui_echo
+
+        ui_read -rp "Select option [1-5]: " choice
+        ui_echo
+
+        log_resume    # ▶️ ÅTERSTARTA LOGGNING
 
         case "$choice" in
-	    1) local_inventory ;;
+            1) local_inventory ;;
             2) local_security ;;
             3) network_vulnerability ;;
             4) wifi_discovery ;;
             5) exit 0 ;;
-            *) echo "Invalid choice" ;;
+            *) ui_echo "Invalid choice" ;;
         esac
-
+        
+	log_pause
         pause
         show_intro
+	log_resume
     done
 }
 
