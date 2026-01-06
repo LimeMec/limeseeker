@@ -3,9 +3,10 @@ wifi_discovery() {
     clear
     echo
     echo
-    sleep 0.5
-    ui_echo "${CYAN}${BOLD}▶ WIFI discovery scan...${NC}"
+    sleep 0.3
+    ui_echo "${CYAN}${BOLD}WIFI discovery scan...${NC}"
     log_to_file "▶ WIFI discovery scan..."
+    echo
     echo
     
     sleep 0.5

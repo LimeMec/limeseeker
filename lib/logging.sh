@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
-#
-# logging.sh – central loggning för LimeSeeker
-# 
-# Terminalfärg + ren loggfil
-# Förutsätter: colors.sh är laddad
-#
+
+# Loggning för LimeSeeker
+# Färger i terminal men inga färger i logg
+
 
 # -------------------------
-# Intern hjälp-funktion
+# Loggstämpel
 # -------------------------
 _log_ts() {
     date "+%Y-%m-%d %H:%M:%S"
@@ -20,16 +18,16 @@ _strip_colors() {
     sed 's/\x1B\[[0-9;]*[mK]//g'
 }
 
-# -------------------------
-# Logga text utan färger
-# -------------------------
+# ---------------------------
+# Text utan färger till logg
+# ---------------------------
 log_to_file() {
     echo "$*" >> "$REPORT_FILE"
 }
 
-# -------------------------
-# Loggnivåer med färg i terminalen
-# -------------------------
+# ------------------------------
+# Text med färg till terminalen
+# ------------------------------
 log_info() {
     echo -e "[$(_log_ts)] [INFO]  $*"
     log_to_file "[$(_log_ts)] [INFO]  $*"
@@ -57,7 +55,7 @@ log_debug() {
 }
 
 # -------------------------
-# Sektioner / rubriker
+# Rubriker
 # -------------------------
 log_section() {
     echo
@@ -70,7 +68,7 @@ log_section() {
 }
 
 # -------------------------
-# Kommando-wrapper
+# Automatisk loggning
 # -------------------------
 run_cmd() {
     local desc="$1"
@@ -86,9 +84,9 @@ run_cmd() {
         return 1
     fi
 }
-# =========================
-# Temporärt stäng / slå på loggning
-# =========================
+# ---------------------------
+# Pausa / återuppta loggning
+# ---------------------------
 
 log_pause() {
     exec 3>&1 4>&2

@@ -2,13 +2,16 @@
 
 local_inventory() {
 
-    # Rensa terminalen (UI-only, loggas ej)
+    #------------------------------
+    # Rensa terminalen, inte logg 
+    # -----------------------------
     if declare -F ui_clear >/dev/null; then
         ui_clear
     fi
 
-    # ===== SECTION HEADER =====
-    #clear
+    #--------------------
+    # Rubrik för modul
+    # -------------------
     sleep 0.3
     echo
     echo
@@ -16,15 +19,19 @@ local_inventory() {
     log_to_file "▶ Scanning local inventory..."
     echo
     echo
-
-    # ===== SYSTEM UPTIME =====
+    
+    #---------------------
+    # Systemets upptid
+    # --------------------
     sleep 1
     ui_echo "${GREEN}${BOLD}▶ SYSTEM UPTIME:${NC}"
     log_to_file "▶ SYSTEM UPTIME:"
     uptime -p
     echo
-
-    # ===== BIOS =====
+    
+    #-------------------
+    # BIOS / Firmware
+    # ------------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ BIOS / FIRMWARE:${NC}"
     log_to_file "▶ BIOS / FIRMWARE:"
@@ -34,8 +41,10 @@ local_inventory() {
         echo "dmidecode not installed"
     fi
     echo
-
-    # ===== OS =====
+    
+    #-----------------
+    # Operativsystem
+    # ----------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ OPERATING SYSTEM:${NC}"
     log_to_file "▶ OPERATING SYSTEM:"
@@ -45,8 +54,10 @@ local_inventory() {
     echo "Kernel version:   $(uname -v)"
     echo "Architecture:     $(uname -m)"
     echo
-
-    # ===== GPU =====
+    
+    #--------------
+    # Grafikkort
+    # -------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ GPU:${NC}"
     log_to_file "▶ GPU:"
@@ -57,7 +68,9 @@ local_inventory() {
     fi
     echo
 
-    # ===== CPU =====
+    #-------------
+    # Processor
+    # ------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ CPU:${NC}"
     log_to_file "▶ CPU:"
@@ -68,21 +81,27 @@ local_inventory() {
         awk 'NR==1{min=$1} END{print "Min MHz:", min "\nMax MHz:", $1}'
     echo
 
-    # ===== MEMORY =====
+    #-------------
+    # RAM-minne
+    # ------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ MEMORY:${NC}"
     log_to_file "▶ MEMORY:"
     free -h
     echo
 
-    # ===== DISK =====
+    #-------------
+    # Hårddisk
+    # ------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ DISK SPACE:${NC}"
     log_to_file "▶ DISK SPACE:"
     df -h --exclude-type=tmpfs --exclude-type=devtmpfs
     echo
 
-    # ===== NETWORK =====
+    #-----------
+    # Nätverk
+    # ----------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ NETWORK:${NC}"
     log_to_file "▶ NETWORK:"

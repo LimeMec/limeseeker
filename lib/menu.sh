@@ -1,6 +1,6 @@
 main_menu() {
     while true; do
-        log_pause     # ⛔ STOPPA LOGGNING
+        log_pause     #Pausa loggning
 
         ui_echo "${BOLD}${GREEN}Choose scan:${NC}"
         ui_echo "1) Local inventory scan"
@@ -13,14 +13,20 @@ main_menu() {
         ui_read -rp "Select option [1-5]: " choice
         ui_echo
 
-        log_resume    # ▶️ ÅTERSTARTA LOGGNING
+        log_resume    # Återuppta loggning
 
         case "$choice" in
             1) local_inventory ;;
             2) local_security ;;
             3) network_vulnerability ;;
             4) wifi_discovery ;;
-            5) exit 0 ;;
+            5)
+		ui_echo "${YELLOW}Quitting LimeSeeker...${NC}"
+                log_to_file "Quitting LimeSeeker..."
+                sleep 1
+                exit 0
+		echo
+                ;;
             *) ui_echo "Invalid choice" ;;
         esac
         

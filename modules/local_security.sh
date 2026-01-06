@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# =========================
-# CVE helper (GLOBAL)
-# =========================
+# -------------
+# CVE scan
+# -------------
 check_cve() {
 
     if ! command -v searchsploit &>/dev/null; then
@@ -34,9 +34,9 @@ check_cve() {
     log_to_file "    → Manual validation required"
 }
 
-# =========================
-# MAIN MODULE
-# =========================
+# -------------------
+# Rubrik för modul
+# -------------------
 local_security() {
 
     if declare -F ui_clear >/dev/null; then
@@ -51,9 +51,9 @@ local_security() {
     echo
     echo
 
-    # =========================
+    # --------------
     # Kernel & OS
-    # =========================
+    # --------------
     sleep 1
     ui_echo "${GREEN}${BOLD}▶ KERNEL & OS:${NC}"
     log_to_file "▶ KERNEL & OS:"
@@ -61,9 +61,9 @@ local_security() {
     echo "OS:     $(uname -o)"
     echo
 
-    # =========================
-    # Sudo users
-    # =========================
+    # -----------------
+    # Sudo användare
+    # -----------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ USERS WITH SUDO ACCESS:${NC}"
     log_to_file "▶ USERS WITH SUDO ACCESS:"
@@ -81,9 +81,9 @@ local_security() {
     fi
     echo
 
-    # =========================
+    # -----------------
     # Root SSH login
-    # =========================
+    # -----------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ ROOT SSH LOGIN:${NC}"
     log_to_file "▶ ROOT SSH LOGIN:"
@@ -115,9 +115,9 @@ local_security() {
     esac
     echo
 
-    # =========================
-    # System updates
-    # =========================
+    # ----------------------
+    # Systemuppdateringar
+    # ----------------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ AVAILABLE SYSTEM UPDATES:${NC}"
     log_to_file "▶ AVAILABLE SYSTEM UPDATES:"
@@ -143,9 +143,9 @@ local_security() {
     fi
     echo
 
-    # =========================
-    # Risky services
-    # =========================
+    # ----------------------
+    # Riskfyllda tjänster
+    # ----------------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ RUNNING SERVICES (RISKY):${NC}"
     log_to_file "▶ RUNNING SERVICES (RISKY):"
@@ -164,9 +164,9 @@ local_security() {
     fi
     echo
 
-    # =========================
-    # Listening ports & process security
-    # =========================
+    # ---------------------------------
+    # Lyssnande portar och processer
+    # ---------------------------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ LISTENING PORTS & SECURITY:${NC}"
     log_to_file "▶ LISTENING PORTS & SECURITY:"
@@ -183,27 +183,27 @@ local_security() {
 
     echo
 
-    # =========================
-    # World-writable files
-    # =========================
+    # ----------------------
+    # Global skrivåtkomst
+    # ----------------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ WORLD-WRITABLE FILES (TOP 10):${NC}"
     log_to_file "▶ WORLD-WRITABLE FILES (TOP 10):"
     find / -xdev -type f -perm -0002 2>/dev/null | head -n 10
     echo
 
-    # =========================
-    # SUID binaries
-    # =========================
+    # ----------------
+    # SUID binärer
+    # ----------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ SUID BINARIES (TOP 10):${NC}"
     log_to_file "▶ SUID BINARIES (TOP 10):"
     find / -xdev -perm -4000 -type f 2>/dev/null | head -n 10
     echo
 
-    # =========================
-    # CVE CHECK
-    # =========================
+    # ------------
+    # CVE check
+    # -----------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ CVE CHECK (COMMON PACKAGES):${NC}"
     log_to_file "▶ CVE CHECK (COMMON PACKAGES):"

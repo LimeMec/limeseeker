@@ -1,0 +1,14 @@
+===========================================================
+      LimeSeeker Report: tis  6 jan 2026 01:34:13 CET
+===========================================================
+[H[2J[3J
+
+▶ WIFI discovery scan...
+
+No wireless interface detected
+[H[2J[3J
+
+▶ WIFI discovery scan...
+
+No wireless interface detected
+Quitting LimeSeeker...
