@@ -1,0 +1,778 @@
+===========================================================
+      LimeSeeker Report: tis  6 jan 2026 01:47:51 CET
+===========================================================
+
+
+▶ Scanning local inventory...
+
+
+▶ SYSTEM UPTIME:
+up 2 hours, 24 minutes
+
+▶ BIOS / FIRMWARE:
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+▶ OPERATING SYSTEM:
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+▶ GPU:
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+▶ CPU:
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.815
+Max MHz: 1696.815
+
+▶ MEMORY:
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,9Gi        12Gi        34Mi       1,9Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+▶ DISK SPACE:
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    21G    24G  46% /
+KaliShare         172G    96G    76G  56% /media/sf_KaliShare
+
+▶ NETWORK:
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+
+▶ Local inventory scan completed
+
+
+▶ Scanning local security...
+
+
+▶ KERNEL & OS:
+Kernel: 6.17.10+kali-amd64
+OS:     GNU/Linux
+
+▶ USERS WITH SUDO ACCESS:
+Users with sudo privileges
+limemec
+
+▶ ROOT SSH LOGIN:
+Root SSH login allowed via SSH key only
+
+▶ AVAILABLE SYSTEM UPDATES:
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+581 paket kan uppgraderas. Kör ”apt list --upgradable” för att se dem.
+System updates available:
+7zip/kali-rolling 25.01+dfsg-5 amd64 [uppgraderingsbart från: 25.01+dfsg-4]
+alsa-ucm-conf/kali-rolling 1.2.15-1 all [uppgraderingsbart från: 1.2.14-1]
+amd64-microcode/kali-rolling 3.20251202.1 amd64 [uppgraderingsbart från: 3.20250311.1]
+at-spi2-common/kali-rolling 2.58.2-2 all [uppgraderingsbart från: 2.58.2-1]
+at-spi2-core/kali-rolling 2.58.2-2 amd64 [uppgraderingsbart från: 2.58.2-1]
+binutils-common/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+binutils-mingw-w64-i686/kali-rolling 2.45.50.20251201-1+13 amd64 [uppgraderingsbart från: 2.45.50.20251125-1+12.1+b1]
+binutils-mingw-w64-x86-64/kali-rolling 2.45.50.20251201-1+13 amd64 [uppgraderingsbart från: 2.45.50.20251125-1+12.1+b1]
+binutils-x86-64-linux-gnu/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+binutils/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+bsdextrautils/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+bsdutils/kali-rolling 1:2.41.3-2 amd64 [uppgraderingsbart från: 1:2.41.2-4]
+burpsuite/kali-rolling 2025.11.6-0kali1 amd64 [uppgraderingsbart från: 2025.10.7-0kali1]
+cadaver/kali-rolling 0.28+dfsg-2 amd64 [uppgraderingsbart från: 0.28+dfsg-1]
+chromium-common/kali-rolling 143.0.7499.169-1 amd64 [uppgraderingsbart från: 142.0.7444.175-1]
+chromium-sandbox/kali-rolling 143.0.7499.169-1 amd64 [uppgraderingsbart från: 142.0.7444.175-1]
+chromium/kali-rolling 143.0.7499.169-1 amd64 [uppgraderingsbart från: 142.0.7444.175-1]
+clang/kali-rolling 1:21.1.6-70 amd64 [uppgraderingsbart från: 1:19.0-63]
+comerr-dev/kali-rolling 2.1-1.47.2-3+b8 amd64 [uppgraderingsbart från: 2.1-1.47.2-3+b4]
+commix/kali-rolling 4.1-0kali1 all [uppgraderingsbart från: 4.0-0kali1]
+console-setup-linux/kali-rolling 1.245 all [uppgraderingsbart från: 1.244]
+console-setup/kali-rolling 1.245 all [uppgraderingsbart från: 1.244]
+cpio/kali-rolling 2.15+dfsg-2.1 amd64 [uppgraderingsbart från: 2.15+dfsg-2]
+cpp-15-for-host/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+cpp-15-x86-64-linux-gnu/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+cpp-15/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+cron-daemon-common/kali-rolling 3.0pl1-205 all [uppgraderingsbart från: 3.0pl1-200]
+cron/kali-rolling 3.0pl1-205 amd64 [uppgraderingsbart från: 3.0pl1-200]
+cryptsetup-bin/kali-rolling 2:2.8.3-1 amd64 [uppgraderingsbart från: 2:2.8.1-1]
+cryptsetup-initramfs/kali-rolling 2:2.8.3-1 all [uppgraderingsbart från: 2:2.8.1-1]
+cryptsetup/kali-rolling 2:2.8.3-1 amd64 [uppgraderingsbart från: 2:2.8.1-1]
+dconf-cli/kali-rolling 0.49.0-4 amd64 [uppgraderingsbart från: 0.49.0-2]
+dconf-gsettings-backend/kali-rolling 0.49.0-4 amd64 [uppgraderingsbart från: 0.49.0-2]
+dconf-service/kali-rolling 0.49.0-4 amd64 [uppgraderingsbart från: 0.49.0-2]
+dhcpcd-base/kali-rolling 1:10.3.0-3 amd64 [uppgraderingsbart från: 1:10.3.0-2]
+dictionaries-common/kali-rolling 1.31.2 all [uppgraderingsbart från: 1.30.11]
+dnsmasq-base/kali-rolling 2.92~rc3-1 amd64 [uppgraderingsbart från: 2.91-1]
+dvisvgm/kali-rolling 3.6+ds-1 amd64 [uppgraderingsbart från: 3.5+ds-1]
+e2fsprogs/kali-rolling 1.47.2-3+b8 amd64 [uppgraderingsbart från: 1.47.2-3+b4]
+easy-rsa/kali-rolling 3.2.5-1 all [uppgraderingsbart från: 3.2.4-1]
+eject/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+evil-winrm/kali-rolling 3.9-0kali2 all [uppgraderingsbart från: 3.9-0kali1]
+evolution-data-server-common/kali-rolling 3.56.2-7 all [uppgraderingsbart från: 3.56.2-5]
+exfatprogs/kali-rolling 1.3.1-1 amd64 [uppgraderingsbart från: 1.3.0-1]
+exploitdb/kali-rolling 20251217-0kali1 all [uppgraderingsbart från: 20251204-0kali1]
+fdisk/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+figlet/kali-rolling 2.2.5-3.1 amd64 [uppgraderingsbart från: 2.2.5-3+b2]
+firmware-amd-graphics/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-atheros/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-brcm80211/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-carl9170/kali-rolling 1.9.9-690-gc6e7ab0-0.1 all [uppgraderingsbart från: 1.9.9-686-ge7ba7bf+dfsg-0.1]
+firmware-intel-graphics/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-intel-misc/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-intel-sound/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-iwlwifi/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-libertas/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-linux-nonfree/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-linux/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-marvell-prestera/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-mediatek/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-misc-nonfree/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-nvidia-graphics/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+firmware-realtek/kali-rolling 20251111-1 all [uppgraderingsbart från: 20250808-1]
+fonts-lyx/kali-rolling 2.5.0~RC2-1 all [uppgraderingsbart från: 2.4.4-2]
+freerdp3-x11/kali-rolling 3.20.0+dfsg-1 amd64 [uppgraderingsbart från: 3.19.0+dfsg-1]
+g++-15-x86-64-linux-gnu/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+g++-15/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+gcc-15-base/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+gcc-15-for-host/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+gcc-15-x86-64-linux-gnu/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+gcc-15/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+gcr/kali-rolling 3.41.2-6 amd64 [uppgraderingsbart från: 3.41.2-5]
+gdal-data/kali-rolling 3.12.1+dfsg-1 all [uppgraderingsbart från: 3.12.0+dfsg-1]
+gdal-plugins/kali-rolling 3.12.1+dfsg-1 amd64 [uppgraderingsbart från: 3.12.0+dfsg-1+b1]
+gir1.2-atk-1.0/kali-rolling 2.58.2-2 amd64 [uppgraderingsbart från: 2.58.2-1]
+gir1.2-atspi-2.0/kali-rolling 2.58.2-2 amd64 [uppgraderingsbart från: 2.58.2-1]
+gir1.2-girepository-3.0/kali-rolling 2.86.3-1 amd64 [uppgraderingsbart från: 2.86.2-1]
+gir1.2-glib-2.0/kali-rolling 2.86.3-1 amd64 [uppgraderingsbart från: 2.86.2-1]
+gir1.2-gtk-3.0/kali-rolling 3.24.51-4 amd64 [uppgraderingsbart från: 3.24.51-2]
+gir1.2-harfbuzz-0.0/kali-rolling 12.2.0-1 amd64 [uppgraderingsbart från: 12.1.0-1]
+gir1.2-nm-1.0/kali-rolling 1.54.3-1 amd64 [uppgraderingsbart från: 1.54.1-1]
+gir1.2-vte-2.91/kali-rolling 0.82.2-1+b1 amd64 [uppgraderingsbart från: 0.82.2-1]
+gnome-system-tools/kali-rolling 3.0.0-11.1 amd64 [uppgraderingsbart från: 3.0.0-11]
+gnutls-bin/kali-rolling 3.8.11-3 amd64 [uppgraderingsbart från: 3.8.10-3]
+gpp-decrypt/kali-rolling 0.1-1kali3 all [uppgraderingsbart från: 0.1-1kali2]
+gsettings-desktop-schemas/kali-rolling 49.1-3 all [uppgraderingsbart från: 49.1-1]
+gstreamer1.0-libav/kali-rolling 1.26.10-1 amd64 [uppgraderingsbart från: 1.26.9-1]
+gstreamer1.0-plugins-bad/kali-rolling 1.26.10-1 amd64 [uppgraderingsbart från: 1.26.9-1]
+gstreamer1.0-plugins-good/kali-rolling 1.26.10-1 amd64 [uppgraderingsbart från: 1.26.9-1]
+gtk-update-icon-cache/kali-rolling 4.20.3+ds-3 amd64 [uppgraderingsbart från: 4.20.3+ds-2]
+gtk2-engines-pixbuf/kali-rolling 2.24.33-10 amd64 [uppgraderingsbart från: 2.24.33-9]
+gvfs-backends/kali-rolling 1.58.0-2 amd64 [uppgraderingsbart från: 1.58.0-1]
+gvfs-common/kali-rolling 1.58.0-2 all [uppgraderingsbart från: 1.58.0-1]
+gvfs-daemons/kali-rolling 1.58.0-2 amd64 [uppgraderingsbart från: 1.58.0-1]
+gvfs-fuse/kali-rolling 1.58.0-2 amd64 [uppgraderingsbart från: 1.58.0-1]
+gvfs-libs/kali-rolling 1.58.0-2 amd64 [uppgraderingsbart från: 1.58.0-1]
+gvfs/kali-rolling 1.58.0-2 amd64 [uppgraderingsbart från: 1.58.0-1]
+gvmd-common/kali-rolling 26.12.1-2 all [uppgraderingsbart från: 26.12.1-0kali1]
+gvmd/kali-rolling 26.12.1-2 amd64 [uppgraderingsbart från: 26.12.1-0kali1]
+inetsim/kali-rolling 1.3.2+dfsg.1-5 all [uppgraderingsbart från: 1.3.2+dfsg.1-1]
+inetutils-telnet/kali-rolling 2:2.7-1 amd64 [uppgraderingsbart från: 2:2.6-4]
+intel-media-va-driver/kali-rolling 25.4.5+dfsg1-1 amd64 [uppgraderingsbart från: 25.4.2+dfsg1-1]
+iproute2/kali-rolling 6.18.0-1 amd64 [uppgraderingsbart från: 6.17.0-1]
+iptables/kali-rolling 1.8.11-4 amd64 [uppgraderingsbart från: 1.8.11-2]
+kali-desktop-base/kali-rolling 2025.4.5 all [uppgraderingsbart från: 2025.4.4]
+kali-desktop-core/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-desktop-xfce/kali-rolling 2025.4.14 all [uppgraderingsbart från: 2025.4.9]
+kali-linux-core/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-linux-default/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-linux-firmware/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-linux-headless/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-system-cli/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-system-core/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-system-gui/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-themes-common/kali-rolling 2025.4.5 all [uppgraderingsbart från: 2025.4.4]
+kali-themes/kali-rolling 2025.4.5 all [uppgraderingsbart från: 2025.4.4]
+kali-tools-top10/kali-rolling 2025.4.14 amd64 [uppgraderingsbart från: 2025.4.9]
+kali-undercover/kali-rolling 2026.1.0 all [uppgraderingsbart från: 2025.4.2]
+kbd/kali-rolling 2.9.0-1 amd64 [uppgraderingsbart från: 2.7.1-2]
+keyboard-configuration/kali-rolling 1.245 all [uppgraderingsbart från: 1.244]
+layer-shell-qt/kali-rolling 6.5.4-1 amd64 [uppgraderingsbart från: 6.5.3-1]
+lib32gcc-s1/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+lib32stdc++6/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libapache2-mod-php8.4/kali-rolling 8.4.16-1 amd64 [uppgraderingsbart från: 8.4.11-1+b1]
+libapache2-mod-php/kali-rolling 2:8.4+99 all [uppgraderingsbart från: 2:8.4+96]
+libasan8/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libatk-bridge2.0-0t64/kali-rolling 2.58.2-2 amd64 [uppgraderingsbart från: 2.58.2-1]
+libatk1.0-0t64/kali-rolling 2.58.2-2 amd64 [uppgraderingsbart från: 2.58.2-1]
+libatkmm-1.6-1v5/kali-rolling 2.28.4-2 amd64 [uppgraderingsbart från: 2.28.4-1+b2]
+libatomic1/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libatspi2.0-0t64/kali-rolling 2.58.2-2 amd64 [uppgraderingsbart från: 2.58.2-1]
+libbinutils/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+libblkid1/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+libbluray3/kali-rolling 1:1.4.0-4 amd64 [uppgraderingsbart från: 1:1.4.0-3]
+libbrlapi0.8/kali-rolling 6.8-4+b2 amd64 [uppgraderingsbart från: 6.8-4+b1]
+libbson2-2/kali-rolling 2.2.1-1 amd64 [uppgraderingsbart från: 2.2.0-1]
+libc-bin/kali-rolling 2.42-5 amd64 [uppgraderingsbart från: 2.41-12]
+libc-dev-bin/kali-rolling 2.42-5 amd64 [uppgraderingsbart från: 2.41-12]
+libc-l10n/kali-rolling 2.42-5 all [uppgraderingsbart från: 2.41-12]
+libc6-dev/kali-rolling 2.42-5 amd64 [uppgraderingsbart från: 2.41-12]
+libc6-i386/kali-rolling 2.42-5 amd64 [uppgraderingsbart från: 2.41-12]
+libc6/kali-rolling 2.42-5 amd64 [uppgraderingsbart från: 2.41-12]
+libcamel-1.2-64t64/kali-rolling 3.56.2-7 amd64 [uppgraderingsbart från: 3.56.2-5]
+libcap2-bin/kali-rolling 1:2.75-10+b5 amd64 [uppgraderingsbart från: 1:2.75-10+b2]
+libcap2/kali-rolling 1:2.75-10+b5 amd64 [uppgraderingsbart från: 1:2.75-10+b2]
+libcares2/kali-rolling 1.34.6-1 amd64 [uppgraderingsbart från: 1.34.5-1]
+libcc1-0/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libcharon-extauth-plugins/kali-rolling 6.0.4-1 amd64 [uppgraderingsbart från: 6.0.3-1]
+libchromaprint1/kali-rolling 1.6.0-2+b1 amd64 [uppgraderingsbart från: 1.6.0-2]
+libcom-err2/kali-rolling 1.47.2-3+b8 amd64 [uppgraderingsbart från: 1.47.2-3+b4]
+libconfig++11/kali-rolling 1.7.3-2.1 amd64 [uppgraderingsbart från: 1.7.3-2]
+libconfig11/kali-rolling 1.7.3-2.1 amd64 [uppgraderingsbart från: 1.7.3-2]
+libcryptsetup12/kali-rolling 2:2.8.3-1 amd64 [uppgraderingsbart från: 2:2.8.1-1]
+libctf-nobfd0/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+libctf0/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+libdconf1/kali-rolling 0.49.0-4 amd64 [uppgraderingsbart från: 0.49.0-2]
+libde265-0/kali-rolling 1.0.16-1+b1 amd64 [uppgraderingsbart från: 1.0.16-1]
+libdebconfclient0/kali-rolling 0.282+b2 amd64 [uppgraderingsbart från: 0.282]
+libdecor-0-0/kali-rolling 0.2.5-1 amd64 [uppgraderingsbart från: 0.2.4-1]
+libdouble-conversion3/kali-rolling 3.4.0-1 amd64 [uppgraderingsbart från: 3.3.1-2]
+libdvdnav4/kali-rolling 7.0.0-2 amd64 [uppgraderingsbart från: 6.1.1-3+b1]
+libdvdread8t64/kali-rolling 7.0.1-1 amd64 [uppgraderingsbart från: 6.1.3-2]
+libebackend-1.2-11t64/kali-rolling 3.56.2-7 amd64 [uppgraderingsbart från: 3.56.2-5]
+libebook-1.2-21t64/kali-rolling 3.56.2-7 amd64 [uppgraderingsbart från: 3.56.2-5]
+libebook-contacts-1.2-4t64/kali-rolling 3.56.2-7 amd64 [uppgraderingsbart från: 3.56.2-5]
+libedata-book-1.2-27t64/kali-rolling 3.56.2-7 amd64 [uppgraderingsbart från: 3.56.2-5]
+libedataserver-1.2-27t64/kali-rolling 3.56.2-7 amd64 [uppgraderingsbart från: 3.56.2-5]
+libedit2/kali-rolling 3.1-20251016-1 amd64 [uppgraderingsbart från: 3.1-20250104-1]
+libegl-mesa0/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libevdev2/kali-rolling 1.13.6+dfsg-1 amd64 [uppgraderingsbart från: 1.13.5+dfsg-1]
+libext2fs2t64/kali-rolling 1.47.2-3+b8 amd64 [uppgraderingsbart från: 1.47.2-3+b4]
+libfdisk1/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+libffado2/kali-rolling 2.4.9-3 amd64 [uppgraderingsbart från: 2.4.9-2]
+libffi-dev/kali-rolling 3.5.2-3 amd64 [uppgraderingsbart från: 3.5.2-2]
+libffi8/kali-rolling 3.5.2-3 amd64 [uppgraderingsbart från: 3.5.2-2]
+libfluidsynth3/kali-rolling 2.5.2+dfsg-1 amd64 [uppgraderingsbart från: 2.5.1+dfsg-1]
+libfreerdp-client3-3/kali-rolling 3.20.0+dfsg-1 amd64 [uppgraderingsbart från: 3.19.0+dfsg-1]
+libfreerdp3-3/kali-rolling 3.20.0+dfsg-1 amd64 [uppgraderingsbart från: 3.19.0+dfsg-1]
+libfribidi0/kali-rolling 1.0.16-5 amd64 [uppgraderingsbart från: 1.0.16-3]
+libgbm1/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgcc-15-dev/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libgcc-s1/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libgck-1-0/kali-rolling 3.41.2-6 amd64 [uppgraderingsbart från: 3.41.2-5]
+libgcr-base-3-1/kali-rolling 3.41.2-6 amd64 [uppgraderingsbart från: 3.41.2-5]
+libgcr-ui-3-1/kali-rolling 3.41.2-6 amd64 [uppgraderingsbart från: 3.41.2-5]
+libgdal38/kali-rolling 3.12.1+dfsg-1 amd64 [uppgraderingsbart från: 3.12.0+dfsg-1+b1]
+libgeos-c1t64/kali-rolling 3.14.1-2 amd64 [uppgraderingsbart från: 3.14.1-1]
+libgeos3.14.1/kali-rolling 3.14.1-2 amd64 [uppgraderingsbart från: 3.14.1-1]
+libgfortran5/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libgirepository-2.0-0/kali-rolling 2.86.3-1 amd64 [uppgraderingsbart från: 2.86.2-1]
+libgl1-mesa-dri/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libglib2.0-0t64/kali-rolling 2.86.3-1 amd64 [uppgraderingsbart från: 2.86.2-1]
+libglib2.0-bin/kali-rolling 2.86.3-1 amd64 [uppgraderingsbart från: 2.86.2-1]
+libglib2.0-data/kali-rolling 2.86.3-1 all [uppgraderingsbart från: 2.86.2-1]
+libglx-mesa0/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgnutls-dane0t64/kali-rolling 3.8.11-3 amd64 [uppgraderingsbart från: 3.8.10-3]
+libgnutls30t64/kali-rolling 3.8.11-3 amd64 [uppgraderingsbart från: 3.8.10-3]
+libgoa-1.0-0b/kali-rolling 3.56.2-6 amd64 [uppgraderingsbart från: 3.56.2-1]
+libgoa-1.0-common/kali-rolling 3.56.2-6 all [uppgraderingsbart från: 3.56.2-1]
+libgomp1/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libgpg-error-l10n/kali-rolling 1.58-1 all [uppgraderingsbart från: 1.56-2]
+libgpg-error0/kali-rolling 1.58-1 amd64 [uppgraderingsbart från: 1.56-2]
+libgprofng0/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+libgssdp-1.6-0/kali-rolling 1.6.4-3 amd64 [uppgraderingsbart från: 1.6.4-2]
+libgstreamer-plugins-bad1.0-0/kali-rolling 1.26.10-1 amd64 [uppgraderingsbart från: 1.26.9-1]
+libgtk-3-0t64/kali-rolling 3.24.51-4 amd64 [uppgraderingsbart från: 3.24.51-2]
+libgtk-3-bin/kali-rolling 3.24.51-4 amd64 [uppgraderingsbart från: 3.24.51-2]
+libgtk-3-common/kali-rolling 3.24.51-4 all [uppgraderingsbart från: 3.24.51-2]
+libgtk-4-1/kali-rolling 4.20.3+ds-3 amd64 [uppgraderingsbart från: 4.20.3+ds-2]
+libgtk-4-bin/kali-rolling 4.20.3+ds-3 amd64 [uppgraderingsbart från: 4.20.3+ds-2]
+libgtk-4-common/kali-rolling 4.20.3+ds-3 all [uppgraderingsbart från: 4.20.3+ds-2]
+libgupnp-1.6-0/kali-rolling 1.6.9-4 amd64 [uppgraderingsbart från: 1.6.9-3]
+libgusb2/kali-rolling 0.4.9-5 amd64 [uppgraderingsbart från: 0.4.9-2]
+libgvm22t64/kali-rolling 22.34.1-1 amd64 [uppgraderingsbart från: 22.33.0-0kali1]
+libharfbuzz-gobject0/kali-rolling 12.2.0-1 amd64 [uppgraderingsbart från: 12.1.0-1]
+libharfbuzz-icu0/kali-rolling 12.2.0-1 amd64 [uppgraderingsbart från: 12.1.0-1]
+libharfbuzz-subset0/kali-rolling 12.2.0-1 amd64 [uppgraderingsbart från: 12.1.0-1]
+libharfbuzz0b/kali-rolling 12.2.0-1 amd64 [uppgraderingsbart från: 12.1.0-1]
+libheif-plugin-aomenc/kali-rolling 1.20.2-2+b4 amd64 [uppgraderingsbart från: 1.20.2-2+b1]
+libheif-plugin-dav1d/kali-rolling 1.20.2-2+b4 amd64 [uppgraderingsbart från: 1.20.2-2+b1]
+libheif-plugin-libde265/kali-rolling 1.20.2-2+b4 amd64 [uppgraderingsbart från: 1.20.2-2+b1]
+libheif-plugin-x265/kali-rolling 1.20.2-2+b4 amd64 [uppgraderingsbart från: 1.20.2-2+b1]
+libheif1/kali-rolling 1.20.2-2+b4 amd64 [uppgraderingsbart från: 1.20.2-2+b1]
+libhwasan0/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libigdgmm12/kali-rolling 22.9.0+ds1-1 amd64 [uppgraderingsbart från: 22.8.2+ds1-1]
+libimage-exiftool-perl/kali-rolling 13.44+dfsg-1 all [uppgraderingsbart från: 13.36+dfsg-1]
+libimagequant0/kali-rolling 4.4.1-1 amd64 [uppgraderingsbart från: 4.4.0-3]
+libip4tc2/kali-rolling 1.8.11-4 amd64 [uppgraderingsbart från: 1.8.11-2]
+libip6tc2/kali-rolling 1.8.11-4 amd64 [uppgraderingsbart från: 1.8.11-2]
+libitm1/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libjansson4/kali-rolling 2.14-2+b4 amd64 [uppgraderingsbart från: 2.14-2+b3]
+libjavascriptcoregtk-4.1-0/kali-rolling 2.50.4-1 amd64 [uppgraderingsbart från: 2.50.3-1]
+libjavascriptcoregtk-6.0-1/kali-rolling 2.50.4-1 amd64 [uppgraderingsbart från: 2.50.3-1]
+libjs-sphinxdoc/kali-rolling 8.2.3-11 all [uppgraderingsbart från: 8.2.3-10]
+libjs-sprintf-js/kali-rolling 1.1.3+ds1+~1.1.4-2 all [uppgraderingsbart från: 1.1.2+ds1+~1.1.2-1]
+liblastlog2-2/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+liblayershellqtinterface6/kali-rolling 6.5.4-1 amd64 [uppgraderingsbart från: 6.5.3-1]
+libldb2/kali-rolling 2:2.11.0+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:2.11.0+samba4.23.3+dfsg-1+b1]
+liblightdm-gobject-1-0/kali-rolling 1.32.0-7 amd64 [uppgraderingsbart från: 1.32.0-6+b2]
+libllvmspirvlib18.1/kali-rolling 18.1.19-1 amd64 [uppgraderingsbart från: 18.1.17-1]
+liblsan0/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libltdl7/kali-rolling 2.5.4-9 amd64 [uppgraderingsbart från: 2.5.4-7]
+liblzma-dev/kali-rolling 5.8.2-1 amd64 [uppgraderingsbart från: 5.8.1-2]
+liblzma5/kali-rolling 5.8.2-1 amd64 [uppgraderingsbart från: 5.8.1-2]
+libmariadb3/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+libminizip1t64/kali-rolling 1:1.3.dfsg+really1.3.1-1+b2 amd64 [uppgraderingsbart från: 1:1.3.dfsg+really1.3.1-1+b1]
+libmongoc2-2/kali-rolling 2.2.1-1 amd64 [uppgraderingsbart från: 2.2.0-1]
+libmosquitto1/kali-rolling 2.0.22-4 amd64 [uppgraderingsbart från: 2.0.22-3]
+libmount1/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+libmpg123-0t64/kali-rolling 1.33.3-2 amd64 [uppgraderingsbart från: 1.33.3-1]
+libmujs3/kali-rolling 1.3.8-2 amd64 [uppgraderingsbart från: 1.3.6-1]
+libnftables1/kali-rolling 1.1.6-1 amd64 [uppgraderingsbart från: 1.1.5-2]
+libnl-3-200/kali-rolling 3.12.0-1 amd64 [uppgraderingsbart från: 3.11.0-2]
+libnl-genl-3-200/kali-rolling 3.12.0-1 amd64 [uppgraderingsbart från: 3.11.0-2]
+libnl-route-3-200/kali-rolling 3.12.0-1 amd64 [uppgraderingsbart från: 3.11.0-2]
+libnm0/kali-rolling 1.54.3-1 amd64 [uppgraderingsbart från: 1.54.1-1]
+libnode-dev/kali-rolling 22.21.1+dfsg+~cs22.19.0-6+b2 amd64 [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+libnss-systemd/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+libnss-winbind/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+libnss3/kali-rolling 2:3.119-1 amd64 [uppgraderingsbart från: 2:3.117-1]
+libnvme1t64/kali-rolling 1.16.1-2 amd64 [uppgraderingsbart från: 1.16.1-1]
+libobjc-15-dev/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libobjc4/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libopenal-data/kali-rolling 1:1.25.0-1 all [uppgraderingsbart från: 1:1.24.2-2]
+libopenal1/kali-rolling 1:1.25.0-1 amd64 [uppgraderingsbart från: 1:1.24.2-2]
+libopenmpt0t64/kali-rolling 0.8.4-1 amd64 [uppgraderingsbart från: 0.8.3-1]
+libopenni2-0/kali-rolling 2.2.0.33+dfsg-19 amd64 [uppgraderingsbart från: 2.2.0.33+dfsg-18+b2]
+libout123-0t64/kali-rolling 1.33.3-2 amd64 [uppgraderingsbart från: 1.33.3-1]
+libpam-systemd/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+libpam-winbind/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+libpng16-16t64/kali-rolling 1.6.53-1 amd64 [uppgraderingsbart från: 1.6.52-1]
+libportmidi2/kali-rolling 2:2.0.8-1 amd64 [uppgraderingsbart från: 2:2.0.7-1]
+libpq5/kali-rolling 18.1-2 amd64 [uppgraderingsbart från: 18.1-1]
+libpython3.13-dev/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+libpython3.13-minimal/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+libpython3.13-stdlib/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+libpython3.13/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+libqt5core5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5dbus5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5gui5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5network5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5opengl5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5printsupport5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5qml5/kali-rolling 5.15.17+dfsg-4 amd64 [uppgraderingsbart från: 5.15.17+dfsg-3]
+libqt5qmlmodels5/kali-rolling 5.15.17+dfsg-4 amd64 [uppgraderingsbart från: 5.15.17+dfsg-3]
+libqt5quick5/kali-rolling 5.15.17+dfsg-4 amd64 [uppgraderingsbart från: 5.15.17+dfsg-3]
+libqt5quickwidgets5/kali-rolling 5.15.17+dfsg-4 amd64 [uppgraderingsbart från: 5.15.17+dfsg-3]
+libqt5sql5-sqlite/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5sql5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5test5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5webengine-data/kali-rolling 5.15.19+dfsg2-2 all [uppgraderingsbart från: 5.15.19+dfsg2-1]
+libqt5webengine5/kali-rolling 5.15.19+dfsg2-2 amd64 [uppgraderingsbart från: 5.15.19+dfsg2-1]
+libqt5webenginecore5/kali-rolling 5.15.19+dfsg2-2 amd64 [uppgraderingsbart från: 5.15.19+dfsg2-1]
+libqt5webenginewidgets5/kali-rolling 5.15.19+dfsg2-2 amd64 [uppgraderingsbart från: 5.15.19+dfsg2-1]
+libqt5widgets5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt5xml5t64/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+libqt6multimedia6/kali-rolling 6.9.2-5+b1 amd64 [uppgraderingsbart från: 6.9.2-5]
+libquadmath0/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+librav1e0.8/kali-rolling 0.8.1-7 amd64 [uppgraderingsbart från: 0.8.1-6]
+librpm-sequoia-1/kali-rolling 1.10.0-1 amd64 [uppgraderingsbart från: 1.9.0-1]
+librpm10/kali-rolling 6.0.1-1 amd64 [uppgraderingsbart från: 6.0.0-2]
+librpmbuild10/kali-rolling 6.0.1-1 amd64 [uppgraderingsbart från: 6.0.0-2]
+librpmio10/kali-rolling 6.0.1-1 amd64 [uppgraderingsbart från: 6.0.0-2]
+librpmsign10/kali-rolling 6.0.1-1 amd64 [uppgraderingsbart från: 6.0.0-2]
+librsvg2-2/kali-rolling 2.61.3+dfsg-3 amd64 [uppgraderingsbart från: 2.61.3+dfsg-2]
+librsvg2-common/kali-rolling 2.61.3+dfsg-3 amd64 [uppgraderingsbart från: 2.61.3+dfsg-2]
+libsdl2-2.0-0/kali-rolling 2.32.10+dfsg-6 amd64 [uppgraderingsbart från: 2.32.10+dfsg-4]
+libsdl2-classic/kali-rolling 2.32.10+dfsg-6 amd64 [uppgraderingsbart från: 2.32.10+dfsg-4]
+libsdl2-image-2.0-0/kali-rolling 2.8.8+dfsg-2 amd64 [uppgraderingsbart från: 2.8.8+dfsg-1]
+libsdl2-mixer-2.0-0/kali-rolling 2.8.1+dfsg-5 amd64 [uppgraderingsbart från: 2.8.1+dfsg-4]
+libsdl2-ttf-2.0-0/kali-rolling 2.24.0+dfsg-3 amd64 [uppgraderingsbart från: 2.24.0+dfsg-2]
+libsensors5/kali-rolling 1:3.6.2-2+b1 amd64 [uppgraderingsbart från: 1:3.6.2-2]
+libsframe2/kali-rolling 2.45.50.20251209-1 amd64 [uppgraderingsbart från: 2.45.50.20251201-1]
+libsmartcols1/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+libsmbclient0/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+libsmi2t64/kali-rolling 0.4.8+dfsg2-18 amd64 [uppgraderingsbart från: 0.4.8+dfsg2-17+b1]
+libsodium23/kali-rolling 1.0.18-2 amd64 [uppgraderingsbart från: 1.0.18-1+b2]
+libsoup-3.0-0/kali-rolling 3.6.5-6 amd64 [uppgraderingsbart från: 3.6.5-5]
+libsoup-3.0-common/kali-rolling 3.6.5-6 all [uppgraderingsbart från: 3.6.5-5]
+libss2/kali-rolling 1.47.2-3+b8 amd64 [uppgraderingsbart från: 1.47.2-3+b4]
+libstdc++-15-dev/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libstdc++6/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libstrongswan-standard-plugins/kali-rolling 6.0.4-1 amd64 [uppgraderingsbart från: 6.0.3-1]
+libstrongswan/kali-rolling 6.0.4-1 amd64 [uppgraderingsbart från: 6.0.3-1]
+libsyn123-0t64/kali-rolling 1.33.3-2 amd64 [uppgraderingsbart från: 1.33.3-1]
+libsystemd-shared/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+libsystemd0/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+libtalloc2/kali-rolling 2:2.4.3+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:2.4.3+samba4.23.3+dfsg-1+b1]
+libtdb1/kali-rolling 2:1.4.14+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:1.4.14+samba4.23.3+dfsg-1+b1]
+libteckit0/kali-rolling 2.5.13+ds-1 amd64 [uppgraderingsbart från: 2.5.12+ds1-1+b1]
+libtevent0t64/kali-rolling 2:0.17.1+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:0.17.1+samba4.23.3+dfsg-1+b1]
+libtsan2/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libubsan1/kali-rolling 15.2.0-12 amd64 [uppgraderingsbart från: 15.2.0-9]
+libudev1/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+liburing2/kali-rolling 2.13-1 amd64 [uppgraderingsbart från: 2.12-1]
+libuuid1/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+libva-drm2/kali-rolling 2.23.0-1 amd64 [uppgraderingsbart från: 2.22.0-3]
+libva-x11-2/kali-rolling 2.23.0-1 amd64 [uppgraderingsbart från: 2.22.0-3]
+libva2/kali-rolling 2.23.0-1 amd64 [uppgraderingsbart från: 2.22.0-3]
+libvdpau1/kali-rolling 1.5-4 amd64 [uppgraderingsbart från: 1.5-3+b1]
+libvisual-0.4-0/kali-rolling 0.4.2-4 amd64 [uppgraderingsbart från: 0.4.2-3]
+libvte-2.91-0/kali-rolling 0.82.2-1+b1 amd64 [uppgraderingsbart från: 0.82.2-1]
+libvte-2.91-common/kali-rolling 0.82.2-1+b1 amd64 [uppgraderingsbart från: 0.82.2-1]
+libvulkan1/kali-rolling 1.4.335.0-1 amd64 [uppgraderingsbart från: 1.4.328.1-1]
+libwbclient0/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+libwebkit2gtk-4.1-0/kali-rolling 2.50.4-1 amd64 [uppgraderingsbart från: 2.50.3-1]
+libwebkitgtk-6.0-4/kali-rolling 2.50.4-1 amd64 [uppgraderingsbart från: 2.50.3-1]
+libwinpr3-3/kali-rolling 3.20.0+dfsg-1 amd64 [uppgraderingsbart från: 3.19.0+dfsg-1]
+libwireplumber-0.5-0/kali-rolling 0.5.12-3 amd64 [uppgraderingsbart från: 0.5.12-1]
+libwireshark-data/kali-rolling 4.6.2-3 all [uppgraderingsbart från: 4.6.0-1]
+libwireshark19/kali-rolling 4.6.2-3 amd64 [uppgraderingsbart från: 4.6.0-1]
+libwiretap16/kali-rolling 4.6.2-3 amd64 [uppgraderingsbart från: 4.6.0-1]
+libwsutil17/kali-rolling 4.6.2-3 amd64 [uppgraderingsbart från: 4.6.0-1]
+libx264-165/kali-rolling 2:0.165.3222+gitb35605ac-3+b1 amd64 [uppgraderingsbart från: 2:0.165.3222+gitb35605ac-3]
+libxdmcp-dev/kali-rolling 1:1.1.5-2 amd64 [uppgraderingsbart från: 1:1.1.5-1]
+libxdmcp6/kali-rolling 1:1.1.5-2 amd64 [uppgraderingsbart från: 1:1.1.5-1]
+libxfont2/kali-rolling 1:2.0.6-2 amd64 [uppgraderingsbart från: 1:2.0.6-1+b3]
+libxi6/kali-rolling 2:1.8.2-2 amd64 [uppgraderingsbart från: 2:1.8.2-1]
+libxml2-16/kali-rolling 2.15.1+dfsg-2+b1 amd64 [uppgraderingsbart från: 2.14.6+dfsg-0.1]
+libxml2-dev/kali-rolling 2.15.1+dfsg-2+b1 amd64 [uppgraderingsbart från: 2.14.6+dfsg-0.1]
+libxml2-utils/kali-rolling 2.15.1+dfsg-2+b1 amd64 [uppgraderingsbart från: 2.14.6+dfsg-0.1]
+libxmu6/kali-rolling 2:1.1.3-4 amd64 [uppgraderingsbart från: 2:1.1.3-3+b4]
+libxmuu1/kali-rolling 2:1.1.3-4 amd64 [uppgraderingsbart från: 2:1.1.3-3+b4]
+libxtables12/kali-rolling 1.8.11-4 amd64 [uppgraderingsbart från: 1.8.11-2]
+libyaml-0-2/kali-rolling 0.2.5-2+b1 amd64 [uppgraderingsbart från: 0.2.5-2]
+libyelp-1-0/kali-rolling 49.0-5 amd64 [uppgraderingsbart från: 49.0-4]
+libyuv0/kali-rolling 0.0.1922.20251210-1 amd64 [uppgraderingsbart från: 0.0.1919.20250919-1]
+libze1/kali-rolling 1.26.2-1 amd64 [uppgraderingsbart från: 1.24.1-2]
+lightdm/kali-rolling 1.32.0-7 amd64 [uppgraderingsbart från: 1.32.0-6+b2]
+llvm-spirv-18/kali-rolling 18.1.19-1 amd64 [uppgraderingsbart från: 18.1.17-1]
+lm-sensors/kali-rolling 1:3.6.2-2+b1 amd64 [uppgraderingsbart från: 1:3.6.2-2]
+locales/kali-rolling 2.42-5 all [uppgraderingsbart från: 2.41-12]
+login/kali-rolling 1:4.16.0-2+really2.41.3-2 amd64 [uppgraderingsbart från: 1:4.16.0-2+really2.41.2-4]
+logsave/kali-rolling 1.47.2-3+b8 amd64 [uppgraderingsbart från: 1.47.2-3+b4]
+mariadb-client-core/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-client/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-common/kali-rolling 1:11.8.5-3 all [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-plugin-provider-bzip2/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-plugin-provider-lz4/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-plugin-provider-lzma/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-plugin-provider-lzo/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-plugin-provider-snappy/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-server-compat/kali-rolling 1:11.8.5-3 all [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-server-core/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mariadb-server/kali-rolling 1:11.8.5-3 amd64 [uppgraderingsbart från: 1:11.8.5-1]
+mawk/kali-rolling 1.3.4.20250131-2 amd64 [uppgraderingsbart från: 1.3.4.20250131-1]
+mesa-libgallium/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+mesa-vulkan-drivers/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+metasploit-framework/kali-rolling 6.4.103-0kali1 amd64 [uppgraderingsbart från: 6.4.101-0kali1]
+mosquitto/kali-rolling 2.0.22-4 amd64 [uppgraderingsbart från: 2.0.22-3]
+mount/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+mpg123/kali-rolling 1.33.3-2 amd64 [uppgraderingsbart från: 1.33.3-1]
+multimac/kali-rolling 1.0.3-1kali4 amd64 [uppgraderingsbart från: 1.0.3-1kali3]
+ndiff/kali-rolling 7.98+dfsg-1kali1 all [uppgraderingsbart från: 7.95+dfsg-3kali1]
+netsniff-ng/kali-rolling 0.6.9-2 amd64 [uppgraderingsbart från: 0.6.9-1.1+b2]
+network-manager-l10n/kali-rolling 1.54.3-1 all [uppgraderingsbart från: 1.54.1-1]
+network-manager-openvpn-gnome/kali-rolling 1.12.5-1 amd64 [uppgraderingsbart från: 1.12.3-1]
+network-manager-openvpn/kali-rolling 1.12.5-1 amd64 [uppgraderingsbart från: 1.12.3-1]
+network-manager/kali-rolling 1.54.3-1 amd64 [uppgraderingsbart från: 1.54.1-1]
+nftables/kali-rolling 1.1.6-1 amd64 [uppgraderingsbart från: 1.1.5-2]
+nginx-common/kali-rolling 1.28.1-2 all [uppgraderingsbart från: 1.28.0-6]
+nginx/kali-rolling 1.28.1-2 amd64 [uppgraderingsbart från: 1.28.0-6]
+nmap-common/kali-rolling 7.98+dfsg-1kali1 all [uppgraderingsbart från: 7.95+dfsg-3kali1]
+nmap/kali-rolling 7.98+dfsg-1kali1 amd64 [uppgraderingsbart från: 7.95+dfsg-3kali1]
+node-ajv/kali-rolling 8.17.1~ds+~3.0.1+~3.1.0-4 all [uppgraderingsbart från: 8.17.1~ds+~3.0.1+~3.1.0-1]
+node-chokidar/kali-rolling 3.6.0-5 all [uppgraderingsbart från: 3.6.0-3]
+node-copy-concurrently/kali-rolling 1.0.5-10 all [uppgraderingsbart från: 1.0.5-9]
+node-file-entry-cache/kali-rolling 6.0.1+~3.0.4+~2.0.0+~1.0.0+~2.0.1-3 all [uppgraderingsbart från: 6.0.1+~3.0.4+~2.0.0+~1.0.0+~2.0.1-2]
+node-flat-cache/kali-rolling 3.0.4~6.0.1+~3.0.4+~2.0.0+~1.0.0+~2.0.1-3 all [uppgraderingsbart från: 3.0.4~6.0.1+~3.0.4+~2.0.0+~1.0.0+~2.0.1-2]
+node-gyp/kali-rolling 12.1.0+~6.1.0-3 all [uppgraderingsbart från: 11.4.0+~5.0.0-2]
+node-log-driver/kali-rolling 1.2.7+git+20180219+bba1761737-8 all [uppgraderingsbart från: 1.2.7+git+20180219+bba1761737-7]
+node-mkdirp/kali-rolling 2.1.6+~cs5.2.1-5 all [uppgraderingsbart från: 2.1.6+~cs5.2.1-3]
+node-move-concurrently/kali-rolling 1.0.1-6 all [uppgraderingsbart från: 1.0.1-5]
+node-nopt/kali-rolling 9.0.0-1 all [uppgraderingsbart från: 5.0.0-4]
+node-normalize-package-data/kali-rolling 8.0.0+~2.4.4-2 all [uppgraderingsbart från: 4.0.1+~2.4.1-1]
+node-re2/kali-rolling 1.22.1+~cs1.3.5-1+b1 amd64 [uppgraderingsbart från: 1.22.1+~cs1.3.5-1]
+node-readdirp/kali-rolling 3.6.0-3 all [uppgraderingsbart från: 3.6.0-1]
+node-shell-quote/kali-rolling 1.8.3+~1.7.5-1 all [uppgraderingsbart från: 1.7.4+~1.7.1-1]
+node-sprintf-js/kali-rolling 1.1.3+ds1+~1.1.4-2 all [uppgraderingsbart från: 1.1.2+ds1+~1.1.2-1]
+node-tap/kali-rolling 16.3.7+ds3+~cs49.5.20-5 all [uppgraderingsbart från: 16.3.7+ds3+~cs49.5.20-3]
+node-v8-compile-cache/kali-rolling 2.4.0-4 all [uppgraderingsbart från: 2.4.0-2]
+node-which/kali-rolling 2.0.2+~cs1.3.2-4 all [uppgraderingsbart från: 2.0.2+~cs1.3.2-3]
+node-write/kali-rolling 2.0.0~6.0.1+~3.0.4+~2.0.0+~1.0.0+~2.0.1-3 all [uppgraderingsbart från: 2.0.0~6.0.1+~3.0.4+~2.0.0+~1.0.0+~2.0.1-2]
+node-yaml/kali-rolling 2.8.2+~cs0.4.0-1 all [uppgraderingsbart från: 2.3.4+~cs0.4.0-1]
+nodejs-doc/kali-rolling 22.21.1+dfsg+~cs22.19.0-6 all [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+nodejs/kali-rolling 22.21.1+dfsg+~cs22.19.0-6+b2 amd64 [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+openvas-scanner/kali-rolling 23.35.3-1 amd64 [uppgraderingsbart från: 23.32.5-1]
+openvpn/kali-rolling 2.7.0~rc4-1 amd64 [uppgraderingsbart från: 2.7.0~rc3-1]
+ospd-openvas/kali-rolling 22.9.1-2 all [uppgraderingsbart från: 22.9.1-1]
+pci.ids/kali-rolling 0.0~2025.12.16-1 all [uppgraderingsbart från: 0.0~2025.11.04-1]
+peass/kali-rolling 20251215.2904ebf1-0kali1 all [uppgraderingsbart från: 20251201.130af74a-0kali1]
+perl-tk/kali-rolling 1:804.036+dfsg1-6 amd64 [uppgraderingsbart från: 1:804.036+dfsg1-5]
+php-common/kali-rolling 2:99 all [uppgraderingsbart från: 2:96]
+php-mysql/kali-rolling 2:8.4+99 all [uppgraderingsbart från: 2:8.4+96]
+php8.4-cli/kali-rolling 8.4.16-1 amd64 [uppgraderingsbart från: 8.4.11-1+b1]
+php8.4-common/kali-rolling 8.4.16-1 amd64 [uppgraderingsbart från: 8.4.11-1+b1]
+php8.4-mysql/kali-rolling 8.4.16-1 amd64 [uppgraderingsbart från: 8.4.11-1+b1]
+php8.4-opcache/kali-rolling 8.4.16-1 amd64 [uppgraderingsbart från: 8.4.11-1+b1]
+php8.4-readline/kali-rolling 8.4.16-1 amd64 [uppgraderingsbart från: 8.4.11-1+b1]
+php8.4/kali-rolling 8.4.16-1 all [uppgraderingsbart från: 8.4.11-1]
+php/kali-rolling 2:8.4+99 all [uppgraderingsbart från: 2:8.4+96]
+postgresql-18-jit/kali-rolling 18.1-2 amd64 [uppgraderingsbart från: 18.1-1]
+postgresql-18/kali-rolling 18.1-2 amd64 [uppgraderingsbart från: 18.1-1]
+postgresql-client-18/kali-rolling 18.1-2 amd64 [uppgraderingsbart från: 18.1-1]
+powershell-empire/kali-rolling 6.2.1-0kali4 all [uppgraderingsbart från: 6.2.1-0kali3]
+pyqt6-dev-tools/kali-rolling 6.10.1-2 all [uppgraderingsbart från: 6.10.0-1]
+python-apt-common/kali-rolling 3.1.0 all [uppgraderingsbart från: 3.0.0]
+python3-aiodns/kali-rolling 3.5.0-2 all [uppgraderingsbart från: 3.5.0-1]
+python3-alembic/kali-rolling 1.16.4-4 all [uppgraderingsbart från: 1.16.4-3]
+python3-altgraph/kali-rolling 0.17.5+ds-1 all [uppgraderingsbart från: 0.17.4+ds-4]
+python3-apt/kali-rolling 3.1.0 amd64 [uppgraderingsbart från: 3.0.0+b1]
+python3-autobahn/kali-rolling 24.4.2+dfsg1-4 all [uppgraderingsbart från: 24.4.2+dfsg1-3]
+python3-autocommand/kali-rolling 2.2.2-4 all [uppgraderingsbart från: 2.2.2-3]
+python3-bcrypt/kali-rolling 5.0.0-3 amd64 [uppgraderingsbart från: 4.3.0-2]
+python3-brlapi/kali-rolling 6.8-4+b2 amd64 [uppgraderingsbart från: 6.8-4+b1]
+python3-bs4/kali-rolling 4.14.3-2 all [uppgraderingsbart från: 4.14.3-1]
+python3-cbor/kali-rolling 1.0.0-1.3 amd64 [uppgraderingsbart från: 1.0.0-1.2+b6]
+python3-celery/kali-rolling 5.6.0-2 all [uppgraderingsbart från: 5.5.3-3]
+python3-censys/kali-rolling 2.2.19-1 all [uppgraderingsbart från: 2.2.18-2]
+python3-cmd2/kali-rolling 2.5.11+ds-2 all [uppgraderingsbart från: 2.5.11+ds-1]
+python3-cryptography/kali-rolling 46.0.1-1 amd64 [uppgraderingsbart från: 45.0.7-1]
+python3-django/kali-rolling 3:4.2.27-2 all [uppgraderingsbart från: 3:4.2.26-1]
+python3-docopt/kali-rolling 0.6.2-7 all [uppgraderingsbart från: 0.6.2-6]
+python3-elasticsearch/kali-rolling 9.2.1-1 all [uppgraderingsbart från: 9.2.0-1]
+python3-executing/kali-rolling 2.2.1-0.1 all [uppgraderingsbart från: 2.2.0-0.3]
+python3-faraday-plugins/kali-rolling 1.27.1-0kali1 all [uppgraderingsbart från: 1.26.0-0kali1]
+python3-gdal/kali-rolling 3.12.1+dfsg-1 amd64 [uppgraderingsbart från: 3.12.0+dfsg-1+b1]
+python3-greenlet/kali-rolling 3.2.4-3 amd64 [uppgraderingsbart från: 3.2.4-2+b1]
+python3-gvm/kali-rolling 26.8.0-1 all [uppgraderingsbart från: 26.7.0-1]
+python3-html5lib/kali-rolling 1.2-3 all [uppgraderingsbart från: 1.2-2]
+python3-jeepney/kali-rolling 0.9.0-2 all [uppgraderingsbart från: 0.9.0-1]
+python3-kombu/kali-rolling 5.6.1-1 all [uppgraderingsbart från: 5.5.4-3]
+python3-ldb/kali-rolling 2:2.11.0+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:2.11.0+samba4.23.3+dfsg-1+b1]
+python3-legacycrypt/kali-rolling 0.3-4 all [uppgraderingsbart från: 0.3-3]
+python3-lz4/kali-rolling 4.4.5+dfsg-1 amd64 [uppgraderingsbart från: 4.4.4+dfsg-3+b1]
+python3-macholib/kali-rolling 1.16.4+ds-1 all [uppgraderingsbart från: 1.16.3+ds-3]
+python3-markdown2/kali-rolling 2.5.4-3 all [uppgraderingsbart från: 2.5.4-2]
+python3-markdown/kali-rolling 3.10-2 all [uppgraderingsbart från: 3.10-1]
+python3-mechanize/kali-rolling 1:0.4.10+ds-7 all [uppgraderingsbart från: 1:0.4.10+ds-6]
+python3-mnemonic/kali-rolling 0.21-3 all [uppgraderingsbart från: 0.21-2]
+python3-msgpack/kali-rolling 1.1.2-1 amd64 [uppgraderingsbart från: 1.0.3-3+b5]
+python3-nassl/kali-rolling 5.3.1-0kali1 amd64 [uppgraderingsbart från: 5.3.0-0kali1]
+python3-pandas-lib/kali-rolling 2.3.3+dfsg-3 amd64 [uppgraderingsbart från: 2.3.3+dfsg-2]
+python3-pandas/kali-rolling 2.3.3+dfsg-3 all [uppgraderingsbart från: 2.3.3+dfsg-2]
+python3-passlib/kali-rolling 1.9.3-1 all [uppgraderingsbart från: 1.7.4-6]
+python3-pil.imagetk/kali-rolling 12.0.0-1+b1 amd64 [uppgraderingsbart från: 11.3.0-1]
+python3-pil/kali-rolling 12.0.0-1+b1 amd64 [uppgraderingsbart från: 11.3.0-1]
+python3-pluggy/kali-rolling 1.6.0-2 all [uppgraderingsbart från: 1.6.0-1]
+python3-ply/kali-rolling 3.11-10 all [uppgraderingsbart från: 3.11-9]
+python3-psycopg-c/kali-rolling 3.3.2-1 amd64 [uppgraderingsbart från: 3.3.1-1]
+python3-psycopg/kali-rolling 3.3.2-1 all [uppgraderingsbart från: 3.3.1-1]
+python3-pydantic-core/kali-rolling 2.41.5-2+b1 amd64 [uppgraderingsbart från: 2.41.5-1]
+python3-pydantic/kali-rolling 2.12.5-2 amd64 [uppgraderingsbart från: 2.12.5-1]
+python3-pydyf/kali-rolling 0.12.1-1 all [uppgraderingsbart från: 0.11.0-5]
+python3-pyexploitdb/kali-rolling 0.3.5-0kali1 all [uppgraderingsbart från: 0.2.102-0kali1]
+python3-pygame/kali-rolling 2.6.1-4 amd64 [uppgraderingsbart från: 2.6.1-2]
+python3-pyqt5.sip/kali-rolling 12.17.2-1 amd64 [uppgraderingsbart från: 12.17.1-1+b1]
+python3-pyqt6.sip/kali-rolling 13.10.3-1 amd64 [uppgraderingsbart från: 13.10.2-2+b1]
+python3-pyqt6/kali-rolling 6.10.1-2 amd64 [uppgraderingsbart från: 6.10.0-1]
+python3-rpds-py/kali-rolling 0.28.0-1 amd64 [uppgraderingsbart från: 0.27.1-2]
+python3-ruamel.yaml.clib/kali-rolling 0.2.15+ds-1 amd64 [uppgraderingsbart från: 0.2.12+ds-1+b1]
+python3-samba/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+python3-scipy/kali-rolling 1.16.3-2 amd64 [uppgraderingsbart från: 1.16.3-1+b1]
+python3-soupsieve/kali-rolling 2.8.1-1 all [uppgraderingsbart från: 2.7-2]
+python3-sqlalchemy-ext/kali-rolling 2.0.45+ds1-1 amd64 [uppgraderingsbart från: 2.0.44+ds1-1+b1]
+python3-sqlalchemy-utc/kali-rolling 0.14.0-5 all [uppgraderingsbart från: 0.14.0-4]
+python3-sqlalchemy/kali-rolling 2.0.45+ds1-1 all [uppgraderingsbart från: 2.0.44+ds1-1]
+python3-stack-data/kali-rolling 0.6.3-2 all [uppgraderingsbart från: 0.6.3-1]
+python3-tables-lib/kali-rolling 3.10.2-3+b2 amd64 [uppgraderingsbart från: 3.10.2-3+b1]
+python3-talloc/kali-rolling 2:2.4.3+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:2.4.3+samba4.23.3+dfsg-1+b1]
+python3-tdb/kali-rolling 2:1.4.14+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:1.4.14+samba4.23.3+dfsg-1+b1]
+python3-twisted/kali-rolling 25.5.0-5 all [uppgraderingsbart från: 25.5.0-4]
+python3-typing-extensions/kali-rolling 4.15.0-2 all [uppgraderingsbart från: 4.15.0-1]
+python3-ubjson/kali-rolling 0.16.1-5 amd64 [uppgraderingsbart från: 0.16.1-4+b4]
+python3-unicrypto/kali-rolling 0.0.10-2.1 all [uppgraderingsbart från: 0.0.10-2]
+python3-uvicorn/kali-rolling 0.38.0-1 all [uppgraderingsbart från: 0.35.0-0kali1]
+python3-watchdog/kali-rolling 6.0.0-4 all [uppgraderingsbart från: 6.0.0-3]
+python3-werkzeug/kali-rolling 3.1.4-1 all [uppgraderingsbart från: 3.1.3-2]
+python3-wrapt/kali-rolling 1.17.3-3 amd64 [uppgraderingsbart från: 1.17.3-2+b1]
+python3.13-dev/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+python3.13-minimal/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+python3.13-tk/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+python3.13-venv/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+python3.13/kali-rolling 3.13.11-1+b1 amd64 [uppgraderingsbart från: 3.13.9-1]
+qt5-gtk-platformtheme/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+qtbase5-dev-tools/kali-rolling 5.15.17+dfsg-5 amd64 [uppgraderingsbart från: 5.15.17+dfsg-4]
+rebind/kali-rolling 0.3.4-1kali10 amd64 [uppgraderingsbart från: 0.3.4-1kali9]
+rfkill/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+rpm-common/kali-rolling 6.0.1-1 amd64 [uppgraderingsbart från: 6.0.0-2]
+rpm2cpio/kali-rolling 6.0.1-1 amd64 [uppgraderingsbart från: 6.0.0-2]
+rpm/kali-rolling 6.0.1-1 amd64 [uppgraderingsbart från: 6.0.0-2]
+ruby-nokogiri/kali-rolling 1.18.10+dfsg-2 amd64 [uppgraderingsbart från: 1.18.10+dfsg-1]
+samba-common-bin/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+samba-common/kali-rolling 2:4.23.4+dfsg-1 all [uppgraderingsbart från: 2:4.23.3+dfsg-1]
+samba-libs/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+samba/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+sbd/kali-rolling 1.37-1kali6 amd64 [uppgraderingsbart från: 1.37-1kali5]
+skipfish/kali-rolling 2.10b-2kali8 amd64 [uppgraderingsbart från: 2.10b-2kali7+b1]
+smbclient/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+socat/kali-rolling 1.8.1.0-2 amd64 [uppgraderingsbart från: 1.8.0.3-1]
+spike/kali-rolling 2.9-1kali11 amd64 [uppgraderingsbart från: 2.9-1kali10]
+sqv/kali-rolling 1.3.0-5 amd64 [uppgraderingsbart från: 1.3.0-3+b1]
+sslyze/kali-rolling 6.2.0-0kali3 all [uppgraderingsbart från: 6.2.0-0kali2]
+strongswan-charon/kali-rolling 6.0.4-1 amd64 [uppgraderingsbart från: 6.0.3-1]
+strongswan-libcharon/kali-rolling 6.0.4-1 amd64 [uppgraderingsbart från: 6.0.3-1]
+strongswan-starter/kali-rolling 6.0.4-1 amd64 [uppgraderingsbart från: 6.0.3-1]
+systemd-sysv/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+systemd-timesyncd/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+systemd/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+tdb-tools/kali-rolling 2:1.4.14+samba4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:1.4.14+samba4.23.3+dfsg-1+b1]
+tex-common/kali-rolling 6.20 all [uppgraderingsbart från: 6.19]
+texlive-latex-extra/kali-rolling 2025.20251127-2 all [uppgraderingsbart från: 2025.20251127-1]
+texlive-plain-generic/kali-rolling 2025.20251127-2 all [uppgraderingsbart från: 2025.20251127-1]
+tftp-hpa/kali-rolling 5.3+20251209-1 amd64 [uppgraderingsbart från: 5.3+20251116-1]
+thc-pptp-bruter/kali-rolling 0.1.4-1kali5 amd64 [uppgraderingsbart från: 0.1.4-1kali4+b1]
+tmux/kali-rolling 3.6a-2 amd64 [uppgraderingsbart från: 3.5a-3]
+tshark/kali-rolling 4.6.2-3 amd64 [uppgraderingsbart från: 4.6.0-1]
+tzdata-legacy/kali-rolling 2025c-3 all [uppgraderingsbart från: 2025b-5]
+tzdata/kali-rolling 2025c-3 all [uppgraderingsbart från: 2025b-5]
+udev/kali-rolling 259-1 amd64 [uppgraderingsbart från: 259~rc2-1]
+unrar/kali-rolling 1:7.2.3-2 amd64 [uppgraderingsbart från: 1:7.2.2-1]
+usb.ids/kali-rolling 2025.12.13-1 all [uppgraderingsbart från: 2025.09.15-1]
+util-linux-extra/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+util-linux/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+uuid-dev/kali-rolling 2.41.3-2 amd64 [uppgraderingsbart från: 2.41.2-4]
+va-driver-all/kali-rolling 2.23.0-1 amd64 [uppgraderingsbart från: 2.22.0-3]
+wafw00f/kali-rolling 2.3.2-1 all [uppgraderingsbart från: 2.3.1-1]
+winbind/kali-rolling 2:4.23.4+dfsg-1 amd64 [uppgraderingsbart från: 2:4.23.3+dfsg-1+b1]
+wireplumber/kali-rolling 0.5.12-3 amd64 [uppgraderingsbart från: 0.5.12-1]
+wireshark-common/kali-rolling 4.6.2-3 amd64 [uppgraderingsbart från: 4.6.0-1]
+wireshark/kali-rolling 4.6.2-3 amd64 [uppgraderingsbart från: 4.6.0-1]
+xbrlapi/kali-rolling 6.8-4+b2 amd64 [uppgraderingsbart från: 6.8-4+b1]
+xdg-user-dirs-gtk/kali-rolling 0.16-1 amd64 [uppgraderingsbart från: 0.14-2]
+xkb-data/kali-rolling 2.46-2 all [uppgraderingsbart från: 2.42-1]
+xz-utils/kali-rolling 5.8.2-1 amd64 [uppgraderingsbart från: 5.8.1-2]
+yelp-xsl/kali-rolling 49.0-2 all [uppgraderingsbart från: 49.0-1]
+yelp/kali-rolling 49.0-5 amd64 [uppgraderingsbart från: 49.0-4]
+zenmap/kali-rolling 7.98+dfsg-1kali1 all [uppgraderingsbart från: 7.95+dfsg-3kali1]
+zlib1g-dev/kali-rolling 1:1.3.dfsg+really1.3.1-1+b2 amd64 [uppgraderingsbart från: 1:1.3.dfsg+really1.3.1-1+b1]
+zlib1g/kali-rolling 1:1.3.dfsg+really1.3.1-1+b2 amd64 [uppgraderingsbart från: 1:1.3.dfsg+really1.3.1-1+b1]
+zsh/kali-rolling 5.9-8+b19 amd64 [uppgraderingsbart från: 5.9-8+b15]
+
+▶ RUNNING SERVICES (RISKY):
+No obvious risky services running
+
+▶ LISTENING PORTS & SECURITY:
+
+▶ WORLD-WRITABLE FILES (TOP 10):
+/home/limemec/.local/share/Trash/files/VBoxLinuxAdditions.run
+
+▶ SUID BINARIES (TOP 10):
+/opt/VBoxGuestAdditions-7.2.4/bin/VBoxDRMClient
+/usr/sbin/mount.cifs
+/usr/sbin/mount.nfs
+/usr/sbin/pppd
+/usr/bin/kismet_cap_nxp_kw41z
+/usr/bin/umount
+/usr/bin/kismet_cap_ti_cc_2540
+/usr/bin/kismet_cap_nrf_mousejack
+/usr/bin/kismet_cap_ubertooth_one
+/usr/bin/rsh-redone-rsh
+
+▶ CVE CHECK (COMMON PACKAGES):
+[*] CVE scan: openssl (installed: 3.5.4)
+[OK] No CVEs found in local database
+[*] CVE scan: openssh (installed: OpenSSH_10.2p1 Debian-3,)
+[OK] No CVEs found in local database
+[*] CVE scan: linux kernel (installed: 6.17.10+kali-amd64)
+[OK] No CVEs found in local database
+
+
+Local security scan completed
+WARNING!
+You are about to perform a network vulnerability scan
+You must have authorization to scan this network
+Type YES to continue (10s timeout): Authorization confirmed. Starting scan...
+▶ Network vulnerability scan...
+▶ Interface: eth0
+▶ Target network: 10.0.2.15/24
+▶ Discovering active hosts...
+▶ Analyzing host: 10.0.2.2
+Open ports & services
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-06 01:50 CET
+Nmap scan report for 10.0.2.2
+Host is up (0.0050s latency).
+Not shown: 996 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3389-TCP:V=7.95%I=7%D=1/6%Time=695C5C4B%P=x86_64-pc-linux-gnu%r(Ter
+SF:minalServerCookie,13,"\x03\0\0\x13\x0e\xd0\0\0\x124\0\x02/\x08\0\x02\0\
+SF:0\0");
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.00 seconds
+Vulnerability checks
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-06 01:50 CET
+Nmap scan report for 10.0.2.2
+Host is up (0.0050s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 4.98 seconds
+▶ Analyzing host: 10.0.2.3
+Open ports & services
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-06 01:50 CET
+Nmap scan report for 10.0.2.3
+Host is up (0.0011s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  Cloudflare public DNS
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.23 seconds
+Vulnerability checks
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-06 01:50 CET
+Nmap scan report for 10.0.2.3
+Host is up (0.0037s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.86 seconds
+▶ Analyzing host: 10.0.2.15
+Open ports & services
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-06 01:50 CET
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.75 seconds
+Vulnerability checks
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-06 01:50 CET
+Nmap scan report for 10.0.2.15
+Host is up (0.0000080s latency).
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.39 seconds
+Network vulnerability scan complete
+[H[2J[3J
+
+▶ WIFI discovery scan...
+
+
+No wireless interface detected
+Quitting LimeSeeker...
