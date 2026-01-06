@@ -3,6 +3,9 @@ wifi_discovery() {
     clear
     echo
     echo
+    # ------------------
+    # Rubrik för modul
+    # ------------------
     sleep 0.3
     ui_echo "${CYAN}${BOLD}WIFI discovery scan...${NC}"
     log_to_file "▶ WIFI discovery scan..."

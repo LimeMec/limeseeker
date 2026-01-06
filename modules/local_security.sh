@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# -------------
+# ------------
 # CVE scan
-# -------------
+# ------------
 check_cve() {
 
     if ! command -v searchsploit &>/dev/null; then
@@ -34,15 +34,15 @@ check_cve() {
     log_to_file "    → Manual validation required"
 }
 
-# -------------------
-# Rubrik för modul
-# -------------------
 local_security() {
 
     if declare -F ui_clear >/dev/null; then
         ui_clear
     fi
-    
+
+    #-------------------
+    # Rubrik för modul
+    # ----------------- 
     sleep 0.3
     echo
     echo
@@ -61,9 +61,9 @@ local_security() {
     echo "OS:     $(uname -o)"
     echo
 
-    # -----------------
+    # ----------------
     # Sudo användare
-    # -----------------
+    # ----------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ USERS WITH SUDO ACCESS:${NC}"
     log_to_file "▶ USERS WITH SUDO ACCESS:"
@@ -164,9 +164,9 @@ local_security() {
     fi
     echo
 
-    # ---------------------------------
+    # --------------------------------
     # Lyssnande portar och processer
-    # ---------------------------------
+    # --------------------------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ LISTENING PORTS & SECURITY:${NC}"
     log_to_file "▶ LISTENING PORTS & SECURITY:"
@@ -183,25 +183,25 @@ local_security() {
 
     echo
 
-    # ----------------------
+    # ---------------------
     # Global skrivåtkomst
-    # ----------------------
+    # ---------------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ WORLD-WRITABLE FILES (TOP 10):${NC}"
     log_to_file "▶ WORLD-WRITABLE FILES (TOP 10):"
     find / -xdev -type f -perm -0002 2>/dev/null | head -n 10
     echo
 
-    # ----------------
+    # ---------------
     # SUID binärer
-    # ----------------
+    # ---------------
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ SUID BINARIES (TOP 10):${NC}"
     log_to_file "▶ SUID BINARIES (TOP 10):"
     find / -xdev -perm -4000 -type f 2>/dev/null | head -n 10
     echo
 
-    # ------------
+    # -----------
     # CVE check
     # -----------
     sleep 0.5

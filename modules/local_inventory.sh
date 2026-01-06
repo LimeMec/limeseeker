@@ -2,9 +2,9 @@
 
 local_inventory() {
 
-    #------------------------------
+    #-------------------------------
     # Rensa terminalen, inte logg 
-    # -----------------------------
+    # ------------------------------
     if declare -F ui_clear >/dev/null; then
         ui_clear
     fi
