@@ -1,6 +1,6 @@
 main_menu() {
     while true; do
-        log_pause     #Pausa loggning
+        log_pause    # Pausa loggning
 
         ui_echo "${BOLD}${GREEN}Choose scan:${NC}"
         ui_echo "1) Local inventory scan"

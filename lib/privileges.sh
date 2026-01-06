@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-#-------------------
+#------------------
 # Efterfråga sudo
-#-------------------
+#------------------
 require_sudo() {
     if [[ $EUID -ne 0 ]]; then
         # Gul text direkt (funkar alltid)
