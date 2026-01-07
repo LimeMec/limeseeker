@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# --------------------------------------------------------------------------------
-# Modulkontrakt:
+# ---------------
+# Modulkontrakt
+# ---------------
 #
 # Module: local_inventory
 # Description:
@@ -45,7 +46,6 @@ local_inventory() {
     # Rubrik för modul
     # -------------------
     sleep 0.3
-    echo
     echo
     ui_echo "${CYAN}${BOLD}Scanning local inventory...${NC}"
     log_to_file "▶ Scanning local inventory..."

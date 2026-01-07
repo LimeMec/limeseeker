@@ -1,101 +1,84 @@
 #!/usr/bin/env bash
 
-# Loggning för LimeSeeker
-# Färger i terminal men inga färger i logg
+LOGGING_PAUSED=0
 
-
-# -------------------------
-# Loggstämpel
-# -------------------------
-_log_ts() {
-    date "+%Y-%m-%d %H:%M:%S"
-}
-
-# -------------------------
-# Rensar färger innan logg
-# -------------------------
+# -------------------------------------------------
+# Intern: ta bort ANSI-färgkoder
+# -------------------------------------------------
 _strip_colors() {
-    sed 's/\x1B\[[0-9;]*[mK]//g'
+    sed -r 's/\x1B\[[0-9;]*[mK]//g'
 }
 
-# ---------------------------
-# Text utan färger till logg
-# ---------------------------
+# -------------------------------------------------
+# Loggrubrik – EN timestamp, räcker
+# -------------------------------------------------
+log_header() {
+    {
+        echo "==========================================================="
+        echo "              LimeSeeker Scan Report"
+        echo "              Started: $(date)"
+        echo "==========================================================="
+        echo
+    } >> "$REPORT_FILE"
+}
+
+# -------------------------------------------------
+# Loggfooter
+# -------------------------------------------------
+log_footer() {
+    {
+        echo
+        echo "==========================================================="
+        echo "              Scan finished: $(date)"
+        echo "==========================================================="
+    } >> "$REPORT_FILE"
+}
+
+# -------------------------------------------------
+# Eventlogg (MENY, EXIT, FEL) – med timestamp
+# -------------------------------------------------
+log_event() {
+    [[ $LOGGING_PAUSED -eq 1 ]] && return
+    printf "[%s] %s\n" "$(date '+%H:%M:%S')" "$*" \
+        | _strip_colors >> "$REPORT_FILE"
+}
+
+# -------------------------------------------------
+# DIN BEFINTLIGA LOGGNING (UTAN timestamp)
+# -------------------------------------------------
 log_to_file() {
-    echo "$*" >> "$REPORT_FILE"
+    [[ $LOGGING_PAUSED -eq 1 ]] && return
+    printf "%s\n" "$*" | _strip_colors >> "$REPORT_FILE"
 }
 
-# ------------------------------
-# Text med färg till terminalen
-# ------------------------------
-log_info() {
-    echo -e "[$(_log_ts)] [INFO]  $*"
-    log_to_file "[$(_log_ts)] [INFO]  $*"
-}
-
-log_ok() {
-    echo -e "[$(_log_ts)] [ OK ]  ${GREEN}$*${NC}"
-    log_to_file "[$(_log_ts)] [ OK ]  $*"
-}
-
-log_warn() {
-    echo -e "[$(_log_ts)] [WARN]  ${YELLOW}$*${NC}"
-    log_to_file "[$(_log_ts)] [WARN]  $*"
-}
-
-log_error() {
-    echo -e "[$(_log_ts)] [ERROR] ${RED}$*${NC}" >&2
-    log_to_file "[$(_log_ts)] [ERROR] $*"
-}
-
-log_debug() {
-    [[ "$DEBUG" == "1" ]] || return 0
-    echo -e "[$(_log_ts)] [DEBUG] $*"
-    log_to_file "[$(_log_ts)] [DEBUG] $*"
-}
-
-# ------------------------
-# Rubriker
-# ------------------------
+# -------------------------------------------------
+# Sektion / modulrubrik
+# -------------------------------------------------
 log_section() {
-    echo
-    echo "--------------------------------------------------"
-    echo "[$(_log_ts)] $*"
-    echo "--------------------------------------------------"
-    log_to_file "--------------------------------------------------"
-    log_to_file "$*"
-    log_to_file "--------------------------------------------------"
+    [[ $LOGGING_PAUSED -eq 1 ]] && return
+    {
+        echo
+        echo "-----------------------------------------------------------"
+        echo "$*" | _strip_colors
+        echo "-----------------------------------------------------------"
+    } >> "$REPORT_FILE"
 }
 
-# -------------------------
-# Automatisk loggning
-# -------------------------
-run_cmd() {
-    local desc="$1"
-    shift
-
-    log_info "$desc"
-    log_debug "Command: $*"
-
-    if "$@"; then
-        log_ok "$desc completed"
-    else
-        log_error "$desc failed"
-        return 1
-    fi
-}
-# ---------------------------
-# Pausa / återuppta loggning
-# ---------------------------
-
+# -------------------------------------------------
+# Pausa / återuppta loggning (används av menu.sh)
+# -------------------------------------------------
 log_pause() {
-    exec 3>&1 4>&2
-    exec >/dev/tty 2>/dev/tty
+    LOGGING_PAUSED=1
 }
 
 log_resume() {
-    exec >&3 2>&4
-    exec 3>&- 4>&-
+    LOGGING_PAUSED=0
 }
 
+# -------------------------------------------------
+# Summary
+# -------------------------------------------------
+log_summary() {
+    printf "%-30s : %s\n" "$1" "$2" | _strip_colors >> "$REPORT_FILE"
+}
 

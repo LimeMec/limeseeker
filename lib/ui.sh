@@ -33,7 +33,7 @@ show_intro() {
     ui_echo "======================================================================="
     ui_echo "${RED}IMPORTANT:${NC} Only scan networks you own or have permission to test!"
     ui_echo
-    ui_echo "${GREEN}${BOLD}Date:${NC} $(date)"
+    #ui_echo "${GREEN}${BOLD}Date:${NC} $(date)"
     ui_echo "${GREEN}${BOLD}Logged in user:${NC} ${SUDO_USER:-$USER}"
 
     if [ "$(id -u)" -eq 0 ]; then
@@ -41,6 +41,8 @@ show_intro() {
     else
         ui_echo "${GREEN}${BOLD}Root status:${NC} Not running as root"
     fi
+    
+    ui_echo "${GREEN}${BOLD}Date:${NC} $(date)"
 
     ui_echo
 }

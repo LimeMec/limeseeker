@@ -1,68 +1,101 @@
+#!/usr/bin/env bash
+
 main_menu() {
     local choice
     local status
+    local module
 
-    # ------------------------------
-    # Initiera modulstatus
-    # ------------------------------
-    declare -A MODULE_STATUS
-    MODULE_STATUS["local_inventory"]="– not run"
-    MODULE_STATUS["local_security"]="– not run"
-    MODULE_STATUS["network_vulnerability"]="– not run"
-    MODULE_STATUS["wifi_discovery"]="– not run"
-    
-    #--------------
-    # Visa intro
     # -------------
+    # Modulstatus
+    # -------------
+    declare -A MODULE_STATUS=(
+        [local_inventory]="– not run"
+        [local_security]="– not run"
+        [network_vulnerability]="– not run"
+        [wifi_discovery]="– not run"
+    )
+
+    # --------------------------------
+    # Visa sammanfattning, UI + logg
+    # --------------------------------
+    show_summary_report() {
+        ui_echo
+        ui_echo "${CYAN}${BOLD}LimeSeeker Summary Report${NC}"
+        ui_echo "${CYAN}$(date)${NC}"
+        ui_echo
+
+        for module in local_inventory local_security network_vulnerability wifi_discovery; do
+            ui_echo "$(printf "%-30s : %s" "$module" "${MODULE_STATUS[$module]}")"
+            log_summary "$module" "${MODULE_STATUS[$module]}"
+        done
+
+        ui_echo
+    }
+
+    # -----------------
+    # Kör alla moduler
+    # -----------------
+    run_all_scans() {
+        local modules=(local_inventory local_security network_vulnerability wifi_discovery)
+
+        for module in "${modules[@]}"; do
+            ui_echo
+            ui_echo "${CYAN}${BOLD}▶ Running $module...${NC}"
+            log_section "Running module: $module"
+
+            $module
+            status=$?
+
+            MODULE_STATUS["$module"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
+
+            if [[ $status -eq 0 ]]; then
+                ui_echo "${GREEN}✔ $module completed successfully${NC}"
+                log_event "[OK] $module completed successfully"
+            else
+                ui_echo "${RED}✖ $module failed or aborted${NC}"
+                log_event "[FAIL] $module failed or aborted"
+            fi
+
+            sleep 1
+        done
+
+        show_summary_report
+        pause
+    }
+
+    # -------
+    # Start
+    # -------
     show_intro
 
     while true; do
         log_pause
-
-        # ----------------------------
-        # Visa modulstatus i menyn
-        # ----------------------------
-        ui_echo "${BOLD}${GREEN}Choose scan:${NC}"
-        ui_echo "1) Local inventory scan        [${MODULE_STATUS["local_inventory"]}]"
-        ui_echo "2) Local security scan         [${MODULE_STATUS["local_security"]}]"
-        ui_echo "3) Network vulnerability scan  [${MODULE_STATUS["network_vulnerability"]}]"
-        ui_echo "4) Wireless scan               [${MODULE_STATUS["wifi_discovery"]}]"
-        ui_echo "5) Quit"
+        
+	ui_echo
+        ui_echo "${BOLD}${CYAN}Choose scan:${NC}"
+        ui_echo "1) Local inventory scan        [${MODULE_STATUS[local_inventory]}]"
+        ui_echo "2) Local security scan         [${MODULE_STATUS[local_security]}]"
+        ui_echo "3) Network vulnerability scan  [${MODULE_STATUS[network_vulnerability]}]"
+        ui_echo "4) Wireless scan               [${MODULE_STATUS[wifi_discovery]}]"
+        ui_echo "5) Run all scans"
+        ui_echo "6) Quit"
         ui_echo
 
-        ui_read -rp "Select option [1-5]: " choice
+        ui_read -rp "Select option [1-6]: " choice
         ui_echo
 
         log_resume
 
-        # ---------------------------------
-        # Kör vald modul och spara status
-        # ---------------------------------
         case "$choice" in
-            1)
-                local_inventory
-                status=$?
-                MODULE_STATUS["local_inventory"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
-                ;;
-            2)
-                local_security
-                status=$?
-                MODULE_STATUS["local_security"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
-                ;;
-            3)
-                network_vulnerability
-                status=$?
-                MODULE_STATUS["network_vulnerability"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
-                ;;
-            4)
-                wifi_discovery
-                status=$?
-                MODULE_STATUS["wifi_discovery"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
-                ;;
-            5)
+            1) module=local_inventory ;;
+            2) module=local_security ;;
+            3) module=network_vulnerability ;;
+            4) module=wifi_discovery ;;
+            5) run_all_scans ;;
+            6)
                 ui_echo "${YELLOW}Quitting LimeSeeker...${NC}"
-                log_to_file "Quitting LimeSeeker..."
-                sleep 1
+                log_event "User exited LimeSeeker"
+                log_footer
                 return 0
                 ;;
             *)
@@ -70,31 +103,28 @@ main_menu() {
                 continue
                 ;;
         esac
+	# ----------------------------------------
+        # Kör vald modul, men inte run_all_scans
+	# ----------------------------------------
+        if [[ "$choice" =~ ^[1-4]$ ]]; then
+            log_section "Running module: $module"
+            $module
+            status=$?
 
-        # ------------------------------
-        # Visa resultat i loggen
-        # ------------------------------
-        if [[ $status -eq 0 ]]; then
-            ui_echo "${GREEN}✔ Module completed successfully${NC}"
-            log_to_file "[OK] Module completed successfully"
-        else
-            ui_echo "${YELLOW}✖ Module aborted or failed${NC}"
-            log_to_file "[FAIL] Module aborted or failed"
+            MODULE_STATUS["$module"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
+
+            if [[ $status -eq 0 ]]; then
+                log_event "[OK] $module completed"
+            else
+                log_event "[FAIL] $module failed"
+            fi
+
+            show_summary_report
+            pause
         fi
 
-        # ------------------------------
-        # Pausa mellan valen
-        # ------------------------------
         log_pause
-        pause
-        log_resume
-
-        # -------------------------------
-        # Rensa och visa intro + meny
-        # -------------------------------
-        if declare -F ui_clear >/dev/null; then
-            ui_clear
-        fi
+        declare -F ui_clear >/dev/null && ui_clear
         show_intro
     done
 }

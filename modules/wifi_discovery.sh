@@ -38,7 +38,6 @@ wifi_discovery() {
     
     clear
     echo
-    echo
     # ------------------
     # Rubrik för modul
     # ------------------

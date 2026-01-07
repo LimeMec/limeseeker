@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# -----------------------------------------------------------------------------------
-# Modulkontrakt:
+# ---------------
+# Modulkontrakt
+# ---------------
 #
 # Module: local_security
 # Description:
@@ -77,7 +78,6 @@ local_security() {
     # Rubrik för modul
     # ----------------- 
     sleep 0.3
-    echo
     echo
     ui_echo "${CYAN}${BOLD}Scanning local security...${NC}"
     log_to_file "▶ Scanning local security..."
