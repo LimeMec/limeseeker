@@ -173,6 +173,7 @@ local_security() {
         dnf updateinfo list security || echo "No system updates pending"
     else
         echo "Package manager not supported"
+	return 1
     fi
     echo
 
@@ -253,5 +254,7 @@ local_security() {
     echo
     ui_echo "${GREEN}${BOLD}✔ Local security scan completed${NC}"
     log_to_file "Local security scan completed"
+
+    return 0
 }
 

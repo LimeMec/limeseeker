@@ -154,5 +154,7 @@ local_inventory() {
     sleep 0.5
     ui_echo "${GREEN}${BOLD}✔ Local inventory scan completed${NC}"
     log_to_file "▶ Local inventory scan completed"
+
+    return 0
 }
 

@@ -52,7 +52,7 @@ wifi_discovery() {
     if ! command -v iw &>/dev/null; then
         ui_echo "${RED}iw not installed${NC}"
 	log_to_file "iw not installed"
-	return
+	return 1
     fi
 
     WLAN_IFACES=$(iw dev 2>/dev/null | awk '$1=="Interface"{print $2}')
@@ -61,7 +61,7 @@ wifi_discovery() {
     if [ -z "$WLAN_IFACES" ]; then
         ui_echo "${YELLOW}No wireless interface detected${NC}"
 	log_to_file "No wireless interface detected"
-	return
+	return 1
     fi
     
     for IFACE in $WLAN_IFACES; do
@@ -80,4 +80,5 @@ wifi_discovery() {
 
      echo
      echo
+     return 0
 }
