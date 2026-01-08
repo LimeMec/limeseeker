@@ -1,37 +1,17 @@
 #!/usr/bin/env bash
 
-# ---------------
-# Modulkontrakt
-# ---------------
-#
-# Module: local_inventory
-# Description:
-#   Collects local system inventory information (hardware, OS, network).
-#
-# Category:
-#   Local / Inventory
-#
-# Requires (commands):
-#   uptime, uname, dmidecode, lspci, lscpu, free, df, ip
-#
-# Requires (privileges):
-#   root (for dmidecode and full hardware access)
-#
-# Input:
-#   none
-#
-# Output:
-#   Human-readable inventory to stdout
-#   Logged output via log_to_file
-#
-# Return codes:
-#   0 = scan completed successfully
-#   1 = scan aborted or partial failure
-#
-# Side effects:
-#   Read-only system inspection
-#   Does NOT modify system configuration or state
-# -------------------------------------------------------------------------------
+# ----------------------------
+# Modulkontrakt för info-meny
+# ----------------------------
+local_inventory_DESC="Collects local system inventory information (OS & hardware)"
+local_inventory_CATEGORY="Local / Inventory"
+local_inventory_COMMANDS="uptime, uname, dmidecode, lspci, lscpu, free, df, ip"
+local_inventory_PRIVILEGES="root (for dmidecode and full hardware access)"
+local_inventory_INPUT="none"
+local_inventory_OUTPUT="System information to stdout, logged output via log_to_file"
+local_inventory_RETURNCODES="0 = success, 1 = failure"
+local_inventory_SIDEFFECTS="Read-only system inspection"
+
 
 local_inventory() {
 

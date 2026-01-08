@@ -1,38 +1,17 @@
 #!/usr/bin/env bash
 
-# ---------------
-# Modulkontrakt
-# ---------------
-#
-# Module: local_security
-# Description:
-#   Performs a local security posture assessment and basic vulnerability checks.
-#
-# Category:
-#   Local / Security
-#
-# Requires (commands):
-#   uname, getent, sshd, apt or dnf, systemctl, ss, find, openssl, searchsploit
-#
-# Requires (privileges):
-#   root (service inspection, package checks, file permission scans)
-#
-# Input:
-#   none
-#
-# Output:
-#   Human-readable security findings to stdout
-#   Logged output via log_to_file
-#
-# Return codes:
-#   0 = scan completed successfully
-#   1 = scan aborted or incomplete
-#
-# Side effects:
-#   Read-only inspection of system state
-#   Generates local package manager and CVE database queries
-# ------------------------------------------------------------------------------------
 
+# ----------------------------
+# Modulkontrakt för info-meny
+# ----------------------------
+local_security_DESC="Checks OS, users, root SSH, system updates, CVEs"
+local_security_CATEGORY="Local / Security"
+local_security_COMMANDS="uname, getent, sshd, apt or dnf, systemctl, ss, find, openssl, searchsploit"
+local_security_PRIVILEGES="root (service inspection, package checks, file permission scans)"
+local_security_INPUT="none"
+local_security_OUTPUT="Security findings to stdout, logged output via log_to_file"
+local_security_RETURNCODES="0 = success, 1 = failure"
+local_security_SIDEFFECTS="Read-only system inspection, generates local package manager and CVE database queries"
 
 # ------------
 # CVE scan
