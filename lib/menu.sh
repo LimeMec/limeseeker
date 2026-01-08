@@ -1,6 +1,31 @@
 #!/usr/bin/env bash
 
 main_menu() {
+    
+    # ---------------
+    # Hantera Ctrl+C 
+    # ---------------
+    handle_sigint() {
+        ui_echo
+        ui_echo "${YELLOW}Exiting LimeSeeker...${NC}"
+        log_event "User aborted LimeSeeker (Ctrl+C)"
+        exit 0
+    }
+    
+    trap handle_sigint SIGINT
+
+    # ---------------
+    # Hantera Ctrl+Z
+    # ---------------
+    handle_sigtstp() {
+	    ui_echo
+            ui_echo "${YELLOW}Ctrl+Z detected! Exiting LimeSeeker for security...${NC}"
+            log_event "User attempted to pause script (Ctrl+Z)"
+            exit 1
+    }
+    trap handle_sigtstp SIGTSTP
+ 
+   	
     local choice
     local status
     local module
@@ -190,10 +215,9 @@ main_menu() {
         ui_echo "7) Quit"
         ui_echo
 
-        ui_read -rp "Select option [1-7]: " choice
+        ui_read -rp "Select option [1-7]: " choice || handle_sigint
         ui_echo
 
-        # Tom ENTER
         if [[ -z "$choice" ]]; then
             ui_echo "${RED}No option selected${NC}"
 	    sleep 1	    

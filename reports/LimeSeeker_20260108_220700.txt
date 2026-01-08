@@ -1,0 +1,68 @@
+===========================================================
+      LimeSeeker Report: tor  8 jan 2026 22:07:00 CET
+===========================================================
+Select option [1-7]: Select option [1-7]: Select option [1-7]: Select option [1-7]: 
+-----------------------------------------------------------
+Running module: local_inventory
+-----------------------------------------------------------
+
+▶ Scanning local inventory...
+
+
+▶ SYSTEM UPTIME:
+up 2 days, 22 hours, 44 minutes
+
+▶ BIOS / FIRMWARE:
+
+▶ OPERATING SYSTEM:
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+▶ GPU:
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+▶ CPU:
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.815
+Max MHz: 1696.815
+
+▶ MEMORY:
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,9Gi        10Gi        35Mi       3,4Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+▶ DISK SPACE:
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    21G    24G  47% /
+KaliShare         172G    97G    75G  57% /media/sf_KaliShare
+
+▶ NETWORK:
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+
+▶ Local inventory scan completed
+[22:07:49] [OK] local_inventory completed
+local_inventory                : ✔ done
+local_security                 : – not run
+network_vulnerability          : – not run
+wifi_discovery                 : – not run
+Press Enter to continue...Select option [1-7]: Select option [1-7]: Select option [1-7]: Select option [1-7]: Select option [1-7]: [22:37:18] User exited LimeSeeker
+
+===========================================================
+              Scan finished: tor  8 jan 2026 22:37:18 CET
+===========================================================

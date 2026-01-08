@@ -1,12 +1,71 @@
 #!/usr/bin/env bash
 
+# --------------------
+# Script metadata
+# --------------------
+SCRIPT_NAME="LimeSeeker"
+SCRIPT_VERSION="1.3.2"
+SCRIPT_AUTHOR="LimeMec / Markus Carlsson"
+
+show_help() {
+    clear
+    echo
+    echo "  LimeSeeker | Linux & Network Vulnerability Scanner"
+    echo "  --------------------------------------------------"
+    echo
+    echo "  LimeSeeker is an interactive system and network"
+    echo "  scanning tool designed for local security auditing."
+    echo
+    echo "  Requirements:"
+    echo "    • Must be run with sudo privileges"
+    echo "    • Linux system with standard utilities installed"
+    echo
+    echo
+    echo "  Options:"
+    echo "    -h, --help       Show this help message and exit"
+    echo "    -v, --version    Show script version and author"
+    echo
+    echo "  Examples:"
+    echo "    ./limeseeker.sh"
+    echo "    ./limeseeker.sh -h"
+    echo "    ./limeseeker.sh --version"
+    echo
+    exit 0
+}
+
+show_version() {
+    clear
+    echo
+    echo "  LimeSeeker | Linux & Network Vulnerability Scanner"
+    echo "  --------------------------------------------------"
+    echo
+    echo "  Version : $SCRIPT_VERSION"
+    echo "  Author  : $SCRIPT_AUTHOR"
+    echo
+    exit 0
+}
+
+case "$1" in
+    -h|--help)
+        show_help
+        ;;
+    -v|--version)
+        show_version
+        ;;
+esac
+
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 #------------------
 # Säkerställ sudo
 # -----------------
+source lib/colors.sh
+source lib/privileges.sh
 source "$BASE_DIR/lib/privileges.sh"
 require_sudo "$@"
+trap cleanup EXIT
+show_intro
+main_menu
 
 #------------------------------------------
 # Skapa katalog och fil för loggrapporten
