@@ -9,7 +9,9 @@ if [[ -t 1 || -t 2 || -e /dev/tty ]]; then
     MAGENTA="\e[35m"
     CYAN="\e[36m"
     BOLD="\e[1m"
+    DIM="\e[2m"
     NC="\e[0m"
+
 else
     RED=""
     GREEN=""

@@ -5,7 +5,7 @@ main_menu() {
     local status
     local module
 
-    # ------------ 
+    # ------------
     # Modulstatus
     # ------------
     declare -A MODULE_STATUS=(
@@ -19,14 +19,29 @@ main_menu() {
     # Status med färg
     # ----------------
     status_color() {
-        local status="$1"
-        case "$status" in
-            "– not run") echo -e "${YELLOW}${status}${NC}" ;;
-            "✔ done")    echo -e "${GREEN}${status}${NC}"  ;;
-            "✖ failed")  echo -e "${RED}${status}${NC}"    ;;
-            *)           echo "$status" ;;
-        esac
-    }
+    local status="$1"
+
+    case "$status" in
+        "– not run")
+            # Dimgrå allt
+            echo -e "${DIM}[ ] not run${NC}"
+            ;;
+
+        "✔ done")
+            # Vita klamrar, grön symbol + text
+            echo -e "[${GREEN}✔${NC}] ${GREEN}done${NC}"
+            ;;
+
+        "✖ failed")
+            # Vita klamrar, röd symbol + text
+            echo -e "[${RED}✖${NC}] ${RED}failed${NC}"
+            ;;
+
+        *)
+            echo "$status"
+            ;;
+    esac
+}
 
     # -------------------------------
     # Visa sammanfattning, UI + logg
@@ -92,7 +107,6 @@ main_menu() {
 
         ui_clear
         ui_echo
-        ui_echo
         ui_echo "${CYAN}${BOLD}        LimeSeeker | Module ${module//_/ }${NC}"
         ui_echo "${CYAN}-----------------------------------------------${NC}"
         ui_echo
@@ -121,7 +135,6 @@ main_menu() {
         while true; do
             ui_clear
             ui_echo
-            ui_echo
             ui_echo "${BOLD}${CYAN}        LimeSeeker | Module information${NC}"
             ui_echo "${BOLD}${CYAN}-----------------------------------------------${NC}"
             ui_echo
@@ -135,16 +148,23 @@ main_menu() {
             ui_read -rp "Select module [1-5]: " choice
             ui_echo
 
+            if [[ -z "$choice" ]]; then
+                ui_echo "${RED}No option selected${NC}"
+                sleep 1
+                continue
+            fi
+
             case "$choice" in
                 1) module="local_inventory" ;;
                 2) module="local_security" ;;
                 3) module="network_vulnerability" ;;
                 4) module="wifi_discovery" ;;
                 5) return 0 ;;
-                *) ui_echo "${RED}Invalid choice${NC}"
-                   sleep 1
-                   continue
-                   ;;
+                *)
+                    ui_echo "${RED}Invalid choice${NC}"
+                    sleep 1
+                    continue
+                    ;;
             esac
 
             show_module_info "$module"
@@ -161,10 +181,10 @@ main_menu() {
 
         ui_echo
         ui_echo "${BOLD}${CYAN}Choose module scan:${NC}"
-        ui_echo "1) Local inventory        [$(status_color "${MODULE_STATUS[local_inventory]}")]"
-        ui_echo "2) Local security         [$(status_color "${MODULE_STATUS[local_security]}")]"
-        ui_echo "3) Network vulnerability  [$(status_color "${MODULE_STATUS[network_vulnerability]}")]"
-        ui_echo "4) WiFi discovery         [$(status_color "${MODULE_STATUS[wifi_discovery]}")]"
+        ui_echo "1) Local inventory         $(status_color "${MODULE_STATUS[local_inventory]}")"
+        ui_echo "2) Local security          $(status_color "${MODULE_STATUS[local_security]}")"
+        ui_echo "3) Network vulnerability   $(status_color "${MODULE_STATUS[network_vulnerability]}")"
+        ui_echo "4) WiFi discovery          $(status_color "${MODULE_STATUS[wifi_discovery]}")"
         ui_echo "5) Run all modules"
         ui_echo "6) Info about modules"
         ui_echo "7) Quit"
@@ -172,6 +192,15 @@ main_menu() {
 
         ui_read -rp "Select option [1-7]: " choice
         ui_echo
+
+        # Tom ENTER
+        if [[ -z "$choice" ]]; then
+            ui_echo "${RED}No option selected${NC}"
+	    sleep 1	    
+            ui_clear
+            show_intro
+            continue
+        fi
 
         log_resume
 
@@ -188,9 +217,13 @@ main_menu() {
                 log_footer
                 return 0
                 ;;
-            *) ui_echo "${RED}Invalid choice${NC}"
-               continue
-               ;;
+            *)
+                ui_echo "${RED}Invalid choice${NC}"
+                sleep 1
+                ui_clear
+                show_intro
+                continue
+                ;;
         esac
 
         # ----------------
@@ -214,7 +247,7 @@ main_menu() {
         fi
 
         log_pause
-        declare -F ui_clear >/dev/null && ui_clear
+        ui_clear
         show_intro
     done
 }
