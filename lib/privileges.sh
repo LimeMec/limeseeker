@@ -6,13 +6,24 @@
 
 require_sudo() {
 
+    #-------------------------------
+    # Rensa terminalen, inte logg 
+    # ------------------------------
+    if declare -F ui_clear >/dev/null; then
+        ui_clear
+    fi
+
     clear
     echo
-    echo -e "${CYAN}${BOLD}===========================================================${NC}"
-    echo -e "${CYAN}${BOLD}      LimeSeeker | Linux & Network Vulnerability Scanner   ${NC}"
-    echo -e "${CYAN}${BOLD}===========================================================${NC}"
+    ui_echo "${CYAN}${BOLD}===========================================================${NC}"
+    ui_echo "${CYAN}${BOLD}      LimeSeeker | Linux & Network Vulnerability Scanner   ${NC}"
+    ui_echo "${CYAN}${BOLD}===========================================================${NC}"
+    log_to_file "==========================================================="
+    log_to_file "      LimeSeeker | Linux & Network Vulnerability Scanner"
+    log_to_file "==========================================================="
     echo
-    echo -e "${YELLOW}${BOLD}[!] Elevated privileges required${NC}"
+    ui_echo "${YELLOW}${BOLD}[!] Elevated privileges required${NC}"
+    log_to_file "[!] Elevated privileges required"
     echo
     echo "LimeSeeker performs local system inspection and"
     echo "network-related security scans that require sudo access."
@@ -27,17 +38,20 @@ require_sudo() {
     
     #---------------------------
     # Tvinga ange sudo-lösenord
-    # --------------------------
+    # -------------------------
     if sudo -v; then
         echo
-        echo -e "${GREEN}${BOLD}✔ Sudo authentication successful${NC}"
+        ui_echo "${GREEN}${BOLD}✔ Sudo authentication successful${NC}"
+	log_to_file "✔ Sudo authentication successful"
         sleep 1
         clear
         return 0
     else
         echo
-        echo -e "${RED}${BOLD}✖ Sudo authentication failed${NC}"
-        echo -e "${RED}Exiting LimeSeeker.${NC}"
+        ui_echo "${RED}${BOLD}✖ Sudo authentication failed${NC}"
+	log_to_file "✖ Sudo authentication failed"
+        ui_echo "${RED}Exiting LimeSeeker.${NC}"
+	log_to_file "Exiting Limeseeker."
         exit 1
     fi
 }

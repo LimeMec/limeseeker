@@ -1,29 +1,46 @@
 #!/usr/bin/env bash
 
 main_menu() {
+    
+    # ---------------
+    #
+    local modules_to_run=()
+	
 
     # ---------------
     # Hantera Ctrl+C
     # ---------------
     handle_sigint() {
-        ui_echo
-        ui_echo "${YELLOW}Exiting LimeSeeker...${NC}"
-        log_event "User aborted LimeSeeker (Ctrl+C)"
-        sudo -k
-        exit 0
-    }
+    echo -e "\n${YELLOW}Ctrl+C detected. Exiting LimeSeeker...${NC}" > /dev/tty
+    echo -e "${YELLOW}Cleraring sudo privileges...${NC}" > /dev/tty
+    log_event "User aborted LimeSeeker (Ctrl+C)"
+    sudo -k
+    exit 0
+}
     trap handle_sigint SIGINT
-
-    # ---------------
-    # Hantera Ctrl+Z
+    
+    # ----------------
+    # Hanterar Ctrl+D
+    # ----------------
+    handle_eof() {
+    echo -e "\n${YELLOW}Ctrl+D detected. Exiting LimeSeeker...${NC}" > /dev/tty
+    echo -e "${YELLOW}Clearing sudo privileges...${NC}"
+    log_event "User exited LimeSeeker via Ctrl+D (EOF)"
+    sudo -k
+    exit 0
+}
+    
+    # ----------------
+    # Hanterar ctrl+Z
     # ---------------
     handle_sigtstp() {
-        ui_echo
-        ui_echo "${RED}Ctrl+Z is disabled for security reasons. Exiting.${NC}"
-        log_event "User attempted Ctrl+Z (SIGTSTP)"
-        sudo -k
-        exit 1
-    }
+    echo -e "\n${YELLOW}Ctrl+Z detected. Exiting for security...${NC}" > /dev/tty
+    echo -e "${YELLOW}Clearing sudo privileges${NC}" > /dev/tty
+    log_event "User attempted to suspend script"
+    sudo -k
+    exit 1
+}
+
     trap handle_sigtstp SIGTSTP
 
     local choice status module
@@ -161,50 +178,73 @@ main_menu() {
     show_intro
 
     while true; do
-        log_pause
+        modules_to_run=()
+	ui_clear
+	show_intro
+	log_pause
         ui_echo
         ui_echo "${BOLD}${CYAN}Choose module scan:${NC}"
         ui_echo "1) Local inventory         $(status_color "${MODULE_STATUS[local_inventory]}")"
         ui_echo "2) Local security          $(status_color "${MODULE_STATUS[local_security]}")"
         ui_echo "3) Network vulnerability   $(status_color "${MODULE_STATUS[network_vulnerability]}")"
         ui_echo "4) WiFi discovery          $(status_color "${MODULE_STATUS[wifi_discovery]}")"
-        ui_echo "5) Run all modules"
+        ui_echo "5) Scanning all modules"
         ui_echo
+	ui_echo
         ui_echo "i) Module information"
         ui_echo "c) Clear module status"
         ui_echo "q) Quit"
         ui_echo
-
-        ui_read -rp "Select option: " choice || handle_sigint
-        log_resume
+	ui_echo
+        
+	if ! ui_read -rp "Select option [1-5]: " choice; then 
+		handle_eof
+        fi 
 
         case "$choice" in
-            1) module=local_inventory ;;
-            2) module=local_security ;;
-            3) module=network_vulnerability ;;
-            4) module=wifi_discovery ;;
-            5) run_all_scans ;;
-            i|I) info_menu ;;
-            c|C) reset_module_status ;;
-            q|Q)
-                ui_echo "${YELLOW}Quitting LimeSeeker...${NC}"
-                log_event "User exited LimeSeeker"
-                sudo -k
-                return 0
-                ;;
-            *) ui_echo "${RED}Invalid choice${NC}"; sleep 1 ;;
+		1) modules_to_run=(local_inventory) ;;
+                2) modules_to_run=(local_security) ;;
+                3) modules_to_run=(network_vulnerability) ;;
+                4) modules_to_run=(wifi_discovery) ;;
+                5) modules_to_run=(local_inventory local_security network_vulnerability wifi_discovery) ;;
+     
+   	        i|I) 
+			 info_menu 
+			 continue
+			 ;;
+                c|C) 
+			 reset_module_status 
+			 continue
+			 ;;
+                q|Q)
+			 ui_echo "${YELLOW}Exiting LimeSeeker...${NC}"
+		         ui_echo "${YELLOW}Clearing sudo privileges...${NC}"
+                         log_event "User exited LimeSeeker"
+                         sudo -k
+                         return 0
+                         ;;
+                *) ui_echo "${RED}Invalid choice${NC}"; sleep 1 ;;
         esac
 
-        if [[ "$choice" =~ ^[1-4]$ ]]; then
-            log_section "Running module: $module"
-            $module
-            status=$?
-            MODULE_STATUS["$module"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
-            pause
-        fi
+         for module in "${modules_to_run[@]}"; do
+		 log_section "Running module: $module"
+		 $module
+                 status=$?
 
-        ui_clear
-        show_intro
-    done
-}
+         if [[ $status -eq 0 ]]; then
+                 MODULE_STATUS["$module"]="✔ done"
+                 ui_echo
+                 ui_echo "[${GREEN}✔${NC}] ${GREEN}${module//_/ } completed successfully${NC}"
+                 log_event "[OK] $module completed successfully"
+         else
+                  MODULE_STATUS["$module"]="✖ failed"
+                  ui_echo
+                  ui_echo "[${RED}✖${NC}] ${RED}${module//_/ } failed or was aborted${NC}"
+                  log_event "[FAIL] $module failed or aborted"
+         fi
+        done
 
+        ui_echo
+        pause
+done
+}      

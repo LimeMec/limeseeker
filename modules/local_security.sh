@@ -228,11 +228,6 @@ local_security() {
     check_cve "openssl" "$OPENSSL"
     check_cve "openssh" "$SSHD"
     check_cve "linux kernel" "$KERNEL"
-    
-    echo
-    echo
-    ui_echo "${GREEN}${BOLD}✔ Local security scan completed${NC}"
-    log_to_file "Local security scan completed"
 
     return 0
 }

@@ -129,12 +129,7 @@ local_inventory() {
     else
         echo "No active network interface found"
     fi
-
-    echo
-    sleep 0.5
-    ui_echo "${GREEN}${BOLD}✔ Local inventory scan completed${NC}"
-    log_to_file "▶ Local inventory scan completed"
-
+    
     return 0
 }
 

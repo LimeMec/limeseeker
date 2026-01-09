@@ -47,7 +47,7 @@ show_help() {
         SAFETY="${module}_SAFETY"
 
         echo -e "  ${BOLD}${module}${NC}"
-        echo "    Description : ${!DESC}"
+	echo "    Description : ${!DESC}"
         echo "    Category    : ${!CATEGORY}"
 
         if [[ -n "${!SAFETY}" ]]; then
