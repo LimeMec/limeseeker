@@ -31,7 +31,6 @@ show_intro() {
     ui_echo "=================================================================="
     ui_echo "        LimeSeeker | Linux & Network Vulnerability Scanner"
     ui_echo "=================================================================="
-    ui_echo "${RED}IMPORTANT:${NC} Only scan networks you own or have permission to test!"
     ui_echo
     #ui_echo "${GREEN}${BOLD}Date:${NC} $(date)"
     ui_echo "${GREEN}${BOLD}Logged in user:${NC} ${SUDO_USER:-$USER}"

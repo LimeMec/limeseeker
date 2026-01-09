@@ -1,0 +1,7 @@
+===========================================================
+      LimeSeeker Report: fre  9 jan 2026 12:37:10 CET
+===========================================================
+./limeseeker.sh: rad 145: require_sudo: kommandot finns inte
+./limeseeker.sh: rad 152: require_bash: kommandot finns inte
+./limeseeker.sh: rad 157: show_intro: kommandot finns inte
+./limeseeker.sh: rad 158: main_menu: kommandot finns inte

@@ -1,0 +1,5 @@
+===========================================================
+      LimeSeeker Report: fre  9 jan 2026 12:41:39 CET
+===========================================================
+./limeseeker.sh: rad 143: require_sudo: kommandot finns inte
+Select option: [12:47:31] User exited LimeSeeker

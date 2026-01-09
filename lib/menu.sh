@@ -1,34 +1,32 @@
 #!/usr/bin/env bash
 
 main_menu() {
-    
+
     # ---------------
-    # Hantera Ctrl+C 
+    # Hantera Ctrl+C
     # ---------------
     handle_sigint() {
         ui_echo
         ui_echo "${YELLOW}Exiting LimeSeeker...${NC}"
         log_event "User aborted LimeSeeker (Ctrl+C)"
+        sudo -k
         exit 0
     }
-    
     trap handle_sigint SIGINT
 
     # ---------------
     # Hantera Ctrl+Z
     # ---------------
     handle_sigtstp() {
-	    ui_echo
-            ui_echo "${YELLOW}Ctrl+Z detected! Exiting LimeSeeker for security...${NC}"
-            log_event "User attempted to pause script (Ctrl+Z)"
-            exit 1
+        ui_echo
+        ui_echo "${RED}Ctrl+Z is disabled for security reasons. Exiting.${NC}"
+        log_event "User attempted Ctrl+Z (SIGTSTP)"
+        sudo -k
+        exit 1
     }
     trap handle_sigtstp SIGTSTP
- 
-   	
-    local choice
-    local status
-    local module
+
+    local choice status module
 
     # ------------
     # Modulstatus
@@ -44,76 +42,49 @@ main_menu() {
     # Status med färg
     # ----------------
     status_color() {
-    local status="$1"
-
-    case "$status" in
-        "– not run")
-            # Dimgrå allt
-            echo -e "${DIM}[ ] not run${NC}"
-            ;;
-
-        "✔ done")
-            # Vita klamrar, grön symbol + text
-            echo -e "[${GREEN}✔${NC}] ${GREEN}done${NC}"
-            ;;
-
-        "✖ failed")
-            # Vita klamrar, röd symbol + text
-            echo -e "[${RED}✖${NC}] ${RED}failed${NC}"
-            ;;
-
-        *)
-            echo "$status"
-            ;;
-    esac
-}
-
-    # -------------------------------
-    # Visa sammanfattning, UI + logg
-    # -------------------------------
-    show_summary_report() {
-        ui_echo
-        ui_echo "${CYAN}${BOLD}LimeSeeker Summary Report${NC}"
-        ui_echo "${CYAN}$(date)${NC}"
-        ui_echo
-
-        for module in local_inventory local_security network_vulnerability wifi_discovery; do
-            ui_echo "$(printf "%-30s : %s" "$module" "$(status_color "${MODULE_STATUS[$module]}")")"
-            log_summary "$module" "${MODULE_STATUS[$module]}"
-        done
-
-        ui_echo
+        case "$1" in
+            "– not run")
+                echo -e "${DIM}[ ] not run${NC}"
+                ;;
+            "✔ done")
+                echo -e "[${GREEN}✔${NC}] ${GREEN}done${NC}"
+                ;;
+            "✖ failed")
+                echo -e "[${RED}✖${NC}] ${RED}failed${NC}"
+                ;;
+            *)
+                echo "$1"
+                ;;
+        esac
     }
 
-    # -----------------
-    # Kör alla moduler
-    # -----------------
-    run_all_scans() {
-        local modules=(local_inventory local_security network_vulnerability wifi_discovery)
+    # -------------------------
+    # Reset modulstatus (c)
+    # -------------------------
+    reset_module_status() {
+        ui_clear
+        ui_echo
+        ui_echo "${BOLD}${YELLOW}Reset module status${NC}"
+        ui_echo
+        ui_echo "This will mark all modules as '${DIM}not run${NC}'."
+        ui_echo "No scans will be executed."
+        ui_echo "Log files will NOT be deleted."
+        ui_echo
+        ui_read -rp "Type YES to confirm: " confirm
 
-        for module in "${modules[@]}"; do
+        if [[ "$confirm" == "YES" ]]; then
+            for module in "${!MODULE_STATUS[@]}"; do
+                MODULE_STATUS["$module"]="– not run"
+            done
             ui_echo
-            ui_echo "${CYAN}${BOLD}▶ Running $module...${NC}"
-            log_section "Running module: $module"
-
-            $module
-            status=$?
-
-            MODULE_STATUS["$module"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
-
-            if [[ $status -eq 0 ]]; then
-                ui_echo "${GREEN}✔ $module completed successfully${NC}"
-                log_event "[OK] $module completed successfully"
-            else
-                ui_echo "${RED}✖ $module failed or aborted${NC}"
-                log_event "[FAIL] $module failed or aborted"
-            fi
-
+            ui_echo "${GREEN}Module status reset successfully.${NC}"
+            log_event "Module status reset by user"
             sleep 1
-        done
-
-        show_summary_report
-        pause
+        else
+            ui_echo
+            ui_echo "${YELLOW}Reset cancelled.${NC}"
+            sleep 1
+        fi
     }
 
     # ------------------------
@@ -122,7 +93,7 @@ main_menu() {
     show_module_info() {
         local module="$1"
 
-        local DESC="${module}_DESC"
+	local DESC="${module}_DESC"
         local CATEGORY="${module}_CATEGORY"
         local COMMANDS="${module}_COMMANDS"
         local INPUT="${module}_INPUT"
@@ -154,42 +125,30 @@ main_menu() {
     # Info-meny
     # ----------
     info_menu() {
-        local choice
-        local module
+        local choice module
 
         while true; do
             ui_clear
             ui_echo
             ui_echo "${BOLD}${CYAN}        LimeSeeker | Module information${NC}"
-            ui_echo "${BOLD}${CYAN}-----------------------------------------------${NC}"
+            ui_echo "${CYAN}-----------------------------------------------${NC}"
             ui_echo
             ui_echo "1) Local inventory"
             ui_echo "2) Local security"
             ui_echo "3) Network vulnerability"
             ui_echo "4) Wireless discovery"
-            ui_echo "5) Back to main menu"
+            ui_echo "5) Return to main menu"
             ui_echo
 
-            ui_read -rp "Select module [1-5]: " choice
-            ui_echo
-
-            if [[ -z "$choice" ]]; then
-                ui_echo "${RED}No option selected${NC}"
-                sleep 1
-                continue
-            fi
+            ui_read -rp "Select option: " choice
 
             case "$choice" in
                 1) module="local_inventory" ;;
                 2) module="local_security" ;;
                 3) module="network_vulnerability" ;;
                 4) module="wifi_discovery" ;;
-                5) return 0 ;;
-                *)
-                    ui_echo "${RED}Invalid choice${NC}"
-                    sleep 1
-                    continue
-                    ;;
+                5) return ;;
+                *) ui_echo "${RED}Invalid choice${NC}"; sleep 1; continue ;;
             esac
 
             show_module_info "$module"
@@ -203,7 +162,6 @@ main_menu() {
 
     while true; do
         log_pause
-
         ui_echo
         ui_echo "${BOLD}${CYAN}Choose module scan:${NC}"
         ui_echo "1) Local inventory         $(status_color "${MODULE_STATUS[local_inventory]}")"
@@ -211,21 +169,13 @@ main_menu() {
         ui_echo "3) Network vulnerability   $(status_color "${MODULE_STATUS[network_vulnerability]}")"
         ui_echo "4) WiFi discovery          $(status_color "${MODULE_STATUS[wifi_discovery]}")"
         ui_echo "5) Run all modules"
-        ui_echo "6) Info about modules"
-        ui_echo "7) Quit"
+        ui_echo
+        ui_echo "i) Module information"
+        ui_echo "c) Clear module status"
+        ui_echo "q) Quit"
         ui_echo
 
-        ui_read -rp "Select option [1-7]: " choice || handle_sigint
-        ui_echo
-
-        if [[ -z "$choice" ]]; then
-            ui_echo "${RED}No option selected${NC}"
-	    sleep 1	    
-            ui_clear
-            show_intro
-            continue
-        fi
-
+        ui_read -rp "Select option: " choice || handle_sigint
         log_resume
 
         case "$choice" in
@@ -234,43 +184,25 @@ main_menu() {
             3) module=network_vulnerability ;;
             4) module=wifi_discovery ;;
             5) run_all_scans ;;
-            6) info_menu ;;
-            7)
+            i|I) info_menu ;;
+            c|C) reset_module_status ;;
+            q|Q)
                 ui_echo "${YELLOW}Quitting LimeSeeker...${NC}"
                 log_event "User exited LimeSeeker"
-                log_footer
+                sudo -k
                 return 0
                 ;;
-            *)
-                ui_echo "${RED}Invalid choice${NC}"
-                sleep 1
-                ui_clear
-                show_intro
-                continue
-                ;;
+            *) ui_echo "${RED}Invalid choice${NC}"; sleep 1 ;;
         esac
 
-        # ----------------
-        # Kör vald modul
-        # ----------------
         if [[ "$choice" =~ ^[1-4]$ ]]; then
             log_section "Running module: $module"
             $module
             status=$?
-
             MODULE_STATUS["$module"]=$([[ $status -eq 0 ]] && echo "✔ done" || echo "✖ failed")
-
-            if [[ $status -eq 0 ]]; then
-                log_event "[OK] $module completed"
-            else
-                log_event "[FAIL] $module failed"
-            fi
-
-            show_summary_report
             pause
         fi
 
-        log_pause
         ui_clear
         show_intro
     done
