@@ -6,7 +6,6 @@ main_menu() {
     #
     local modules_to_run=()
 	
-
     # ---------------
     # Hantera Ctrl+C
     # ---------------
@@ -32,7 +31,7 @@ main_menu() {
     
     # ----------------
     # Hanterar ctrl+Z
-    # ---------------
+    # ----------------
     handle_sigtstp() {
     echo -e "\n${YELLOW}Ctrl+Z detected. Exiting for security...${NC}" > /dev/tty
     echo -e "${YELLOW}Clearing sudo privileges${NC}" > /dev/tty
@@ -75,9 +74,9 @@ main_menu() {
         esac
     }
 
-    # -------------------------
-    # Reset modulstatus (c)
-    # -------------------------
+    # ----------------------
+    # Nollställ modulstatus
+    # ----------------------
     reset_module_status() {
         ui_clear
         ui_echo
@@ -104,9 +103,9 @@ main_menu() {
         fi
     }
 
-    # ------------------------
-    # Visa modulkontrakt-info
-    # ------------------------
+    # -------------------
+    # Visa modulkontrakt
+    # -------------------
     show_module_info() {
         local module="$1"
 
@@ -172,9 +171,9 @@ main_menu() {
         done
     }
 
-    # ------
-    # Start
-    # ------
+    # ---------
+    # Modulval
+    # ---------
     show_intro
 
     while true; do

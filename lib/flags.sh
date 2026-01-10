@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# ========================
-# Global flag state
-# ========================
+# ------------
+# Flaggstatus
+# ------------
 FLAG_HANDLED=false
 
-# ========================
-# Parse CLI flags
-# ========================
+# ---------
+# Parsning
+# ---------
 parse_flags() {
     while [[ $# -gt 0 ]]; do
         case "$1" in
@@ -26,6 +26,11 @@ parse_flags() {
                 FLAG_HANDLED=true
                 exit 0
                 ;;
+	    -l|--legal)
+                show_legal
+		FLAG_HANDLED=true
+		exit 0
+		;;
             *)
                 echo "Unknown option: $1"
                 echo "Use --help for available options"
@@ -36,9 +41,9 @@ parse_flags() {
     done
 }
 
-# ========================
-# Help
-# ========================
+# ----------------
+# Help, -h/--help
+# ----------------
 show_help() {
     clear
     echo
@@ -71,9 +76,9 @@ show_help() {
     echo
 }
 
-# ========================
-# Version
-# ========================
+# ----------------------
+# Version, -v/--version
+# ----------------------
 show_version() {
     clear
     echo
@@ -87,9 +92,9 @@ show_version() {
     echo
 }
 
-# ========================
-# Modules overview
-# ========================
+# ----------------------
+# Modules, -m/--modules
+# ----------------------
 show_modules() {
     clear
     echo
@@ -115,5 +120,25 @@ show_modules() {
 	[[ -n "${!OUTPUT}" ]] && echo "    Output       : ${!OUTPUT}"
         echo
     done
+}
+
+# -----------------
+# Legal, -l/--legal
+# -----------------
+show_legal() {
+    clear
+    echo
+    echo -e "     ${BOLD}LimeSeeker | Linux & Network Vulnerability Scanner${NC}"
+    echo "-------------------------------------------------------------"
+    echo
+    echo "This tool performs:"
+    echo
+    echo "  • Passive inspection"
+    echo "  • Active scanning (nmap)"
+    echo "  • No exploitation"
+    echo
+    echo "Use only on systems you own or have permission to test."
+    echo
+    echo
 }
 

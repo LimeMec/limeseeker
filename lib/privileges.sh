@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# -------------------------------------------
-# Information och krav för att starta script
-# -------------------------------------------
-
 require_sudo() {
 
     #-------------------------------
@@ -13,6 +9,9 @@ require_sudo() {
         ui_clear
     fi
 
+    # ------------------------------------------
+    # Information och krav för att starta scipt
+    # ------------------------------------------
     clear
     echo
     ui_echo "${CYAN}${BOLD}===========================================================${NC}"
@@ -38,7 +37,7 @@ require_sudo() {
     
     #---------------------------
     # Tvinga ange sudo-lösenord
-    # -------------------------
+    # --------------------------
     if sudo -v; then
         echo
         ui_echo "${GREEN}${BOLD}✔ Sudo authentication successful${NC}"
