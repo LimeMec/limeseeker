@@ -1,17 +1,24 @@
 #!/usr/bin/env bash
 
+# ----------------
+# Module metadata
+# ----------------
+local_security_NAME="Local security"
+local_security_DESC="
+The Local security module performs common security-related checks
+on the local system.
 
-# ----------------------------
-# Modulkontrakt för info-meny
-# ----------------------------
-local_security_DESC="Checks OS, users, root SSH, system updates, CVEs"
-local_security_CATEGORY="Local / Security"
-local_security_COMMANDS="uname, getent, sshd, apt or dnf, systemctl, ss, find, openssl, searchsploit"
-local_security_PRIVILEGES="root (service inspection, package checks, file permission scans)"
-local_security_INPUT="none"
-local_security_OUTPUT="Security findings to stdout, logged output via log_to_file"
-local_security_RETURNCODES="0 = success, 1 = failure"
-local_security_SIDEFFECTS="Read-only system inspection, generates local package manager and CVE database queries"
+This includes:
+  • Package update status
+  • File permission anomalies
+  • SUID/SGID binaries
+  • World-writable files and directories
+  • Common misconfigurations
+
+Purpose:
+To identify local weaknesses that could be abused for privilege
+escalation or persistence.
+"
 
 # ------------
 # CVE scan

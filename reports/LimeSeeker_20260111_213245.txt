@@ -1,0 +1,272 @@
+===========================================================
+      LimeSeeker Report: sön 11 jan 2026 21:32:45 CET
+===========================================================
+Select option [1-5]: Select option: Select option [1-5]: Select option: Select option [1-5]: Select option: Select option [1-5]: Select option: Press ENTER to returnSelect option: Press ENTER to returnSelect option: Select option [1-5]: Select option: Select option [1-5]: 
+
+
+up 20 hours, 23 minutes
+
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.817
+Max MHz: 1696.817
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,8Gi        10Gi        32Mi       3,5Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    22G    23G  49% /
+KaliShare         172G   107G    66G  63% /media/sf_KaliShare
+
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+Press Enter to continue...Select option [1-5]: [H[2J[3J
+
+
+Press Enter to continue...Select option [1-5]: [H[2J[3J
+
+
+Press Enter to continue...Select option [1-5]: [H[2J[3J
+
+
+Press Enter to continue...Select option [1-5]: 
+
+
+up 20 hours, 29 minutes
+
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.817
+Max MHz: 1696.817
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,8Gi        10Gi        32Mi       3,5Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    22G    23G  49% /
+KaliShare         172G   107G    66G  63% /media/sf_KaliShare
+
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+Press Enter to continue...Select option [1-5]: [H[2J[3J
+
+
+Press Enter to continue...Select option [1-5]: 
+
+
+up 20 hours, 30 minutes
+
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.817
+Max MHz: 1696.817
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,8Gi        10Gi        32Mi       3,5Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    22G    23G  49% /
+KaliShare         172G   107G    66G  63% /media/sf_KaliShare
+
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+Press Enter to continue...Select option [1-5]: 
+
+
+up 20 hours, 30 minutes
+
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.817
+Max MHz: 1696.817
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,8Gi        10Gi        32Mi       3,5Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    22G    23G  49% /
+KaliShare         172G   107G    66G  63% /media/sf_KaliShare
+
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+Press Enter to continue...Select option [1-5]: [H[2J[3J
+
+
+Press Enter to continue...Select option [1-5]: 
+
+
+up 20 hours, 30 minutes
+
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.817
+Max MHz: 1696.817
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,8Gi        10Gi        32Mi       3,5Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    22G    23G  49% /
+KaliShare         172G   107G    66G  63% /media/sf_KaliShare
+
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+Press Enter to continue...Select option [1-5]: 
+
+
+Kernel: 6.17.10+kali-amd64
+OS:     GNU/Linux
+
+limemec
+
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+9 paket kan uppgraderas. Kör ”apt list --upgradable” för att se dem.
+libegl-mesa0/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgbm1/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgl1-mesa-dri/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libglx-mesa0/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+libnode-dev/kali-rolling 22.21.1+dfsg+~cs22.19.0-6+b2 amd64 [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+mesa-libgallium/kali-rolling 25.3.2-2 amd64 [uppgraderingsbart från: 25.2.6-1]
+node-re2/kali-rolling 1.22.1+~cs1.3.5-1+b1 amd64 [uppgraderingsbart från: 1.22.1+~cs1.3.5-1]
+nodejs/kali-rolling 22.21.1+dfsg+~cs22.19.0-6+b2 amd64 [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+python3-tables-lib/kali-rolling 3.10.2-3+b2 amd64 [uppgraderingsbart från: 3.10.2-3+b1]
+
+
+
+/home/limemec/.local/share/Trash/files/VBoxLinuxAdditions.run
+
+/opt/VBoxGuestAdditions-7.2.4/bin/VBoxDRMClient
+/usr/sbin/mount.cifs
+/usr/sbin/mount.nfs
+/usr/sbin/pppd
+/usr/bin/kismet_cap_nxp_kw41z
+/usr/bin/umount
+/usr/bin/kismet_cap_ti_cc_2540
+/usr/bin/kismet_cap_nrf_mousejack
+/usr/bin/kismet_cap_ubertooth_one
+/usr/bin/rsh-redone-rsh
+
+Press Enter to continue...Select option [1-5]: 

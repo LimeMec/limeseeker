@@ -1,17 +1,25 @@
 #!/usr/bin/env bash
 
-# ----------------------------
-# Modulkontrakt för info-meny
-# ----------------------------
-wifi_discovery_DESC="Discovers nearby wireless networks and signal strength information"
-wifi_discovery_CATEGORY="Network / Discovery"
-wifi_discovery_COMMANDS="iw, ip"
-wifi_discovery_PRIVILEGES="root (wireless scanning and interface control)"
-wifi_discovery_INPUT="none"
-wifi_discovery_OUTPUT="Wireless results to stdout, logged output via log_to_file"
-wifi_discovery_RETURNCODES="0 = success, 1 = failure"
-wifi_discovery_SIDEFFECTS="Temporarily brings wireless interface up, generates passive wireless scan traffic"
+# ----------------
+# Module metadata
+# ----------------
+wifi_discovery_NAME="WiFi discovery"
+wifi_discovery_DESC="
+The WiFi discovery module scans the local wireless environment.
 
+This includes:
+•  Nearby access points
+•  Encryption types (WEP/WPA/WPA2/WPA3)
+•  Signal strength
+•  Channel usage
+
+Purpose:
+To map the surrounding wireless landscape and identify weak or
+misconfigured access points.
+
+Note:
+This module may require monitor mode and root privileges.
+"
 
 wifi_discovery() {
     
@@ -21,7 +29,7 @@ wifi_discovery() {
     # Rubrik för modul
     # ------------------
     sleep 0.3
-    ui_echo "${CYAN}${BOLD}WIFI discovery scan...${NC}"
+    ui_echo "${CYAN}${BOLD}WiFi discovery scan...${NC}"
     log_to_file "▶ WiFi discovery scan..."
     echo
     echo

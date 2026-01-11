@@ -1,17 +1,23 @@
 #!/usr/bin/env bash
 
-# ----------------------------
-# Modulkontrakt för info-meny
-# ----------------------------
-local_inventory_DESC="Collects local system inventory information (OS & hardware)"
-local_inventory_CATEGORY="Local / Inventory"
-local_inventory_COMMANDS="uptime, uname, dmidecode, lspci, lscpu, free, df, ip"
-local_inventory_PRIVILEGES="root (for dmidecode and full hardware access)"
-local_inventory_INPUT="none"
-local_inventory_OUTPUT="System information to stdout, logged output via log_to_file"
-local_inventory_RETURNCODES="0 = success, 1 = failure"
-local_inventory_SIDEFFECTS="Read-only system inspection"
+# ------------------------
+# Module metadata
+# ------------------------
+local_inventory_NAME="Local inventory"
+local_inventory_DESC="
+The Local inventory collects detailed information about the local system.
 
+This includes:
+  • Operating system and kernel version
+  • Hardware information (CPU, memory, storage)
+  • Installed packages
+  • Running services
+  • Active users and sessions
+
+Purpose:
+To provide a baseline overview of the system and identify unexpected
+or outdated components.
+"
 
 local_inventory() {
 

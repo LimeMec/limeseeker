@@ -101,40 +101,32 @@ main_menu() {
         fi
     }
 
-    # -------------------
-    # Visa modulkontrakt
-    # -------------------
+    # ---------------
+    # Visa modulinfo
+    # --------------
     show_module_info() {
-        local module="$1"
+    local module="$1"
 
-	local DESC="${module}_DESC"
-        local CATEGORY="${module}_CATEGORY"
-        local COMMANDS="${module}_COMMANDS"
-        local INPUT="${module}_INPUT"
-        local OUTPUT="${module}_OUTPUT"
-        local SIDEFFECTS="${module}_SIDEFFECTS"
-        local SAFETY="${module}_SAFETY"
+    local NAME_VAR="${module}_NAME"
+    local DESC_VAR="${module}_DESC"
+    local SAFETY_VAR="${module}_SAFETY"
 
-        ui_clear
-        ui_echo
-        ui_echo "${CYAN}${BOLD}        LimeSeeker | Module ${module//_/ }${NC}"
-        ui_echo "${CYAN}-----------------------------------------------${NC}"
-	ui_status_block
-        ui_echo
-        ui_echo "${BOLD}Description :${NC} ${!DESC}"
-        ui_echo "${BOLD}Category    :${NC} ${!CATEGORY}"
-        ui_echo "${BOLD}Commands    :${NC} ${!COMMANDS}"
-        ui_echo "${BOLD}Input       :${NC} ${!INPUT}"
-        ui_echo "${BOLD}Output      :${NC} ${!OUTPUT}"
-        ui_echo "${BOLD}Side effects:${NC} ${!SIDEFFECTS}"
+    ui_clear
+    ui_echo
+    ui_echo "${CYAN}${BOLD}        LimeSeeker | ${!NAME_VAR}${NC}"
+    ui_echo "${CYAN}-----------------------------------------------------------${NC}"
+    ui_status_block
+    ui_echo "${!DESC_VAR}"
+    ui_echo
 
-        if [[ -n "${!SAFETY}" ]]; then
-            ui_echo "${BOLD}Safety      :${NC} ${!SAFETY}"
-        fi
+    if [[ -n "${!SAFETY_VAR}" ]]; then
+        ui_echo "${YELLOW}${BOLD}Safety notice:${NC}"
+        ui_echo "${!SAFETY_VAR}"
         ui_echo
-        ui_echo
-        ui_read -rp "Press ENTER to return"
-    }
+    fi
+
+    ui_read -rp "Press ENTER to return"
+}
 
     # ----------
     # Info-meny
@@ -152,7 +144,7 @@ main_menu() {
             ui_echo "1) Local inventory"
             ui_echo "2) Local security"
             ui_echo "3) Network vulnerability"
-            ui_echo "4) Wireless discovery"
+            ui_echo "4) WiFi discovery"
 	    ui_echo
             ui_echo "b) Back to main menu"
             ui_echo
@@ -194,6 +186,7 @@ main_menu() {
 	ui_echo
         ui_echo "i) Module information"
         ui_echo "c) Clear module status"
+	ui_echo
         ui_echo "q) Quit"
         ui_echo
 	ui_echo
