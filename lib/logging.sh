@@ -2,6 +2,20 @@
 
 LOGGING_PAUSED=0
 
+logging_enabled() {
+    [[ -n "$REPORT_FILE" ]]
+}
+
+log_pause() {
+    logging_enabled || return
+    LOGGING_PAUSED=1
+}
+
+log_resume() {
+    logging_enabled || return
+    LOGGING_PAUSED=0
+}
+
 # -------------------------------------------------
 # Intern: ta bort ANSI-färgkoder
 # -------------------------------------------------
@@ -39,6 +53,7 @@ log_footer() {
 # -------------------------------------------------
 log_event() {
     [[ $LOGGING_PAUSED -eq 1 ]] && return
+    logging_enabled || return
     printf "[%s] %s\n" "$(date '+%H:%M:%S')" "$*" \
         | _strip_colors >> "$REPORT_FILE"
 }
@@ -48,6 +63,7 @@ log_event() {
 # -------------------------------------------------
 log_to_file() {
     [[ $LOGGING_PAUSED -eq 1 ]] && return
+    logging_enabled || return
     printf "%s\n" "$*" | _strip_colors >> "$REPORT_FILE"
 }
 
@@ -56,6 +72,7 @@ log_to_file() {
 # -------------------------------------------------
 log_section() {
     [[ $LOGGING_PAUSED -eq 1 ]] && return
+    logging_enabled || return
     {
         echo
         echo "-----------------------------------------------------------"

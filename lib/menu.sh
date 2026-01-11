@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 main_menu() {
-    
-    # ---------------
-    #
+        
     local modules_to_run=()
 	
     # ---------------
@@ -121,18 +119,19 @@ main_menu() {
         ui_echo
         ui_echo "${CYAN}${BOLD}        LimeSeeker | Module ${module//_/ }${NC}"
         ui_echo "${CYAN}-----------------------------------------------${NC}"
+	ui_status_block
         ui_echo
-        ui_echo "${BOLD} Description :${NC} ${!DESC}"
-        ui_echo "${BOLD} Category    :${NC} ${!CATEGORY}"
-        ui_echo "${BOLD} Commands    :${NC} ${!COMMANDS}"
-        ui_echo "${BOLD} Input       :${NC} ${!INPUT}"
-        ui_echo "${BOLD} Output      :${NC} ${!OUTPUT}"
-        ui_echo "${BOLD} Side effects:${NC} ${!SIDEFFECTS}"
+        ui_echo "${BOLD}Description :${NC} ${!DESC}"
+        ui_echo "${BOLD}Category    :${NC} ${!CATEGORY}"
+        ui_echo "${BOLD}Commands    :${NC} ${!COMMANDS}"
+        ui_echo "${BOLD}Input       :${NC} ${!INPUT}"
+        ui_echo "${BOLD}Output      :${NC} ${!OUTPUT}"
+        ui_echo "${BOLD}Side effects:${NC} ${!SIDEFFECTS}"
 
         if [[ -n "${!SAFETY}" ]]; then
-            ui_echo "${BOLD} Safety      :${NC} ${!SAFETY}"
+            ui_echo "${BOLD}Safety      :${NC} ${!SAFETY}"
         fi
-
+        ui_echo
         ui_echo
         ui_read -rp "Press ENTER to return"
     }
@@ -148,13 +147,16 @@ main_menu() {
             ui_echo
             ui_echo "${BOLD}${CYAN}        LimeSeeker | Module information${NC}"
             ui_echo "${CYAN}-----------------------------------------------${NC}"
+	    ui_status_block
             ui_echo
             ui_echo "1) Local inventory"
             ui_echo "2) Local security"
             ui_echo "3) Network vulnerability"
             ui_echo "4) Wireless discovery"
-            ui_echo "5) Return to main menu"
+	    ui_echo
+            ui_echo "b) Back to main menu"
             ui_echo
+	    ui_echo
 
             ui_read -rp "Select option: " choice
 
@@ -163,7 +165,7 @@ main_menu() {
                 2) module="local_security" ;;
                 3) module="network_vulnerability" ;;
                 4) module="wifi_discovery" ;;
-                5) return ;;
+		b|B) return ;;
                 *) ui_echo "${RED}Invalid choice${NC}"; sleep 1; continue ;;
             esac
 
@@ -222,7 +224,7 @@ main_menu() {
                          sudo -k
                          return 0
                          ;;
-                *) ui_echo "${RED}Invalid choice${NC}"; sleep 1 ;;
+                *) ui_echo "${RED}Invalid choice${NC}"; sleep 1; continue ;;
         esac
 
          for module in "${modules_to_run[@]}"; do

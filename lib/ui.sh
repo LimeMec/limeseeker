@@ -21,6 +21,29 @@ ui_read() {
     read -r "$@" < /dev/tty
 }
 
+# ----------------------------
+# Sudo-/loggningstatus i meny
+# ----------------------------
+ui_sudo_status() {
+    if [[ $EUID -eq 0 ]]; then
+        ui_echo "[${GREEN}✔${NC}] Sudo: Active"
+    else
+        ui_echo "[${RED}✖i${NC}] Sudo: Not active"
+    fi
+}
+ui_logging_status() {
+    if [[ "${LIME_NO_LOG:-0}" -eq 1 ]]; then
+        ui_echo "[${RED}✖${NC}] Logging: Disabled"
+    else
+        ui_echo "[${GREEN}✔${NC}] Logging: Enabled"
+    fi
+}
+
+ui_status_block() {
+    ui_sudo_status
+    ui_logging_status
+}
+
 #-------------
 # Huvudrubrik
 # ------------
@@ -30,19 +53,14 @@ show_intro() {
     ui_echo "${CYAN}${BOLD}"
     ui_echo "=================================================================="
     ui_echo "        LimeSeeker | Linux & Network Vulnerability Scanner"
-    ui_echo "=================================================================="
+    ui_echo "=================================================================="${NC}
+    ui_status_block
     ui_echo
-    #ui_echo "${GREEN}${BOLD}Date:${NC} $(date)"
-    ui_echo "${GREEN}${BOLD}Logged in user:${NC} ${SUDO_USER:-$USER}"
-
-    if [ "$(id -u)" -eq 0 ]; then
-        ui_echo "${GREEN}${BOLD}Root status:${NC} Running as root"
-    else
-        ui_echo "${GREEN}${BOLD}Root status:${NC} Not running as root"
-    fi
-    
+    ui_echo "${GREEN}${BOLD}Hostname:${NC} $(hostname)"
+    ui_echo "${GREEN}${BOLD}User:${NC} ${SUDO_USER:-$USER}"
     ui_echo "${GREEN}${BOLD}Date:${NC} $(date)"
-
     ui_echo
+    ui_echo
+
 }
 

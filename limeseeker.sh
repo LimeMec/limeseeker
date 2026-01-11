@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+SCRIPT_PATH="$(readlink -f "$0")"
+export SCRIPT_PATH
+
 # ---------
 # Metadata
 # ---------
@@ -84,4 +87,3 @@ require_bash
 # --------------
 show_intro
 main_menu
-

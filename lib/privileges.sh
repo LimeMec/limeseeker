@@ -5,10 +5,9 @@ require_sudo() {
     #-------------------------------
     # Rensa terminalen, inte logg 
     # ------------------------------
-    if declare -F ui_clear >/dev/null; then
-        ui_clear
+    if [[ $EUID -eq 0 ]]; then
+	return 0
     fi
-
     # ------------------------------------------
     # Information och krav för att starta scipt
     # ------------------------------------------
@@ -24,21 +23,25 @@ require_sudo() {
     ui_echo "${YELLOW}${BOLD}[!] Elevated privileges required${NC}"
     log_to_file "[!] Elevated privileges required"
     echo
-    echo "LimeSeeker performs local system inspection and"
-    echo "network-related security scans that require sudo access."
+    echo "The user is responsible for ensuring that scans are run only on"
+    echo "systems and networks they own or are authorized to test."
+    echo
     echo
     echo "Requirements:"
+    echo
     echo " • Sudo privileges on this system"
     echo " • Explicit user authorization"
-    echo " • Use only on systems and networks you own or manage"
+    echo
+    echo
+    echo
     echo
     echo "You will now be prompted for your sudo password."
-    echo
-    
+        
     #---------------------------
     # Tvinga ange sudo-lösenord
     # --------------------------
     if sudo -v; then
+	exec sudo "$SCRIPT_PATH" "$@"  
         echo
         ui_echo "${GREEN}${BOLD}✔ Sudo authentication successful${NC}"
 	log_to_file "✔ Sudo authentication successful"
