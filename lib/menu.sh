@@ -146,7 +146,7 @@ main_menu() {
             ui_echo "3) Network vulnerability"
             ui_echo "4) WiFi discovery"
 	    ui_echo
-            ui_echo "b) Back to main menu"
+            ui_echo "q) Back to main menu"
             ui_echo
 	    ui_echo
 
@@ -157,7 +157,7 @@ main_menu() {
                 2) module="local_security" ;;
                 3) module="network_vulnerability" ;;
                 4) module="wifi_discovery" ;;
-		b|B) return ;;
+		q|Q) return ;;
                 *) ui_echo "${RED}Invalid choice${NC}"; sleep 1; continue ;;
             esac
 

@@ -61,7 +61,7 @@ parse_flags() {
 show_help() {
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Linux & Network Vulnerability Scanner${NC}"
+    echo -e "     ${BOLD}LimeSeeker | Help${NC}"
     echo "-------------------------------------------------------------"
     echo
     echo "LimeSeeker is a interactive Linux and network vulnerability"
@@ -92,6 +92,7 @@ show_help() {
     echo "  -n, --no-log     Run the script without creating a log file"
     echo
     echo
+    echo "------------------------------------------------------------"
 }
 
 # ----------------------
@@ -100,7 +101,7 @@ show_help() {
 show_version() {
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Linux & Network Vulnerability Scanner${NC}"
+    echo -e "     ${BOLD}LimeSeeker | Version${NC}"
     echo "-------------------------------------------------------------"
     echo
     echo -e "${BOLD}Version :${NC} ${LIMESEEKER_VERSION}"
@@ -108,36 +109,51 @@ show_version() {
     echo -e "${BOLD}Author  :${NC} ${LIMESEEKER_AUTHOR}"
     echo
     echo
+    echo "------------------------------------------------------------"
 }
 
 # ----------------------
 # Modules, -m/--modules
 # ----------------------
 show_modules() {
+    # Definiera modulerna i den ordning de ska visas
+    local modules=("local_inventory" "local_security" "network_vulnerability" "wifi_discovery")
+
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Linux & Network Vulnerability Scanner${NC}"
+    echo -e "     ${BOLD}LimeSeeker | Modules ${NC}"
     echo "-------------------------------------------------------------"
-    echo
-    echo -e "${BOLD}Modules:${NC}"
-    echo
+    
+    for mod in "${modules[@]}"; do
+        # Hämta variabler dynamiskt
+        local DESC_VAR="${mod}_DESC"
+        local PRIV_VAR="${mod}_PRIVILEGES"
+        local SAFETY_VAR="${mod}_SAFETY"
+        
+        # Snygga till namnet (t.ex. local_inventory -> Local Inventory)
+        local display_name=$(echo "$mod" | sed 's/_/ /g' | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
+        
+        # Skriv ut Modulnamnet i FET stil
+        echo -e "${BOLD}$display_name${NC}"
+        
+        # Skriv ut Beskrivningen (indragen för läsbarhet)
+        echo -e "  ${!DESC_VAR:-Ingen beskrivning tillgänglig.}"
+        
+        # Visa privilegier om de finns
+        if [[ -n "${!PRIV_VAR}" ]]; then
+            echo -e "  Privileges: ${!PRIV_VAR}"
+        fi
 
-    for module in local_inventory local_security network_vulnerability wifi_discovery; do
-        DESC="${module}_DESC"
-        CATEGORY="${module}_CATEGORY"
-	COMMANDS="${module}_COMMANDS"
-	OUTPUT="${module}_OUTPUT"
-
-	out_name="${module//_/ }"
-	out_name="${out_name^}"
-
-        echo "  • ${out_name}"
-        [[ -n "${!CATEGORY}" ]] && echo "    Category     : ${!CATEGORY}"
-        [[ -n "${!DESC}" ]] && echo "    Description  : ${!DESC}"
-	[[ -n "${!COMMANDS}" ]] && echo "    Commands     : ${!COMMANDS}"
-	[[ -n "${!OUTPUT}" ]] && echo "    Output       : ${!OUTPUT}"
-        echo
+        # Visa Safety notice om den finns (i kursiv om din terminal stöder det, annars vanlig)
+        if [[ -n "${!SAFETY_VAR}" ]]; then
+            echo -e "  Safety: ${!SAFETY_VAR}"
+        fi
+        
+        echo # Tomrad mellan moduler för luftig design
     done
+    
+    echo "-------------------------------------------------------------"
+    exit 0
 }
 
 # -----------------
@@ -146,10 +162,8 @@ show_modules() {
 show_legal() {
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Linux & Network Vulnerability Scanner${NC}"
+    echo -e "     ${BOLD}LimeSeeker | Legal${NC}"
     echo "-------------------------------------------------------------"
-    echo
-    echo -e "${BOLD}Disclaimer${NC}"
     echo
     echo "LimeSeeker is not an exploitation framework."
     echo "It does not perform active attacks or privilege escalation."
@@ -158,13 +172,15 @@ show_legal() {
     echo "explicit authorization to test."
     echo
     echo
+    echo "-------------------------------------------------------------"
 }
 # ------------------
 # About, a-/--about
 # ------------------
 show_about() {
     clear
-    echo -e "     ${BOLD}LimeSeeker | Linux & Network Vulnerability Scanner${NC}"
+    echo
+    echo -e "     ${BOLD}LimeSeeker | About${NC}"
     echo "-------------------------------------------------------------"
     echo
     echo "LimeSeeker is a modular Linux and network security scanning tool"
@@ -219,4 +235,5 @@ show_about() {
     echo "on systems and networks they own or have explicit authorization to test" 
     echo 
     echo
+    echo "-------------------------------------------------------------"
 }
