@@ -7,7 +7,7 @@ export SCRIPT_PATH
 # Metadata
 # ---------
 LIMESEEKER_NAME="LimeSeeker"
-LIMESEEKER_VERSION="1.7"
+LIMESEEKER_VERSION="1.3.6"
 LIMESEEKER_AUTHOR="//LimeMec, Markus Carlsson"
 
 # -----------
