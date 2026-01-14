@@ -79,10 +79,11 @@ Syftet är att ge en överblick över den trådlösa miljön och hjälpa till at
 ## Allmänt om moduler
 
 - Moduler kan köras enskilt eller i kombination
-- Vissa moduler kräver root-behörighet
+- Vissa moduler kräver sudo-behörighet
 - Alla resultat kan loggas till rapportfiler
 - Inga moduler gör automatiska ändringar i systemet
 
-Root-behörighet begärs och rensas automatiskt vid avslut.
+Sudo-behörighet begärs och rensas automatiskt vid avslut.
 
 ---
+//LimeMec, Markus Carlsson
