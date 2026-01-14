@@ -10,14 +10,13 @@ LimeSeeker är utformat för att svara på frågan:
  
 
 ## Projektstruktur
-
-limeseeker/
+``` limeseeker/
 ├── limeseeker.sh
 ├── README.md
-|
+ |
 ├── docs/
-|   └── modules.md
-|
+ |      └── modules.md
+ |
 ├── lib/
 │   ├── colors.sh
 │   ├── flags.sh
@@ -26,15 +25,14 @@ limeseeker/
 │   ├── privileges.sh
 │   ├── ui.sh
 │   └── utils.sh
-|
+ |
 ├── modules/
 │   ├── local_inventory.sh
 │   ├── local_security.sh
 │   ├── network_vulnerability.sh
 │   └── wifi_discovery.sh
 └── reports/
-
-
+```
 ## Funktion
 
 LimeSeeker är avsett för att:
