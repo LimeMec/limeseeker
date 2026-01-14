@@ -96,7 +96,7 @@ LimeSeeker kommer automatiskt be om sudo-lösenord.
 - **Network Vulnerability:** Identifiering av brister i nätverkstjänster.
 - **WiFi Discovery:** Skanning av trådlösa nätverk.
 
-En detaljerad beskrivning över modulerna finns i  [modules.md](https://github.com/LimeMec/limeseeker/tree/main/docs/modules.md)
+Mer detaljerad beskrivning över modulerna finns i  [modules.md](https://github.com/LimeMec/limeseeker/tree/main/docs/modules.md)
 
 ## Loggning
 
