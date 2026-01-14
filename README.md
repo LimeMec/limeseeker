@@ -9,8 +9,12 @@ LimeSeeker är ett modulbaserat skript för rekognisering och identifiering av k
 Projektets mål är att ge en tydlig bild av systemets status, där fokus ligger på att identifiera säkerhetsbrister framför aktiv exploatering. 
 LimeSeeker är utformat för att svara på frågan:
 > *"Hur säkert är det här systemet egentligen?"*
- 
 
+## Video
+
+[![Demo](img.youtube.com)](https://youtube.com/shorts/5di3M4QP5wM?feature=share)
+
+ 
 ## Projektstruktur
 ``` limeseeker/
 ├── limeseeker.sh
