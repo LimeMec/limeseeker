@@ -1,0 +1,50 @@
+===========================================================
+      LimeSeeker Report: ons 14 jan 2026 00:40:23 CET
+===========================================================
+Select option [1-5]: 
+
+
+up 11 hours, 13 minutes
+
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.17.10+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.812
+Max MHz: 1696.812
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       2,4Gi        10Gi        77Mi       3,1Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    22G    23G  50% /
+KaliShare         172G   108G    64G  63% /media/sf_KaliShare
+
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+Press Enter to continue...Select option [1-5]: [H[2J[3J
+
+
+Press Enter to continue...Select option [1-5]: Select option: Press ENTER to returnSelect option: Select option [1-5]: Type YES to confirm: Select option [1-5]: 

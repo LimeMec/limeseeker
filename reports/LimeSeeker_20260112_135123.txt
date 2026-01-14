@@ -1,0 +1,27 @@
+===========================================================
+      LimeSeeker Report: mån 12 jan 2026 13:51:23 CET
+===========================================================
+[H[2J[3J
+===========================================================
+      LimeSeeker | Linux & Network Vulnerability Scanner
+===========================================================
+
+[!] Elevated privileges required
+
+The user is responsible for ensuring that scans are run only on
+systems and networks they own or are authorized to test.
+
+
+Requirements:
+
+ • Sudo privileges on this system
+ • Explicit user authorization
+
+
+
+
+You will now be prompted for your sudo password.
+sudo: ett lösenord krävs
+
+✖ Sudo authentication failed
+Exiting Limeseeker.

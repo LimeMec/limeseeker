@@ -1,0 +1,4 @@
+===========================================================
+      LimeSeeker Report: mån 12 jan 2026 12:46:03 CET
+===========================================================
+Select option [1-5]: Type YES to continue (10s timeout): Press Enter to continue...Select option [1-5]: 

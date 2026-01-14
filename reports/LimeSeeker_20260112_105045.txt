@@ -1,0 +1,7 @@
+===========================================================
+      LimeSeeker Report: mån 12 jan 2026 10:50:45 CET
+===========================================================
+Select option [1-5]: [H[2J[3J
+
+
+Press Enter to continue...Select option [1-5]: Type YES to continue (10s timeout): Press Enter to continue...Select option [1-5]: Type YES to confirm: Select option [1-5]: Type YES to confirm: Select option [1-5]: Select option [1-5]: Select option: Press ENTER to returnSelect option: Select option [1-5]: 

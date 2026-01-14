@@ -1,0 +1,6 @@
+===========================================================
+      LimeSeeker Report: mån 12 jan 2026 12:43:54 CET
+===========================================================
+Select option [1-5]: Type YES to continue (10s timeout): Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-12 12:44 +0100
+Stats: 0:00:04 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 77.95% done; ETC: 12:44 (0:00:01 remaining)
