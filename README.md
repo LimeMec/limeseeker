@@ -12,7 +12,7 @@ LimeSeeker är utformat för att svara på frågan:
 
 ## Video
 
-[![Demo](img.youtube.com)](https://youtu.be/jUuefv1hE3E)
+[![Demo](img.youtube.com/vi/VIDEOID/jUuefv1hE3E.jpg)](https://youtu.be/jUuefv1hE3E)
 
  
 ## Projektstruktur
