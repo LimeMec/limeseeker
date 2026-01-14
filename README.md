@@ -13,10 +13,10 @@ LimeSeeker är utformat för att svara på frågan:
 ``` limeseeker/
 ├── limeseeker.sh
 ├── README.md
- |
+|
 ├── docs/
- |      └── modules.md
- |
+|      └── modules.md
+|
 ├── lib/
 │   ├── colors.sh
 │   ├── flags.sh
@@ -25,7 +25,7 @@ LimeSeeker är utformat för att svara på frågan:
 │   ├── privileges.sh
 │   ├── ui.sh
 │   └── utils.sh
- |
+|
 ├── modules/
 │   ├── local_inventory.sh
 │   ├── local_security.sh
