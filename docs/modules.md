@@ -1,6 +1,6 @@
 # LimeSeeker – Moduler
 
-Detta dokument beskriver de moduler som ingår i LimeSeeker samt vad varje modul gör.  
+Beskrivning av de moduler som ingår i LimeSeeker.  
 
 ---
 
