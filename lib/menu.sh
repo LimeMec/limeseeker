@@ -86,7 +86,7 @@ main_menu() {
         ui_echo
         ui_read -rp "Type YES to confirm: " confirm
 
-        if [[ "${answer,,}" == "yes" ]]; then
+        if [[ "${confirm,,}" == "yes" ]]; then
             for module in "${!MODULE_STATUS[@]}"; do
                 MODULE_STATUS["$module"]="– not run"
             done

@@ -1,0 +1,173 @@
+===========================================================
+      LimeSeeker Report: tor 15 jan 2026 22:29:16 CET
+===========================================================
+[H[2J[3J
+===========================================================
+      LimeSeeker | Linux & Network Vulnerability Scanner
+===========================================================
+
+[!] Elevated privileges required
+
+The user is responsible for ensuring that scans are run only on
+systems and networks they own or are authorized to test.
+
+
+Requirements:
+
+ • Sudo privileges on this system
+ • Explicit user authorization
+
+
+
+
+You will now be prompted for your sudo password.
+===========================================================
+      LimeSeeker Report: tor 15 jan 2026 22:29:21 CET
+===========================================================
+Select option [1-5]: 
+
+
+up 45 minutes
+
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+
+OS:               GNU/Linux
+Nodename:         LimeMec
+Kernel release:   6.18.3+kali+1-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.18.3-1kali2 (2026-01-14)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 PRO 4750U with Radeon Graphics
+Thread(s) per core:                      1
+Core(s) per socket:                      8
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Min MHz: 1696.759
+Max MHz: 1696.759
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:          15Gi       1,9Gi        11Gi        37Mi       2,2Gi        13Gi
+Växl.:         2,6Gi          0B       2,6Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda1          47G    23G    22G  51% /
+
+Interface:   eth0
+MAC address: 08:00:27:37:a6:b8
+IP address:  10.0.2.15
+Gateway:     10.0.2.2
+Netmask:     /24
+Press Enter to continue...Select option [1-5]: 
+
+
+Kernel: 6.18.3+kali+1-amd64
+OS:     GNU/Linux
+
+limemec
+
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+14 paket kan uppgraderas. Kör ”apt list --upgradable” för att se dem.
+adduser/kali-rolling 3.154 all [uppgraderingsbart från: 3.153]
+curl/kali-rolling 8.18.0-1 amd64 [uppgraderingsbart från: 8.18.0~rc3-1]
+libcurl3t64-gnutls/kali-rolling 8.18.0-1 amd64 [uppgraderingsbart från: 8.18.0~rc3-1]
+libcurl4t64/kali-rolling 8.18.0-1 amd64 [uppgraderingsbart från: 8.18.0~rc3-1]
+libegl-mesa0/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgbm1/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgl1-mesa-dri/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libglx-mesa0/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libnice10/kali-rolling 0.1.23-2 amd64 [uppgraderingsbart från: 0.1.22-1]
+libnode-dev/kali-rolling 22.21.1+dfsg+~cs22.19.0-6+b2 amd64 [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+mesa-libgallium/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+node-re2/kali-rolling 1.22.1+~cs1.3.5-1+b1 amd64 [uppgraderingsbart från: 1.22.1+~cs1.3.5-1]
+nodejs/kali-rolling 22.21.1+dfsg+~cs22.19.0-6+b2 amd64 [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+python3-tables-lib/kali-rolling 3.10.2-3+b2 amd64 [uppgraderingsbart från: 3.10.2-3+b1]
+
+
+
+/home/limemec/.local/share/Trash/files/VBoxLinuxAdditions.run
+
+/opt/VBoxGuestAdditions-7.2.4/bin/VBoxDRMClient
+/usr/sbin/mount.cifs
+/usr/sbin/mount.nfs
+/usr/sbin/pppd
+/usr/bin/kismet_cap_nxp_kw41z
+/usr/bin/umount
+/usr/bin/kismet_cap_ti_cc_2540
+/usr/bin/kismet_cap_nrf_mousejack
+/usr/bin/kismet_cap_ubertooth_one
+/usr/bin/rsh-redone-rsh
+
+Press Enter to continue...Select option [1-5]: Type YES to continue (10s timeout): Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-15 22:31 +0100
+Nmap scan report for 10.0.2.2
+Host is up (0.0027s latency).
+Not shown: 996 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3389-TCP:V=7.98%I=7%D=1/15%Time=69695CC0%P=x86_64-pc-linux-gnu%r(Te
+SF:rminalServerCookie,13,"\x03\0\0\x13\x0e\xd0\0\0\x124\0\x02/\x08\0\x02\0
+SF:\0\0");
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 18.52 seconds
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-15 22:31 +0100
+Nmap scan report for 10.0.2.2
+Host is up (0.0027s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 6.65 seconds
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-15 22:31 +0100
+Nmap scan report for 10.0.2.3
+Host is up (0.00028s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  Cloudflare public DNS
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.56 seconds
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-15 22:31 +0100
+Nmap scan report for 10.0.2.3
+Host is up (0.00030s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.33 seconds
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-15 22:32 +0100
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 211.93 seconds
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-15 22:35 +0100
+Nmap scan report for 10.0.2.15
+Host is up.
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap done: 1 IP address (1 host up) scanned in 221.30 seconds
+Press Enter to continue...Select option [1-5]: Type YES to confirm: Select option [1-5]: Type YES to confirm: Select option [1-5]: Type YES to confirm: Select option [1-5]: Type YES to confirm: Select option [1-5]: Type YES to confirm: Select option [1-5]: Select option: Press ENTER to returnSelect option: Press ENTER to returnSelect option: Press ENTER to returnSelect option: Select option [1-5]: 
