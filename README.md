@@ -46,7 +46,7 @@ LimeSeeker är utformat för att svara på frågan:
 ## Flödesschema
 
 <a href="https://github.com/LimeMec/limeseeker/tree/main/docs/execution-flow.png">
-  <img src="https://github.com/LimeMec/limeseeker/tree/main/docs/execution-flow.png" width="500">
+  <img src="https://raw.githubusercontent.com/LimeMec/limeseeker/main/docs/execution-flow.png" width="500">
 
 ## Funktion
 
