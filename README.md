@@ -43,6 +43,11 @@ LimeSeeker är utformat för att svara på frågan:
 │   └── wifi_discovery.sh
 └── reports/
 ```
+## Flödesschema
+
+<a href="https://github.com/LimeMec/limeseeker/tree/main/docs/execution-flow.png">
+  <img src="https://github.com/LimeMec/limeseeker/tree/main/docs/execution-flow.png" with="500">
+
 ## Funktion
 
 LimeSeeker är avsett för att:
