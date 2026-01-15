@@ -10,9 +10,14 @@ Projektets mål är att ge en tydlig bild av systemets status, där fokus ligger
 LimeSeeker är utformat för att svara på frågan:
 > *"Hur säkert är det här systemet egentligen?"*
 
-## Video
+## Förhandsvisning
 
-[![Demo](https://img.youtube.com/vi/jUuefv1hE3E/maxresdefault.jpg)](https://youtu.be/jUuefv1hE3E)
+**Demo video (YouTube):**  
+https://www.youtube.com/watch?v=jUuefv1hE3E
+
+<a href="https://www.youtube.com/watch?v=jUuefv1hE3E">
+  <img src="https://img.youtube.com/vi/jUuefv1hE3E/maxresdefault.jpg" width="1000">
+</a>
 
  
 ## Projektstruktur
