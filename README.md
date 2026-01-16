@@ -12,10 +12,10 @@ LimeSeeker är utformat för att svara på frågan:
 
 ## Förhandsvisning
 
-**Demo video (YouTube):**  [LimeSeeker v1.4.O](https://www.youtube.com/watch?v=/Q4fT4tBuXBA)
+**Demo video (YouTube):**  [LimeSeeker v1.4.O](https://youtu.be/Q4fT4tBuXBA?si=5pvbSf_j38Bp7CmL)
 
-<a href="https://www.youtube.com/watch?v=jUuefv1hE3E">
-  <img src="https://img.youtube.com/vi//Q4fT4tBuXBA/maxresdefault.jpg" width="1000">
+<a href="https://youtu.be/Q4fT4tBuXBA?si=5pvbSf_j38Bp7CmL">
+  <img src="https://img.youtube.com/vi/Q4fT4tBuXBA/maxresdefault.jpg" width="1000">
 </a>
 
  
