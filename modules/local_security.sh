@@ -70,16 +70,6 @@ local_security() {
     echo
     echo
 
-    # --------------
-    # Kernel & OS
-    # --------------
-    sleep 1
-    ui_echo "${GREEN}${BOLD}▶ KERNEL & OS:${NC}"
-    log_to_file "▶ KERNEL & OS:"
-    echo "Kernel: $(uname -r)"
-    echo "OS:     $(uname -o)"
-    echo
-
     # ----------------
     # Sudo användare
     # ----------------
