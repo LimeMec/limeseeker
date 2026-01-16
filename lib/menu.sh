@@ -112,9 +112,10 @@ main_menu() {
     local SAFETY_VAR="${module}_SAFETY"
 
     ui_clear
-    ui_echo
-    ui_echo "${CYAN}${BOLD}        LimeSeeker | ${!NAME_VAR}${NC}"
-    ui_echo "${CYAN}-----------------------------------------------------------${NC}"
+    ui_echo "${BOLD}${CYAN}_    _ _  _ ____ ____ ____ ____ _  _ ____ ____"
+    ui_echo "|    | |\/| |___ [__  |___ |___ |_/  |___ |__/"
+    ui_echo "|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ ${!NAME_VAR}"
+    ui_echo "------------------------------------------------------------------------${NC}"
     ui_status_block
     ui_echo "${!DESC_VAR}"
     ui_echo
@@ -137,10 +138,15 @@ main_menu() {
         while true; do
             ui_clear
             ui_echo
-            ui_echo "${BOLD}${CYAN}        LimeSeeker | Module information${NC}"
-            ui_echo "${CYAN}-----------------------------------------------${NC}"
+	    ui_echo "${BOLD}${CYAN}        _____ _______ _______ _______ _______ _______ _     _ _______  ______" 
+            ui_echo " |        |   |  |  | |______ |______ |______ |______ |____/  |______ |_____/"
+            ui_echo " |_____ __|__ |  |  | |______ ______| |______ |______ |    \_ |______ |    \_"
+            ui_echo "        Module information"
+	    ui_echo "-----------------------------------------------------------------------------${NC}"
 	    ui_status_block
             ui_echo
+	    ui_echo
+	    ui_echo "${BOLD}${CYAN}Modules:${NC}"
             ui_echo "1) Local inventory"
             ui_echo "2) Local security"
             ui_echo "3) Network vulnerability"
@@ -175,8 +181,7 @@ main_menu() {
 	ui_clear
 	show_intro
 	log_pause
-        ui_echo
-        ui_echo "${BOLD}${CYAN}Choose module scan:${NC}"
+        ui_echo "${BOLD}${CYAN}Modules:${NC}"
         ui_echo "1) Local inventory         $(status_color "${MODULE_STATUS[local_inventory]}")"
         ui_echo "2) Local security          $(status_color "${MODULE_STATUS[local_security]}")"
         ui_echo "3) Network vulnerability   $(status_color "${MODULE_STATUS[network_vulnerability]}")"
@@ -184,6 +189,7 @@ main_menu() {
         ui_echo "5) Scanning all modules"
         ui_echo
 	ui_echo
+	ui_echo "${BOLD}${CYAN}Options:${NC}"
         ui_echo "i) Module information"
         ui_echo "c) Clear module status"
 	ui_echo

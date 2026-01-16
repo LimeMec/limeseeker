@@ -61,7 +61,9 @@ parse_flags() {
 show_help() {
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Help${NC}"
+    echo "    _    _ _  _ ____ ____ ____ ____ _  _ ____ ____ "
+    echo "    |    | |\/| |___ [__  |___ |___ |_/  |___ |__/ "
+    echo "    |___ | |  | |___ ___] |___ |___ | \_ |___ |  \  Help"
     echo "-------------------------------------------------------------"
     echo
     echo "LimeSeeker is a interactive Linux and network vulnerability"
@@ -101,7 +103,9 @@ show_help() {
 show_version() {
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Version${NC}"
+    echo "    _    _ _  _ ____ ____ ____ ____ _  _ ____ ____ "
+    echo "    |    | |\/| |___ [__  |___ |___ |_/  |___ |__/ "
+    echo "    |___ | |  | |___ ___] |___ |___ | \_ |___ |  \  Version"
     echo "-------------------------------------------------------------"
     echo
     echo -e "${BOLD}Version :${NC} ${LIMESEEKER_VERSION}"
@@ -121,7 +125,9 @@ show_modules() {
 
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Modules ${NC}"
+    echo "    _    _ _  _ ____ ____ ____ ____ _  _ ____ ____ "
+    echo "    |    | |\/| |___ [__  |___ |___ |_/  |___ |__/ "
+    echo "    |___ | |  | |___ ___] |___ |___ | \_ |___ |  \  Modules" 
     echo "-------------------------------------------------------------"
     
     for mod in "${modules[@]}"; do
@@ -162,7 +168,9 @@ show_modules() {
 show_legal() {
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | Legal${NC}"
+    echo "    _    _ _  _ ____ ____ ____ ____ _  _ ____ ____ "
+    echo "    |    | |\/| |___ [__  |___ |___ |_/  |___ |__/ "
+    echo "    |___ | |  | |___ ___] |___ |___ | \_ |___ |  \  Legal"
     echo "-------------------------------------------------------------"
     echo
     echo "LimeSeeker is not an exploitation framework."
@@ -180,7 +188,9 @@ show_legal() {
 show_about() {
     clear
     echo
-    echo -e "     ${BOLD}LimeSeeker | About${NC}"
+    echo "    _    _ _  _ ____ ____ ____ ____ _  _ ____ ___  "
+    echo "    |    | |\/| |___ [__  |___ |___ |_/  |___ |__/ "
+    echo "    |___ | |  | |___ ___] |___ |___ | \_ |___ |  \  About" 
     echo "-------------------------------------------------------------"
     echo
     echo "LimeSeeker is a modular Linux and network security scanning tool"

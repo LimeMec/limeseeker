@@ -51,9 +51,11 @@ show_intro() {
     ui_clear
 
     ui_echo "${CYAN}${BOLD}"
-    ui_echo "=================================================================="
-    ui_echo "        LimeSeeker | Linux & Network Vulnerability Scanner"
-    ui_echo "=================================================================="${NC}
+    ui_echo "        _____ _______ _______ _______ _______ _______ _     _ _______  ______"
+    ui_echo " |        |   |  |  | |______ |______ |______ |______ |____/  |______ |_____/"
+    ui_echo " |_____ __|__ |  |  | |______ ______| |______ |______ |    \_ |______ |    \_"
+    ui_echo "        Linux & Network Vulnerability Scanner                  version ${LIMESEEKER_VERSION}" 
+    ui_echo "-----------------------------------------------------------------------------${NC}"
     ui_status_block
     ui_echo
     ui_echo "${GREEN}${BOLD}Hostname:${NC} $(hostname)"

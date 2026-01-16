@@ -1,0 +1,33 @@
+        _____ _______ _______ _______ _______ _______ _     _ _______  ______
+ |        |   |  |  | |______ |______ |______ |______ |____/  |______ |_____/
+ |_____ __|__ |  |  | |______ ______| |______ |______ |    \_ |______ |    \_
+ Report: fre 16 jan 2026 02:54:40 CET
+ ----------------------------------------------------------------------------
+[H[2J[3J
+_    _ _  _ ____ ____ ____ ____ _  _ ____ ____ 
+|    | |\/| |___ [__  |___ |___ |_/  |___ |__/
+|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ 
+     Linux & Network Vulnerability Scanner
+-----------------------------------------------
+
+[!] Elevated privileges required
+
+The user is responsible for ensuring that scans are run only on
+systems and networks they own or are authorized to test.
+
+
+Requirements:
+
+ • Sudo privileges on this system
+ • Explicit user authorization
+
+
+
+
+You will now be prompted for your sudo password.
+        _____ _______ _______ _______ _______ _______ _     _ _______  ______
+ |        |   |  |  | |______ |______ |______ |______ |____/  |______ |_____/
+ |_____ __|__ |  |  | |______ ______| |______ |______ |    \_ |______ |    \_
+ Report: fre 16 jan 2026 02:54:45 CET
+ ----------------------------------------------------------------------------
+Select option [1-5]: Select option: Press ENTER to returnSelect option: Select option [1-5]: 

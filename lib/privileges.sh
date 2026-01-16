@@ -13,12 +13,16 @@ require_sudo() {
     # ------------------------------------------
     clear
     echo
-    ui_echo "${CYAN}${BOLD}===========================================================${NC}"
-    ui_echo "${CYAN}${BOLD}      LimeSeeker | Linux & Network Vulnerability Scanner   ${NC}"
-    ui_echo "${CYAN}${BOLD}===========================================================${NC}"
-    log_to_file "==========================================================="
-    log_to_file "      LimeSeeker | Linux & Network Vulnerability Scanner"
-    log_to_file "==========================================================="
+    ui_echo "${CYAN}${BOLD}_    _ _  _ ____ ____ ____ ____ _  _ ____ ____ ${NC}"
+    ui_echo "${CYAN}${BOLD}|    | |\/| |___ [__  |___ |___ |_/  |___ |__/ ${NC}"
+    ui_echo "${CYAN}${BOLD}|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ ${NC}"
+    ui_echo "${CYAN}${BOLD}     Linux & Network Vulnerability Scanner${NC}"
+    ui_echo "${CYAN}${BOLD}-----------------------------------------------${NC}"
+    log_to_file "_    _ _  _ ____ ____ ____ ____ _  _ ____ ____ "
+    log_to_file "|    | |\/| |___ [__  |___ |___ |_/  |___ |__/"
+    log_to_file "|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ "
+    log_to_file "     Linux & Network Vulnerability Scanner"
+    log_to_file "-----------------------------------------------"
     echo
     ui_echo "${YELLOW}${BOLD}[!] Elevated privileges required${NC}"
     log_to_file "[!] Elevated privileges required"
