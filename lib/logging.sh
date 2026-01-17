@@ -62,9 +62,9 @@ log_event() {
 # DIN BEFINTLIGA LOGGNING (UTAN timestamp)
 # -----------------------------------------
 log_to_file() {
-    [[ $LOGGING_PAUSED -eq 1 ]] && return
-    logging_enabled || return
-    printf "%s\n" "$*" | _strip_colors >> "$REPORT_FILE"
+    [[ "$LOGGING_ENABLED" != true ]] && return 0
+    [[ -z "$REPORT_FILE" ]] && return 0
+    echo "$(date '+%F %T') $1" >> "$REPORT_FILE"
 }
 
 # ----------------------

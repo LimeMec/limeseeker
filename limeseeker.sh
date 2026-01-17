@@ -45,38 +45,50 @@ source "$BASE_DIR/lib/ui.sh"
 source "$BASE_DIR/lib/menu.sh"
 source "$BASE_DIR/lib/flags.sh"
 
+# --------------
+# Loggning av/på
+# --------------
+LOGGING_ENABLED=true
+
 # ----------------
 # Läsa in flaggor
 # ----------------
 parse_flags "$@"
 
-# --------------
-# Logghantering
-# --------------
-REPORT_DIR="$BASE_DIR/reports"
-mkdir -p "$REPORT_DIR"
-export REPORT_FILE="$REPORT_DIR/LimeSeeker_$(date +%Y%m%d_%H%M%S).txt"
-
-exec > >(tee -a "$REPORT_FILE") 2>&1
-
-# -----------------
-#  Loggningsrubrik
-# -----------------
-
-echo "        _____ _______ _______ _______ _______ _______ _     _ _______  ______"
-echo " |        |   |  |  | |______ |______ |______ |______ |____/  |______ |_____/"
-echo " |_____ __|__ |  |  | |______ ______| |______ |______ |    \_ |______ |    \_"
-echo " Report: $(date)"
-echo " ----------------------------------------------------------------------------"
-# echo "==========================================================="
-# echo "      LimeSeeker Report: $(date)"
-# echo "==========================================================="
-
-#--------------
+# -------------
 # Krav på sudo
 # -------------
 sudo -k
 require_sudo "$@"
+
+# --------------
+# Loggning på/av
+# ------------- 
+case "$1" in
+    -n|--no-log)
+        LOGGING_ENABLED=false
+        ;;
+esac
+
+# --------------
+# Logghantering
+# --------------
+REPORT_DIR="$BASE_DIR/reports"
+
+if [[ "$LOGGING_ENABLED" == true ]]; then
+    mkdir -p "$REPORT_DIR"
+    export REPORT_FILE="$REPORT_DIR/LimeSeeker_$(date +%Y%m%d_%H%M%S).txt"
+
+    exec > >(tee -a "$REPORT_FILE") 2>&1
+
+    echo "        _____ _______ _______ _______ _______ _______ _     _ _______  ______"
+    echo " |        |   |  |  | |______ |______ |______ |______ |____/  |______ |_____/ "
+    echo " |_____ __|__ |  |  | |______ ______| |______ |______ |    \_ |______ |    \_ "
+    echo " Report: $(date)"
+    echo " ----------------------------------------------------------------------------"
+else
+    export REPORT_FILE=""
+fi
 
 # ----------------
 # Signalhantering

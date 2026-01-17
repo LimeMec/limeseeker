@@ -96,7 +96,6 @@ local_security() {
     sleep 0.5
     ui_echo "${GREEN}${BOLD}▶ ROOT SSH LOGIN:${NC}"
     log_to_file "▶ ROOT SSH LOGIN:"
-
     local ROOT_SSH
     ROOT_SSH=$(sshd -T 2>/dev/null | awk '/permitrootlogin/ {print $2}')
 
@@ -128,7 +127,7 @@ local_security() {
     # Systemuppdateringar
     # ----------------------
     sleep 0.5
-    ui_echo "${GREEN}${BOLD}▶ AVAILABLE SYSTEM UPDATES:${NC}"
+    ui_echo "${RED}${BOLD}▶ UNPATCHED PACKAGES (SECURITY RISK):${NC}"
     log_to_file "▶ AVAILABLE SYSTEM UPDATES:"
 
     if command -v apt &>/dev/null; then
@@ -136,12 +135,12 @@ local_security() {
         local UPDATES
         UPDATES=$(apt list --upgradable 2>/dev/null | sed 1d)
 
-        if [ -n "$UPDATES" ]; then
-            ui_echo "${RED}System updates available:${NC}"
+        if [ -n "$UPDATES" ]; then	    
+            ui_echo "${RED}${BOLD}System updates available:${NC}"
 	    log_to_file "System updates available:"
             echo "$UPDATES"
         else
-            ui_echo "${GREEN}No system updates pending${NC}"
+            ui_echo "${GREEN}${BOLD}No system updates pending${NC}"
 	    log_to_file "No system updates pending"
         fi
 

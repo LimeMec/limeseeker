@@ -14,12 +14,10 @@ LIME_NO_LOG=0
 # Parsning
 # ---------
 parse_flags() {
-    while [[ $# -gt 0 ]]; do
-        case "$1" in
-            -h|--help)
-                show_help
-                FLAG_HANDLED=true
-                exit 0
+	while [[ $# -gt 0 ]]; do
+            case "$1" in
+            -n|--no-log)
+                LOGGING_ENABLED=false
                 ;;
             -v|--version)
                 show_version
@@ -120,7 +118,7 @@ show_version() {
 # Modules, -m/--modules
 # ----------------------
 show_modules() {
-    # Definiera modulerna i den ordning de ska visas
+    
     local modules=("local_inventory" "local_security" "network_vulnerability" "wifi_discovery")
 
     clear
@@ -131,31 +129,29 @@ show_modules() {
     echo "-------------------------------------------------------------"
     
     for mod in "${modules[@]}"; do
-        # Hämta variabler dynamiskt
+        
         local DESC_VAR="${mod}_DESC"
         local PRIV_VAR="${mod}_PRIVILEGES"
         local SAFETY_VAR="${mod}_SAFETY"
         
-        # Snygga till namnet (t.ex. local_inventory -> Local Inventory)
+        
         local display_name=$(echo "$mod" | sed 's/_/ /g' | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
         
-        # Skriv ut Modulnamnet i FET stil
+        
         echo -e "${BOLD}$display_name${NC}"
         
-        # Skriv ut Beskrivningen (indragen för läsbarhet)
         echo -e "  ${!DESC_VAR:-Ingen beskrivning tillgänglig.}"
         
-        # Visa privilegier om de finns
+        
         if [[ -n "${!PRIV_VAR}" ]]; then
             echo -e "  Privileges: ${!PRIV_VAR}"
         fi
 
-        # Visa Safety notice om den finns (i kursiv om din terminal stöder det, annars vanlig)
         if [[ -n "${!SAFETY_VAR}" ]]; then
             echo -e "  Safety: ${!SAFETY_VAR}"
         fi
         
-        echo # Tomrad mellan moduler för luftig design
+        echo 
     done
     
     echo "-------------------------------------------------------------"
