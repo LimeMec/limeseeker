@@ -219,6 +219,7 @@ main_menu() {
                 q|Q)
 			 ui_echo "${YELLOW}Exiting LimeSeeker...${NC}"
 		         ui_echo "${YELLOW}Clearing sudo privileges...${NC}"
+			 log_footer
                          log_event "User exited LimeSeeker"
                          sudo -k
                          return 0

@@ -1,19 +1,13 @@
 #!/usr/bin/env bash
 
-LOGGING_PAUSED=0
+# Initiera variabel om den inte finns
+LOGGING_PAUSED=${LOGGING_PAUSED:-0}
 
+# Kontrollera om loggning är aktiv och tillåten
 logging_enabled() {
-    [[ -n "$REPORT_FILE" ]]
-}
-
-log_pause() {
-    logging_enabled || return
-    LOGGING_PAUSED=1
-}
-
-log_resume() {
-    logging_enabled || return
-    LOGGING_PAUSED=0
+    [[ "$LOGGING_ENABLED" == "false" ]] && return 1
+    [[ -z "$REPORT_FILE" ]] && return 1
+    return 0
 }
 
 # -------------------------------
@@ -24,9 +18,10 @@ _strip_colors() {
 }
 
 # -----------------------
-# Loggrubrik, tidssämpel
+# Loggrubrik
 # -----------------------
 log_header() {
+    logging_enabled || return
     {
         echo "==========================================================="
         echo "              LimeSeeker Scan Report"
@@ -40,45 +35,47 @@ log_header() {
 # Loggfooter
 # -----------
 log_footer() {
+    logging_enabled || return
     {
         echo
-        echo "==========================================================="
-        echo "              Scan finished: $(date)"
-        echo "==========================================================="
-    } >> "$REPORT_FILE"
+        echo "_    _ _  _ ____ ____ ____ ____ _  _ ____ ____ "
+        echo "|    | |\/| |___ [__  |___ |___ |_/  |___ |__/ "
+        echo "|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ " 
+	echo "Report complete: $(date)"
+    } | _strip_colors >> "$REPORT_FILE"
 }
 
-# ------------------------------------------
-# Eventlogg (MENY, EXIT, FEL) med tidstämpel
-# ------------------------------------------
+# ---------------------------------------------------------
+# log_event: Den primära funktionen för att skriva till logg
+# ---------------------------------------------------------
 log_event() {
-    [[ $LOGGING_PAUSED -eq 1 ]] && return
+    [[ "$LOGGING_PAUSED" -eq 1 ]] && return
     logging_enabled || return
-    printf "[%s] %s\n" "$(date '+%H:%M:%S')" "$*" \
-        | _strip_colors >> "$REPORT_FILE"
+    
+    # Skriver till loggfilen med tidstämpel
+    printf "[%s] %s\n" "$(date '+%H:%M:%S')" "$*" | _strip_colors >> "$REPORT_FILE"
 }
 
-# -----------------------------------------
-# DIN BEFINTLIGA LOGGNING (UTAN timestamp)
-# -----------------------------------------
+# ---------------------------------------------------------
+# log_to_file: Fixar felmeddelanden i local_inventory.sh
+# ---------------------------------------------------------
 log_to_file() {
-    [[ "$LOGGING_ENABLED" != true ]] && return 0
-    [[ -z "$REPORT_FILE" ]] && return 0
-    echo "$(date '+%F %T') $1" >> "$REPORT_FILE"
+    # Vi skickar detta vidare till log_event
+    log_event "$@"
 }
 
 # ----------------------
 # Sektion / modulrubrik
 # ----------------------
 log_section() {
-    [[ $LOGGING_PAUSED -eq 1 ]] && return
+    [[ "$LOGGING_PAUSED" -eq 1 ]] && return
     logging_enabled || return
     {
         echo
         echo "-----------------------------------------------------------"
-        echo "$*" | _strip_colors
+        echo "$*"
         echo "-----------------------------------------------------------"
-    } >> "$REPORT_FILE"
+    } | _strip_colors >> "$REPORT_FILE"
 }
 
 # -------------------------------------------------
@@ -96,6 +93,7 @@ log_resume() {
 # Summary
 # --------
 log_summary() {
+    logging_enabled || return
     printf "%-30s : %s\n" "$1" "$2" | _strip_colors >> "$REPORT_FILE"
 }
 

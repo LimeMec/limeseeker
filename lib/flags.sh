@@ -38,11 +38,7 @@ parse_flags() {
 		show_about    
 	        FLAG_HANDLED=true
                 exit 0
-                ;;		
-	    -n|--no-log)
-                LIME_NO_LOG=1
-		shift
-		;;
+                ;;	
             *)
                 echo "Unknown option: $1"
                 echo "Use --help for available options"

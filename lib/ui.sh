@@ -32,13 +32,13 @@ ui_sudo_status() {
     fi
 }
 ui_logging_status() {
-    if [[ "${LIME_NO_LOG:-0}" -eq 1 ]]; then
+    # Vi kollar om LOGGING_ENABLED är false
+    if [[ "$LOGGING_ENABLED" == "false" ]]; then
         ui_echo "[${RED}✖${NC}] Logging: Disabled"
     else
         ui_echo "[${GREEN}✔${NC}] Logging: Enabled"
     fi
 }
-
 ui_status_block() {
     ui_sudo_status
     ui_logging_status

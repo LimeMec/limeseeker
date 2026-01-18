@@ -18,28 +18,27 @@ require_sudo() {
     ui_echo "${CYAN}${BOLD}|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ ${NC}"
     ui_echo "${CYAN}${BOLD}     Linux & Network Vulnerability Scanner${NC}"
     ui_echo "${CYAN}${BOLD}-----------------------------------------------${NC}"
-    # log_to_file "_    _ _  _ ____ ____ ____ ____ _  _ ____ ____ "
-    # log_to_file "|    | |\/| |___ [__  |___ |___ |_/  |___ |__/"
-    # log_to_file "|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ "
-    # log_to_file "     Linux & Network Vulnerability Scanner"
-    # log_to_file "-----------------------------------------------"
     ui_echo
     ui_echo "${YELLOW}${BOLD}[!] Elevated privileges required${NC}"
-    log_to_file "[!] Elevated privileges required"
     ui_echo
-    ui_echo "The user is responsible for ensuring that scans are run only on"
-    ui_echo "systems and networks they own or are authorized to test."
+    ui_echo "LimeSeeker requires elevated privileges to perform local security
+inspection and analysis.
+
+By continuing, you confirm that:
+• You are authorized to assess this system and its environment
+• You understand that some modules perform network and wireless scanning
+• You accept responsibility for how this tool is used
+• You understand that scan results may be logged locally
+
+Unauthorized use against systems or networks you do not own or
+explicitly have permission to assess may be illegal.
+
+If you do NOT agree, terminate the script now.
+
+Proceeding indicates acceptance of these terms."
     ui_echo
     ui_echo
-    ui_echo "Requirements:"
-    ui_echo
-    ui_echo " • Sudo privileges on this system"
-    ui_echo " • Explicit user authorization"
-    ui_echo
-    ui_echo
-    ui_echo
-    ui_echo
-    ui_echo "You will now be prompted for your sudo password."
+    ui_echo "Continue by enter your sudo password:"
         
     #---------------------------
     # Tvinga ange sudo-lösenord
