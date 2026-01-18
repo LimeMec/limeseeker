@@ -137,14 +137,15 @@ system och nätverk som användaren äger eller har uttryckligt tillstånd att t
 ## Framtida utveckling 
 
 <b>Planerade förbättringar:</b>
--  Rensa loggfil från ANSI-färgkoder och ej printbara tecken
--  Slå på/av loggning även inne i menyn
--  Möjlighet att köra skript utan *sudo* och i en anpassad miljö för detta
+- Fördjupad analys av wifi-nätverk
+- spara historik för analys av wifi för att jämföra resultat
+- addera modul för system hardening
+- addera mocul för container security
+-  Slå på/av loggning inne i meny
+-  Möjlighet att köra utan sudo i en avskalad miljö
 
 <b>Framtida funktioner:</b>
  -  Stöd för flera miljöer
- - Fördjupad analysmodul för trådlösa nätverk
- - Olika intensitetsnivåer för nätverksskanning för minimera brus.
  
 ---
 Trevligt att just du kikad in här!  
