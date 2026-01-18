@@ -1,5 +1,5 @@
 # LimeSeeker | Linux & Network Vulnerability Scanner 
-![Version](https://img.shields.io/badge/version-1.4.0-green)
+![Version](https://img.shields.io/badge/version-1.4.1-green)
 
 
 LimeSeeker är ett modulbaserat skript för rekognisering och identifiering av kritiska sårbarheter och föråldrade tjänster i Linux-system och nätverk.
@@ -140,7 +140,7 @@ system och nätverk som användaren äger eller har uttryckligt tillstånd att t
 - Fördjupad analys av wifi-nätverk
 - spara historik för analys av wifi för att jämföra resultat
 - addera modul för system hardening
-- addera mocul för container security
+- addera modul för container security
 -  Slå på/av loggning inne i meny
 -  Möjlighet att köra utan sudo i en avskalad miljö
 
