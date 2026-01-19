@@ -40,7 +40,7 @@ LimeSeeker är utformat för att svara på frågan:
 │   ├── local_inventory.sh
 │   ├── local_security.sh
 │   ├── network_vulnerability.sh
-|   |-- system_hardening.sh
+|   |── system_hardening.sh
 │   └── wifi_discovery.sh
 └── reports/
 ```
