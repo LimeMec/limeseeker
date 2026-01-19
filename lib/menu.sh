@@ -48,6 +48,7 @@ main_menu() {
     declare -A MODULE_STATUS=(
         [local_inventory]="– not run"
         [local_security]="– not run"
+	[system_hardening]="– not run"
         [network_vulnerability]="– not run"
         [wifi_discovery]="– not run"
     )
@@ -149,8 +150,9 @@ main_menu() {
 	    ui_echo "${BOLD}${CYAN}Modules:${NC}"
             ui_echo "1) Local inventory"
             ui_echo "2) Local security"
-            ui_echo "3) Network vulnerability"
-            ui_echo "4) WiFi discovery"
+	    ui_echo "3) System hardening"
+            ui_echo "4) Network vulnerability"
+            ui_echo "5) WiFi discovery"
 	    ui_echo
             ui_echo "q) Back to main menu"
             ui_echo
@@ -161,8 +163,9 @@ main_menu() {
             case "$choice" in
                 1) module="local_inventory" ;;
                 2) module="local_security" ;;
-                3) module="network_vulnerability" ;;
-                4) module="wifi_discovery" ;;
+		3) module="system_hardening" ;;
+                4) module="network_vulnerability" ;;
+                5) module="wifi_discovery" ;;
 		q|Q) return ;;
                 *) ui_echo "${RED}Invalid choice${NC}"; sleep 1; continue ;;
             esac
@@ -184,9 +187,10 @@ main_menu() {
         ui_echo "${BOLD}${CYAN}Modules:${NC}"
         ui_echo "1) Local inventory         $(status_color "${MODULE_STATUS[local_inventory]}")"
         ui_echo "2) Local security          $(status_color "${MODULE_STATUS[local_security]}")"
-        ui_echo "3) Network vulnerability   $(status_color "${MODULE_STATUS[network_vulnerability]}")"
-        ui_echo "4) WiFi discovery          $(status_color "${MODULE_STATUS[wifi_discovery]}")"
-        ui_echo "5) Scanning all modules"
+	ui_echo "3) System hardening        $(status_color "${MODULE_STATUS[system_hardening]}")"
+        ui_echo "4) Network vulnerability   $(status_color "${MODULE_STATUS[network_vulnerability]}")"
+        ui_echo "5) WiFi discovery          $(status_color "${MODULE_STATUS[wifi_discovery]}")"
+        ui_echo "6) Scanning all modules"
         ui_echo
 	ui_echo
 	ui_echo "${BOLD}${CYAN}Options:${NC}"
@@ -197,16 +201,17 @@ main_menu() {
         ui_echo
 	ui_echo
         
-	if ! ui_read -rp "Select option [1-5]: " choice; then 
+	if ! ui_read -rp "Select option [1-6]: " choice; then 
 		handle_eof
         fi 
 
         case "$choice" in
 		1) modules_to_run=(local_inventory) ;;
                 2) modules_to_run=(local_security) ;;
-                3) modules_to_run=(network_vulnerability) ;;
-                4) modules_to_run=(wifi_discovery) ;;
-                5) modules_to_run=(local_inventory local_security network_vulnerability wifi_discovery) ;;
+		3) modules_to_run=(system_hardening) ;;
+                4) modules_to_run=(network_vulnerability) ;;
+                5) modules_to_run=(wifi_discovery) ;;
+                6) modules_to_run=(local_inventory local_security system_hardening network_vulnerability wifi_discovery) ;;
      
    	        i|I) 
 			 info_menu 

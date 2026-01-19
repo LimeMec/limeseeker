@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
+# -----------------------------------
 # Initiera variabel om den inte finns
+# -----------------------------------
 LOGGING_PAUSED=${LOGGING_PAUSED:-0}
 
+# ---------------------------------------------
 # Kontrollera om loggning är aktiv och tillåten
+# ---------------------------------------------
 logging_enabled() {
     [[ "$LOGGING_ENABLED" == "false" ]] && return 1
     [[ -z "$REPORT_FILE" ]] && return 1
