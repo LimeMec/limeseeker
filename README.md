@@ -46,8 +46,8 @@ LimeSeeker är utformat för att svara på frågan:
 ```
 ## Flödesschema
 
-<a href="https://github.com/LimeMec/limeseeker/tree/main/docs/execution-flow.png">
-  <img src="https://raw.githubusercontent.com/LimeMec/limeseeker/main/docs/execution-flow.png" width="500">
+<a href="https://github.com/LimeMec/limeseeker/tree/main/docs/execution-flow142.png">
+  <img src="https://raw.githubusercontent.com/LimeMec/limeseeker/main/docs/execution-flow142.png" width="500">
 
 ## Funktion
 
@@ -155,7 +155,7 @@ system och nätverk som användaren äger eller har uttryckligt tillstånd att t
 
 <b>version 1.4.2</b>
 
-- Ny modul: 'system_hardening'
+- Ny modul: `system_hardening.sh`
 
 <b>version 1.4.1</b>
 
