@@ -7,7 +7,7 @@ export SCRIPT_PATH
 # Metadata
 # ---------
 LIMESEEKER_NAME="LimeSeeker"
-LIMESEEKER_VERSION="1.4.1"
+LIMESEEKER_VERSION="1.4.2"
 LIMESEEKER_AUTHOR="//LimeMec, Markus Carlsson"
 
 # -----------
@@ -30,6 +30,7 @@ shopt -u nullglob
 MODULES=(
     local_inventory
     local_security
+    system_hardening
     network_vulnerability
     wifi_discovery
 )

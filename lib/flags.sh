@@ -19,6 +19,11 @@ parse_flags() {
             -n|--no-log)
                 LOGGING_ENABLED=false
                 ;;
+	    -h|--help)
+	        show_help
+                FLAG_HANDLED=true
+                exit 0
+                ;;		
             -v|--version)
                 show_version
                 FLAG_HANDLED=true
@@ -63,13 +68,6 @@ show_help() {
     echo "LimeSeeker is a interactive Linux and network vulnerability"
     echo "scanning tool."
     echo "Use only on systems you own or have permission to test."
-    echo
-    echo
-    echo -e "${BOLD}Features:${NC}"
-    echo
-    echo "  • Modular scans"
-    echo "  • Safe signal handling"
-    echo "  • Detailed logging"
     echo
     echo
     echo -e "${BOLD}Requirements:${NC}"

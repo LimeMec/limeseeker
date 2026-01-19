@@ -1,5 +1,5 @@
 # LimeSeeker | Linux & Network Vulnerability Scanner 
-![Version](https://img.shields.io/badge/version-1.4.1-green)
+![Version](https://img.shields.io/badge/version-1.4.2-green)
 
 
 LimeSeeker är ett modulbaserat skript för rekognisering och identifiering av kritiska sårbarheter och föråldrade tjänster i Linux-system och nätverk.
@@ -40,6 +40,7 @@ LimeSeeker är utformat för att svara på frågan:
 │   ├── local_inventory.sh
 │   ├── local_security.sh
 │   ├── network_vulnerability.sh
+|   |-- system_hardening.sh
 │   └── wifi_discovery.sh
 └── reports/
 ```
@@ -73,7 +74,7 @@ Skriptet är uppbyggt av självständiga moduler och är terminalbaserat för Li
 *   **Shell:** Bash 4+
 *   **Rättigheter:** Sudo-behörighet krävs för vissa moduler.
 *   **Verktyg som används:**
-    *   `ip`, `ss`, `find`, `awk` (Standardverktyg)
+    *   `ip`, `ss`, `find`, `awk`, `ufw`, `firewalld` (Standardverktyg)
     *   [nmap](nmap.org) (för nätverksmoduler)
     *   [searchsploit](www.exploit-db.com) (för CVE-kontroller)
 
@@ -106,10 +107,11 @@ LimeSeeker kommer automatiskt be om sudo-lösenord.
 
 ## Moduler
 
-- **Local Inventory:** Rekognisering av lokala systemresurser.
-- **Local Security:** Kontroll av lokala sårbarheter och konfigurationer.
-- **Network Vulnerability:** Identifiering av brister i nätverkstjänster.
-- **WiFi Discovery:** Skanning av trådlösa nätverk.
+- **Local inventory:** Rekognisering av lokala systemresurser.
+- **Local security:** Kontrollerar lokala sårbarheter och konfigurationer.
+- **System hardening:** Minimera attackytan och att systemet följer best practice.
+- **Network vulnerability:** Identifiering av brister i nätverkstjänster.
+- **WiFi discovery:** Skanning av trådlösa nätverk.
 
 Mer detaljerad beskrivning över modulerna finns i  [modules.md](https://github.com/LimeMec/limeseeker/tree/main/docs/modules.md)
 
@@ -134,18 +136,31 @@ system och nätverk som användaren äger eller har uttryckligt tillstånd att t
 
 
 
-## Framtida utveckling 
+## Framtida uppdateringar 
 
 <b>Planerade förbättringar:</b>
+
 - Fördjupad analys av wifi-nätverk
 - spara historik för analys av wifi för att jämföra resultat
-- addera modul för system hardening
 - addera modul för container security
 -  Slå på/av loggning inne i meny
 -  Möjlighet att köra utan sudo i en avskalad miljö
 
 <b>Framtida funktioner:</b>
+
  -  Stöd för flera miljöer
+
+
+## Genomförda uppdateringar
+
+<b>version 1.4.2</b>
+
+- Ny modul: 'system_hardening'
+
+<b>version 1.4.1</b>
+
+- Tydligare loggning
+
  
 ---
 Trevligt att just du kikad in här!  
