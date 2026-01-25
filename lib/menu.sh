@@ -743,7 +743,7 @@ wifi_menu() {
                 2) module="local_security" ;;
 		3) module="system_hardening" ;;
                 4) module="network_vulnerability" ;;
-                5) module="wifi" ;;
+                5) module="wifi_discovery" ;;
 		q|Q) return ;;
                 *) ui_echo "${RED}Invalid choice${NC}"; sleep 1; continue ;;
             esac
