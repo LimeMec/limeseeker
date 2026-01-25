@@ -1,0 +1,153 @@
+        _____ _______ _______ _______ _______ _______ _     _ _______  ______
+ |        |   |  |  | |______ |______ |______ |______ |____/  |______ |_____/ 
+ |_____ __|__ |  |  | |______ ______| |______ |______ |    \_ |______ |    \_ 
+ Report: lör 24 jan 2026 23:12:02 CET
+ ----------------------------------------------------------------------------
+/home/limemec/kod/github/limeseeker/lib/menu.sh: rad 763: {: kommandot finns inte
+Select option [1-6]: 
+
+
+up 11 minutes
+
+	Vendor: Apple Inc.
+	Version: 429.0.0.0.0
+	Release Date: 03/18/2022
+
+OS:               GNU/Linux
+Nodename:         LimeAir
+Kernel release:   6.18.5+kali-amd64
+Kernel version:   #1 SMP PREEMPT_DYNAMIC Kali 6.18.5-1kali1 (2026-01-19)
+Architecture:     x86_64
+
+00:02.0 VGA compatible controller: Intel Corporation 3rd Gen Core processor Graphics Controller (rev 09)
+
+Architecture:                            x86_64
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) i5-3427U CPU @ 1.80GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+Socket(s):                               1
+CPU(s) scaling MHz:                      94%
+NUMA node0 CPU(s):                       0-3
+
+Min MHz: 1487.494
+Max MHz: 2532.822
+
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:         3,7Gi       2,5Gi       1,1Gi       489Mi       1,0Gi       1,3Gi
+Växl.:         3,9Gi       589Mi       3,3Gi
+
+Filsystem      Storlek Använt Ledigt Anv% Monterat på
+/dev/sda2         106G    20G    82G  20% /
+/dev/sda1         975M   304K   974M   1% /boot/efi
+
+Interface:   wlan0
+MAC address: 7c:d1:c3:e5:f3:73
+IP address:  192.168.1.208
+Gateway:     192.168.1.1
+Netmask:     /24
+Press Enter to continue.../home/limemec/kod/github/limeseeker/lib/menu.sh: rad 763: {: kommandot finns inte
+Select option [1-6]: 
+
+
+limemec
+
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+69 paket kan uppgraderas. Kör ”apt list --upgradable” för att se dem.
+base-files/kali-rolling 1:2026.1.0 amd64 [uppgraderingsbart från: 1:2025.4.0]
+curl/kali-rolling 8.18.0-2 amd64 [uppgraderingsbart från: 8.18.0-1]
+dnsmasq-base/kali-rolling 2.92-1 amd64 [uppgraderingsbart från: 2.92~rc3-1]
+dpkg-dev/kali-rolling 1.23.3+kali1 all [uppgraderingsbart från: 1.22.21+kali1]
+dpkg/kali-rolling 1.23.3+kali1 amd64 [uppgraderingsbart från: 1.22.21+kali1]
+hwloc/kali-rolling 2.12.2-1+b1 amd64 [uppgraderingsbart från: 2.12.2-1]
+intel-media-va-driver/kali-rolling 26.1.0+dfsg1-1 amd64 [uppgraderingsbart från: 25.4.5+dfsg1-1]
+kali-desktop-core/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-desktop-xfce/kali-rolling 2026.1.5 all [uppgraderingsbart från: 2026.1.1]
+kali-linux-core/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-linux-default/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-linux-firmware/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-linux-headless/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-menu/kali-rolling 2026.1.3 all [uppgraderingsbart från: 2025.4.3]
+kali-system-cli/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-system-core/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-system-gui/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+kali-tools-top10/kali-rolling 2026.1.5 amd64 [uppgraderingsbart från: 2026.1.1]
+libao-common/kali-rolling 1.2.2+20180113-1.3 all [uppgraderingsbart från: 1.2.2+20180113-1.2]
+libao4/kali-rolling 1.2.2+20180113-1.3 amd64 [uppgraderingsbart från: 1.2.2+20180113-1.2]
+libbrlapi0.8/kali-rolling 6.8-5 amd64 [uppgraderingsbart från: 6.8-4+b2]
+libcurl3t64-gnutls/kali-rolling 8.18.0-2 amd64 [uppgraderingsbart från: 8.18.0-1]
+libcurl4t64/kali-rolling 8.18.0-2 amd64 [uppgraderingsbart från: 8.18.0-1]
+libdpkg-perl/kali-rolling 1.23.3+kali1 all [uppgraderingsbart från: 1.22.21+kali1]
+libegl-mesa0/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgbm1/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgl1-mesa-dri/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libglx-mesa0/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+libgrpc++1.51t64/kali-rolling 1.51.1-7 amd64 [uppgraderingsbart från: 1.51.1-6]
+libgrpc29t64/kali-rolling 1.51.1-7 amd64 [uppgraderingsbart från: 1.51.1-6]
+libhwloc-plugins/kali-rolling 2.12.2-1+b1 amd64 [uppgraderingsbart från: 2.12.2-1]
+libhwloc15/kali-rolling 2.12.2-1+b1 amd64 [uppgraderingsbart från: 2.12.2-1]
+libnet-dns-perl/kali-rolling 1.54-1 all [uppgraderingsbart från: 1.53-1]
+libpipewire-0.3-0t64/kali-rolling 1.4.10-1 amd64 [uppgraderingsbart från: 1.4.9-1+b1]
+libpipewire-0.3-common/kali-rolling 1.4.10-1 all [uppgraderingsbart från: 1.4.9-1]
+libpipewire-0.3-modules/kali-rolling 1.4.10-1 amd64 [uppgraderingsbart från: 1.4.9-1+b1]
+libplymouth5/kali-rolling 24.004.60-5.1 amd64 [uppgraderingsbart från: 24.004.60-5]
+libpocl2t64/kali-rolling 6.0-7+b1 amd64 [uppgraderingsbart från: 6.0-7]
+libroc0.4/kali-rolling 0.4.0+dfsg-5+b1 amd64 [uppgraderingsbart från: 0.4.0+dfsg-5]
+libspa-0.2-bluetooth/kali-rolling 1.4.10-1 amd64 [uppgraderingsbart från: 1.4.9-1+b1]
+libspa-0.2-modules/kali-rolling 1.4.10-1 amd64 [uppgraderingsbart från: 1.4.9-1+b1]
+libtasn1-6/kali-rolling 4.21.0-2 amd64 [uppgraderingsbart från: 4.20.0-2+b1]
+libtss2-esys-3.0.2-0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-mu-4.0.1-0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-sys1t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-tcti-cmd0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-tcti-device0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-tcti-libtpms0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-tcti-mssim0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-tcti-spi-helper0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-tcti-swtpm0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libtss2-tctildr0t64/kali-rolling 4.1.3-1.3 amd64 [uppgraderingsbart från: 4.1.3-1.2]
+libze1/kali-rolling 1.27.0-1 amd64 [uppgraderingsbart från: 1.26.2-1]
+linux-base/kali-rolling 4.15 all [uppgraderingsbart från: 4.14]
+linux-sysctl-defaults/kali-rolling 4.15 all [uppgraderingsbart från: 4.14]
+mesa-libgallium/kali-rolling 25.3.3-1 amd64 [uppgraderingsbart från: 25.2.6-1]
+nodejs/kali-rolling 22.22.0+dfsg+~cs22.19.6-1+b1 amd64 [uppgraderingsbart från: 20.19.5+dfsg+~cs20.19.24-1]
+pipewire-bin/kali-rolling 1.4.10-1 amd64 [uppgraderingsbart från: 1.4.9-1+b1]
+pipewire-pulse/kali-rolling 1.4.10-1 amd64 [uppgraderingsbart från: 1.4.9-1+b1]
+pipewire/kali-rolling 1.4.10-1 amd64 [uppgraderingsbart från: 1.4.9-1+b1]
+plymouth-label/kali-rolling 24.004.60-5.1 amd64 [uppgraderingsbart från: 24.004.60-5]
+plymouth/kali-rolling 24.004.60-5.1 amd64 [uppgraderingsbart från: 24.004.60-5]
+pocl-opencl-icd/kali-rolling 6.0-7+b1 amd64 [uppgraderingsbart från: 6.0-7]
+powershell-empire/kali-rolling 6.3.0-0kali1 all [uppgraderingsbart från: 6.2.1-0kali4]
+python3-brlapi/kali-rolling 6.8-5 amd64 [uppgraderingsbart från: 6.8-4+b2]
+python3-tables-lib/kali-rolling 3.10.2-3+b2 amd64 [uppgraderingsbart från: 3.10.2-3]
+python3-werkzeug/kali-rolling 3.1.5-1 all [uppgraderingsbart från: 3.1.4-1]
+starkiller/kali-rolling 3.2.0+ds-0kali1 all [uppgraderingsbart från: 3.1.0+ds-0kali1]
+xbrlapi/kali-rolling 6.8-5 amd64 [uppgraderingsbart från: 6.8-4+b2]
+
+
+
+/home/limemec/.config/marktext/dataCenter.json
+/home/limemec/.config/marktext/preferences.json
+
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/lib/chromium/chrome-sandbox
+/usr/lib/xorg/Xorg.wrap
+/usr/lib/openssh/ssh-keysign
+/usr/lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
+/usr/bin/kismet_cap_nrf_52840
+/usr/bin/kismet_cap_ubertooth_one
+/usr/bin/chfn
+/usr/bin/kismet_cap_nrf_51822
+
+Press Enter to continue.../home/limemec/kod/github/limeseeker/lib/menu.sh: rad 763: {: kommandot finns inte
+Select option [1-6]: 
+_    _ _  _ ____ ____ ____ ____ _  _ ____ ____ 
+|    | |\/| |___ [__  |___ |___ |_/  |___ |__/ 
+|___ | |  | |___ ___] |___ |___ | \_ |___ |  \ 
+Report complete: lör 24 jan 2026 23:13:50 CET

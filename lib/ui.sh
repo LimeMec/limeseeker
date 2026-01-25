@@ -1,29 +1,36 @@
 #!/usr/bin/env bash
 
-#----------------------------------
-# Rensa terminalen, aldrig stdout
-# ---------------------------------
+# -----------------------
+# Disable ESC key output
+# -----------------------
+disable_esc() {
+    stty -echoctl 2>/dev/null
+}
+
+#----------------------------
+# Clear terminal, not stdout
+# ---------------------------
 ui_clear() {
     clear > /dev/tty
 }
 
-#-------------------------------
-# Text till terminal med färger
-# ------------------------------
+#----------------------
+# Terminal text colour
+# ---------------------
 ui_echo() {
     printf "%b\n" "$*" > /dev/tty 2>&1
 }
 
-#--------------------
-# Input från terminal
-# -------------------
+#----------------
+# Input terminal
+# ---------------
 ui_read() {
     read -r "$@" < /dev/tty
 }
 
-# ----------------------------
-# Sudo-/loggningstatus i meny
-# ----------------------------
+# ---------------------------
+# Sudo-/loggning status menu
+# ---------------------------
 ui_sudo_status() {
     if [[ $EUID -eq 0 ]]; then
         ui_echo "[${GREEN}✔${NC}] Sudo: Active"
@@ -32,7 +39,6 @@ ui_sudo_status() {
     fi
 }
 ui_logging_status() {
-    # Vi kollar om LOGGING_ENABLED är false
     if [[ "$LOGGING_ENABLED" == "false" ]]; then
         ui_echo "[${RED}✖${NC}] Logging: Disabled"
     else
@@ -45,7 +51,7 @@ ui_status_block() {
 }
 
 #-------------
-# Huvudrubrik
+# Main header
 # ------------
 show_intro() {
     ui_clear

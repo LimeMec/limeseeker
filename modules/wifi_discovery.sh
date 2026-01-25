@@ -5,64 +5,76 @@
 # ----------------
 wifi_discovery_NAME="WiFi discovery"
 wifi_discovery_DESC="
-The WiFi discovery module scans the local wireless environment.
+Performs an extensive passive wireless scan and stores
+raw data for later analysis and historical comparison.
 
-This includes:
-•  Nearby access points
-•  Encryption types (WEP/WPA/WPA2/WPA3)
-•  Signal strength
-•  Channel usage
+Collected data includes:
+• SSID / BSSID
+• Signal strength (dBm)
+• Channel & frequency band
+• Encryption & authentication
+• Cipher suites (CCMP/TKIP)
+• PMF (802.11w)
+• WPS status
+• Supported WiFi standards (b/g/n/ac/ax)
+• Hidden networks
+• Regulatory hints
 
-Purpose:
-To map the surrounding wireless landscape and identify weak or
-misconfigured access points.
-
-Note:
-This module may require monitor mode and root privileges.
+This module performs NO analysis and NO active attacks.
 "
 
 wifi_discovery() {
-    
-    clear
+
+    ui_clear
+    ui_echo "${CYAN}${BOLD}Collecting wireless scan data...${NC}"
+    log_to_file "▶ WiFi discovery started"
     echo
-    # ------------------
-    # Rubrik för modul
-    # ------------------
-    sleep 0.3
-    ui_echo "${CYAN}${BOLD}WiFi discovery scan...${NC}"
-    log_to_file "▶ WiFi discovery scan..."
-    echo
-    echo
-    
-    sleep 0.5
+
     if ! command -v iw &>/dev/null; then
-        ui_echo "${RED}iw not installed${NC}"
-	log_to_file "iw not installed"
-	return 1
+        ui_echo "${YELLOW}[INFO]${NC} iw not installed – skipping WiFi discovery"
+        log_to_file "[INFO] iw not installed – skipping WiFi discovery"
+        return 0
     fi
 
-    WLAN_IFACES=$(iw dev 2>/dev/null | awk '$1=="Interface"{print $2}')
-    
-    sleep 0.5
-    if [ -z "$WLAN_IFACES" ]; then
-        ui_echo "${YELLOW}No wireless interface detected${NC}"
-	log_to_file "No wireless interface detected"
-	return 1
-    fi
-    
+    WLAN_IFACES=$(iw dev | awk '$1=="Interface"{print $2}')
+    [[ -z "$WLAN_IFACES" ]] && {
+        ui_echo "${YELLOW}[INFO]${NC} No wireless interfaces detected"
+        log_to_file "[INFO] No wireless interfaces detected"
+        return 0
+    }
+
+    WIFI_RAW_DIR="$BASE_DIR/reports/limeseeker_wifi"
+    mkdir -p "$WIFI_RAW_DIR"
+
+    TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+
     for IFACE in $WLAN_IFACES; do
         ui_echo "${GREEN}${BOLD}▶ Interface:${NC} $IFACE"
-	log_to_file "▶ Interfaces: $IFACE"
-        sudo ip link set "$IFACE" up 2>/dev/null
+        log_to_file "▶ WiFi interface: $IFACE"
 
-        sudo iw dev "$IFACE" scan 2>/dev/null | \
-        awk '
-            /BSS/     {bssid=$2}
-            /signal/  {signal=$2}
-            /SSID/    {print "SSID:", $2, "| BSSID:", bssid, "| Signal:", signal}
-        '
-        echo
-     done
-    
-     return 0
+        ip link set "$IFACE" up 2>/dev/null
+
+        RAW_FILE="$WIFI_RAW_DIR/${IFACE}_${TIMESTAMP}.raw"
+        META_FILE="$WIFI_RAW_DIR/${IFACE}_${TIMESTAMP}.meta"
+
+        iw dev "$IFACE" scan 2>/dev/null > "$RAW_FILE"
+
+        {
+            echo "timestamp=$TIMESTAMP"
+            echo "interface=$IFACE"
+            echo "hostname=$(hostname)"
+            echo "kernel=$(uname -r)"
+        } > "$META_FILE"
+
+        ui_echo "  → Raw scan saved: $RAW_FILE"
+        ui_echo "  → Metadata saved: $META_FILE"
+        log_to_file "Raw scan saved: $RAW_FILE"
+    done
+
+    echo
+    ui_echo "${CYAN}${BOLD}WiFi discovery completed.${NC}"
+    log_to_file "✔ WiFi discovery completed"
+
+    return 0
 }
+

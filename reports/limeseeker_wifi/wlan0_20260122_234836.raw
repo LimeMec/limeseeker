@@ -1,0 +1,2954 @@
+BSS 7c:2e:bd:81:e4:b6(on wlan0)
+	TSF: 1468045303 usec (0d, 00:24:28)
+	freq: 2437.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime RadioMeasure (0x1431)
+	signal: -71.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: G-1
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 
+	DS Parameter set: channel 6
+	Country: NL	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	ERP: <no flags>
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	RM enabled capabilities:
+		Capabilities: 0x72 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+			Beacon Table Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 81
+	HT capabilities:
+		Capabilities: 0x11ed
+			RX LDPC
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 8 usec (0x06)
+		HT TX/RX MCS rate indexes supported: 0-15
+	HT operation:
+		 * primary channel: 6
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * SSID List
+		 * Operating Mode Notification
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS d4:5d:64:0c:ae:30(on wlan0) -- associated
+	TSF: 4717875210103 usec (54d, 14:31:15)
+	freq: 2447.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy RadioMeasure (0x1011)
+	signal: -54.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: Asus30
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 18.0 24.0 36.0 54.0 
+	DS Parameter set: channel 8
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 9.0 12.0 48.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 16
+		 * channel utilisation: 32/255
+		 * available admission capacity: 0 [*32us]
+	Measurement Pilot Transmission:
+		 * interval: 0 TUs
+	RM enabled capabilities:
+		Capabilities: 0x30 0x00 0x00 0x00 0x00
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x11ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-23
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 8
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: non-HT mixed
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Overlapping BSS scan params:
+		 * passive dwell: 20 TUs
+		 * active dwell: 10 TUs
+		 * channel width trigger scan interval: 300 s
+		 * scan passive total per channel: 200 TUs
+		 * scan active total per channel: 20 TUs
+		 * BSS width channel transition delay factor: 5
+		 * OBSS Scan Activity Threshold: 0.25 %
+	Extended capabilities:
+		 * HT Information Exchange Supported
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Operating Mode Notification
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: 3ad4590a-713f-5605-4854-846976150d00
+		 * Manufacturer: ASUSTeK Computer Inc.
+		 * Model: Wi-Fi Protected Setup Router
+		 * Model Number: RT-AC86U
+		 * Serial Number: d4:5d:64:0c:ae:30
+		 * Primary Device Type: 6-0050f204-1
+		 * Device name: RT-AC86U
+		 * Config methods: Label, Keypad
+		 * RF Bands: 0x3
+		 * Version2: 2.0
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS 90:bf:d9:a3:12:64(on wlan0)
+	TSF: 244230861212 usec (2d, 19:50:30)
+	freq: 2457.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime (0x0411)
+	signal: -53.00 dBm
+	last seen: 176 ms ago
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 9.0 18.0 36.0 54.0 
+	DS Parameter set: channel 10
+	Extended supported rates: 6.0 12.0 24.0 48.0 
+	Country: SE	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	AP Channel Report:
+		 * operating class: 32
+		 * channel(s): 1 2 3 4 5 6 7
+	AP Channel Report:
+		 * operating class: 33
+		 * channel(s): 5 6 7 8 9 10 11
+	TIM: DTIM Count 0 DTIM Period 1 Bitmap Control 0x0 Bitmap[0] 0x0
+	WPA:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 1-PTKSA-RC 1-GTKSA-RC (0x0000)
+	ERP: Barker_Preamble_Mode
+	HT capabilities:
+		Capabilities: 0x18c
+			HT20
+			SM Power Save disabled
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 10
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: non-HT mixed
+		 * non-GF present: 1
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	BSS Load:
+		 * station count: 5
+		 * channel utilisation: 30/255
+		 * available admission capacity: 31250 [*32us]
+BSS e2:bb:9e:08:b3:99(on wlan0)
+	TSF: 4717875277233 usec (54d, 14:31:15)
+	freq: 2447.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime (0x0411)
+	signal: -63.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: DIRECT-tb-EPSON-ET-2850 Series
+	Supported rates: 6.0* 9.0 12.0* 18.0 24.0* 36.0 48.0 54.0 
+	DS Parameter set: channel 8
+	ERP: Barker_Preamble_Mode
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	HT capabilities:
+		Capabilities: 0x86c
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			No RX STBC
+			Max AMSDU length: 7935 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 16 usec (0x07)
+		HT Max RX data rate: 476 Mbps
+		HT TX/RX MCS rate indexes supported: 0-7
+	HT operation:
+		 * primary channel: 8
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 2976 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1472 usec
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: cfe92100-67c4-11d4-a45f-e0bb9e083399
+		 * Manufacturer: EPSON
+		 * Model: ET-2850 Series
+		 * Model Number: ET-2850 Series
+		 * Serial Number: E0BB9E083399
+		 * Primary Device Type: 3-0050f204-5
+		 * Device name: DIRECT-tb-EPSON-ET-2850 Series
+		 * Config methods:
+		 * Version2: 2.0
+BSS d4:5d:64:0c:ae:34(on wlan0)
+	TSF: 4717897626854 usec (54d, 14:31:37)
+	freq: 5260.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy SpectrumMgmt RadioMeasure (0x1111)
+	signal: -56.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: Asus30_5G
+	Supported rates: 6.0* 9.0 12.0* 18.0 24.0* 36.0 48.0 54.0 
+	Country: DE	Environment: Indoor/Outdoor
+		Channels [36 - 36] @ 23 dBm
+		Channels [40 - 40] @ 23 dBm
+		Channels [44 - 44] @ 23 dBm
+		Channels [48 - 48] @ 23 dBm
+		Channels [52 - 52] @ 23 dBm
+		Channels [56 - 56] @ 23 dBm
+		Channels [60 - 60] @ 23 dBm
+		Channels [64 - 64] @ 23 dBm
+		Channels [100 - 100] @ 30 dBm
+		Channels [104 - 104] @ 30 dBm
+		Channels [108 - 108] @ 30 dBm
+		Channels [112 - 112] @ 30 dBm
+		Channels [116 - 116] @ 30 dBm
+		Channels [132 - 132] @ 30 dBm
+		Channels [136 - 136] @ 30 dBm
+		Channels [140 - 140] @ 30 dBm
+	Power constraint: 0 dB
+	TPC report: TX power: 15 dBm
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 5
+		 * channel utilisation: 6/255
+		 * available admission capacity: 0 [*32us]
+	Measurement Pilot Transmission:
+		 * interval: 0 TUs
+	RM enabled capabilities:
+		Capabilities: 0x30 0x00 0x00 0x00 0x00
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x1ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-31
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 52
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: 20 MHz
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Operating Mode Notification
+		 * Max Number Of MSDUs In A-MSDU is unlimited
+	VHT capabilities:
+		VHT Capabilities (0x0f8369b2):
+			Max MPDU length: 11454
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: not supported
+	VHT operation:
+		 * channel width: 1 (80 MHz)
+		 * center freq segment 1: 58
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	Transmit Power Envelope:
+		 * Local Maximum Transmit Power For 20 MHz: 1 dBm
+		 * Local Maximum Transmit Power For 40 MHz: 1 dBm
+		 * Local Maximum Transmit Power For 80 MHz: 1 dBm
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: 3ad4590a-713f-5605-4854-846976150d00
+		 * Manufacturer: ASUSTeK Computer Inc.
+		 * Model: Wi-Fi Protected Setup Router
+		 * Model Number: RT-AC86U
+		 * Serial Number: d4:5d:64:0c:ae:30
+		 * Primary Device Type: 6-0050f204-1
+		 * Device name: RT-AC86U
+		 * Config methods: Label, Keypad
+		 * RF Bands: 0x3
+		 * Version2: 2.0
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS 7c:2e:bd:7f:1d:94(on wlan0)
+	TSF: 6658694913569 usec (77d, 01:38:14)
+	freq: 2437.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime RadioMeasure (0x1431)
+	signal: -71.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: G-1
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 
+	DS Parameter set: channel 6
+	Country: NL	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	ERP: <no flags>
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	RM enabled capabilities:
+		Capabilities: 0x72 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+			Beacon Table Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 81
+	HT capabilities:
+		Capabilities: 0x11ed
+			RX LDPC
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 8 usec (0x06)
+		HT TX/RX MCS rate indexes supported: 0-15
+	HT operation:
+		 * primary channel: 6
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * SSID List
+		 * Operating Mode Notification
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS 7c:2e:bd:7f:1d:90(on wlan0)
+	TSF: 6658700913610 usec (77d, 01:38:20)
+	freq: 5180.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy RadioMeasure (0x1011)
+	signal: -69.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: G-1
+	Supported rates: 6.0* 9.0 12.0* 18.0 24.0* 36.0 48.0 54.0 
+	DS Parameter set: channel 36
+	Country: NL	Environment: Indoor/Outdoor
+		Channels [36 - 48] @ 20 dBm
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	RM enabled capabilities:
+		Capabilities: 0x72 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+			Beacon Table Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 128
+	HT capabilities:
+		Capabilities: 0x1ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 8 usec (0x06)
+		HT TX/RX MCS rate indexes supported: 0-15
+	HT operation:
+		 * primary channel: 36
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 1
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * SSID List
+		 * Operating Mode Notification
+		 * FTM Responder
+		 * Max Number Of MSDUs In A-MSDU is unlimited
+	VHT capabilities:
+		VHT Capabilities (0x338139b2):
+			Max MPDU length: 11454
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			RX antenna pattern consistency
+			TX antenna pattern consistency
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: not supported
+	VHT operation:
+		 * channel width: 1 (80 MHz)
+		 * center freq segment 1: 42
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0xfffc
+	Transmit Power Envelope:
+		 * Local Maximum Transmit Power For 20 MHz: 20 dBm
+		 * Local Maximum Transmit Power For 40 MHz: 20 dBm
+		 * Local Maximum Transmit Power For 80 MHz: 20 dBm
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS fc:34:97:9a:c4:90(on wlan0)
+	TSF: 104436830340 usec (1d, 05:00:36)
+	freq: 2412.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime RadioMeasure (0x1411)
+	signal: -82.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: Maverick
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 18.0 24.0 36.0 54.0 
+	DS Parameter set: channel 1
+	TPC report: TX power: 16 dBm
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 9.0 12.0 48.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC MFP-capable (0x008c)
+	BSS Load:
+		 * station count: 1
+		 * channel utilisation: 94/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x9ad
+			RX LDPC
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 1
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: non-HT mixed
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * Max Number Of MSDUs In A-MSDU is 
+	VHT capabilities:
+		VHT Capabilities (0x038001b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 1
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS aa:34:97:9a:c4:91(on wlan0)
+	TSF: 104436836259 usec (1d, 05:00:36)
+	freq: 2412.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime RadioMeasure (0x1411)
+	signal: -81.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: Ice
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 18.0 24.0 36.0 54.0 
+	DS Parameter set: channel 1
+	TPC report: TX power: 16 dBm
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 9.0 12.0 48.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 45
+		 * channel utilisation: 94/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x9ad
+			RX LDPC
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 1
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: non-HT mixed
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * Max Number Of MSDUs In A-MSDU is 
+	VHT capabilities:
+		VHT Capabilities (0x0f8171b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformee
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 1
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+BSS 5c:4d:bf:a2:89:5a(on wlan0)
+	TSF: 3341021383685 usec (38d, 16:03:41)
+	freq: 2462.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime RadioMeasure (0x1431)
+	signal: -83.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: TN_wifi_A2895A
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 
+	DS Parameter set: channel 11
+	Country: FO	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	TPC report: TX power: 20 dBm
+	ERP: <no flags>
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK SAE
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC MFP-capable (0x008c)
+	RM enabled capabilities:
+		Capabilities: 0x73 0xd0 0x00 0x00 0x0c
+			Link Measurement
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+			Beacon Table Measurement
+			LCI Measurement
+			Transmit Stream/Category Measurement
+			Triggered Transmit Stream/Category
+			FTM Range Report
+			Civic Location Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 4
+	HT capabilities:
+		Capabilities: 0x19ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: No restriction (0x00)
+		HT TX/RX MCS rate indexes supported: 0-31
+	HT operation:
+		 * primary channel: 11
+		 * secondary channel offset: below
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Overlapping BSS scan params:
+		 * passive dwell: 20 TUs
+		 * active dwell: 10 TUs
+		 * channel width trigger scan interval: 300 s
+		 * scan passive total per channel: 200 TUs
+		 * scan active total per channel: 20 TUs
+		 * BSS width channel transition delay factor: 5
+		 * OBSS Scan Activity Threshold: 0.25 %
+	Extended capabilities:
+		 * HT Information Exchange Supported
+		 * Extended Channel Switching
+		 * TFS
+		 * WNM-Sleep Mode
+		 * TIM Broadcast
+		 * BSS Transition
+		 * SSID List
+		 * Operating Mode Notification
+		 * TWT Responder Support
+		 * Max Number Of MSDUs In A-MSDU is unlimited
+	VHT capabilities:
+		VHT Capabilities (0x338b7992):
+			Max MPDU length: 11454
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			RX antenna pattern consistency
+			TX antenna pattern consistency
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 9
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0xfffc
+	HE capabilities:
+		HE MAC Capabilities (0x010d1a081040):
+			+HTC HE Supported
+			TWT Responder
+			Dynamic BA Fragementation Level: 1
+			Minimum Payload size of 128 bytes: 1
+			BSR
+			OM Control
+			Maximum A-MPDU Length Exponent: 3
+			A-MSDU in A-MPDU
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x026048880f43811c110800):
+			HE40/2.4GHz
+			LDPC Coding in Payload
+			HE SU PPDU with 1x HE-LTF and 0.8us GI
+			STBC Rx <= 80MHz
+			Full Bandwidth UL MU-MIMO
+			DCM Max Constellation Rx: 1
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			Beamformee STS <= 80MHz: 3
+			Sounding Dimensions <= 80MHz: 3
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			PPE Threshold Present
+			HE SU PPDU & HE PPDU 4x HE-LTF 0.8us GI
+			Max NC: 3
+			HE ER SU PPDU 4x HE-LTF 0.8us GI
+			HE ER SU PPDU 1x HE-LTF 0.8us GI
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x1b 0x1c 0xc7 0x71 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x003ff4)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 1023
+		BSS Color: 46
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: 3f82e437-0398-52fc-a7f1-d6e6f34137af
+		 * Manufacturer: ZTE
+		 * Model: WAP
+		 * Model Number: 123
+		 * Serial Number: 12345
+		 * Primary Device Type: 6-0050f204-1
+		 * Device name: AP
+		 * Config methods:
+		 * RF Bands: 0x3
+		 * Version2: 2.0
+BSS fc:34:97:9a:c3:91(on wlan0)
+	TSF: 104347569859 usec (1d, 04:59:07)
+	freq: 2412.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime RadioMeasure (0x1411)
+	signal: -79.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: Maverick
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 18.0 24.0 36.0 54.0 
+	DS Parameter set: channel 1
+	TPC report: TX power: 16 dBm
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 9.0 12.0 48.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 0
+		 * channel utilisation: 79/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x9ad
+			RX LDPC
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 1
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 1
+		 * HT protection: nonmember
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * Max Number Of MSDUs In A-MSDU is 
+	VHT capabilities:
+		VHT Capabilities (0x0f8171b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformee
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 1
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: 31cc2436-1b8d-e842-f0c4-cbaebf12509d
+		 * Manufacturer: ASUSTeK Computer Inc.
+		 * Model: Wi-Fi Protected Setup Router
+		 * Model Number: ZenWiFi_XT8
+		 * Serial Number: fc:34:97:9a:c3:90
+		 * Primary Device Type: 6-0050f204-1
+		 * Device name: ZenWiFi_XT8
+		 * Config methods: Label, Keypad
+		 * RF Bands: 0x3
+		 * Version2: 2.0
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+BSS aa:34:97:9a:c3:93(on wlan0)
+	TSF: 104347581299 usec (1d, 04:59:07)
+	freq: 2412.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime RadioMeasure (0x1411)
+	signal: -80.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: Ice
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 18.0 24.0 36.0 54.0 
+	DS Parameter set: channel 1
+	TPC report: TX power: 16 dBm
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 9.0 12.0 48.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 10
+		 * channel utilisation: 79/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x9ad
+			RX LDPC
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 1
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 1
+		 * HT protection: nonmember
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * Max Number Of MSDUs In A-MSDU is 
+	VHT capabilities:
+		VHT Capabilities (0x0f8171b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformee
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 1
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+BSS 10:97:bd:5c:c0:95(on wlan0)
+	TSF: 371132519367 usec (4d, 07:05:32)
+	freq: 2412.0
+	beacon interval: 100 TUs
+	capability: ESS ShortPreamble ShortSlotTime (0x0421)
+	signal: -82.00 dBm
+	last seen: 9872 ms ago
+	Supported rates: 5.5* 11.0* 1.0* 2.0* 6.0 12.0 24.0 48.0 
+	DS Parameter set: channel 1
+	TIM: DTIM Count 0 DTIM Period 2 Bitmap Control 0x0 Bitmap[0] 0x0 (+ 2 octets)
+	ERP: <no flags>
+	Extended supported rates: 54.0 9.0 18.0 36.0 
+	HT capabilities:
+		Capabilities: 0x112c
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 8191 bytes (exponent: 0x000)
+		Minimum RX AMPDU time spacing: No restriction (0x00)
+		HT TX/RX MCS rate indexes supported: 0-7
+	HT operation:
+		 * primary channel: 1
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS 92:bf:b8:e9:d7:61(on wlan0)
+	TSF: 8510515154088 usec (98d, 12:01:55)
+	freq: 2432.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime RadioMeasure (0x1411)
+	signal: -89.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: RosaVillan
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 18.0 24.0 36.0 54.0 
+	DS Parameter set: channel 5
+	Country: DE	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	TPC report: TX power: 16 dBm
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 9.0 12.0 48.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 1
+		 * channel utilisation: 33/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x19ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 5
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 1
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Overlapping BSS scan params:
+		 * passive dwell: 20 TUs
+		 * active dwell: 10 TUs
+		 * channel width trigger scan interval: 300 s
+		 * scan passive total per channel: 200 TUs
+		 * scan active total per channel: 20 TUs
+		 * BSS width channel transition delay factor: 5
+		 * OBSS Scan Activity Threshold: 0.25 %
+	Extended capabilities:
+		 * HT Information Exchange Supported
+		 * Extended Channel Switching
+		 * Event
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * Max Number Of MSDUs In A-MSDU is 
+	802.11u Interworking:
+		Network Options: 0x0
+			Network Type: 0 (Private)
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+	VHT capabilities:
+		VHT Capabilities (0x0f8979b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 7
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	HE capabilities:
+		HE MAC Capabilities (0x000112081000):
+			+HTC HE Supported
+			BSR
+			OM Control
+			Maximum A-MPDU Length Exponent: 2
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x222002c00d41810800cc00):
+			HE40/2.4GHz
+			242 tone RUs/2.4GHz
+			LDPC Coding in Payload
+			NDP with 4x HE-LTF and 3.2us GI
+			Rx HE MU PPDU from Non-AP STA
+			SU Beamformer
+			SU Beamformee
+			Beamformee STS <= 80MHz: 3
+			Sounding Dimensions <= 80MHz: 1
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			PPE Threshold Present
+			Max NC: 1
+			TX 1024-QAM
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x19 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x010004)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 0
+			ER SU Disable
+		BSS Color: 28
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: 7d1cbac1-3612-cc5f-2832-6d2a5fac4591
+		 * Manufacturer: ASUSTeK Computer Inc.
+		 * Model: Wi-Fi Protected Setup Router
+		 * Model Number: ZenWiFi_XD5
+		 * Serial Number: R8IG06K029346UM
+		 * Primary Device Type: 6-0050f204-1
+		 * Device name: ZenWiFi_XD5
+		 * Config methods: Label, Keypad
+		 * RF Bands: 0x3
+		 * Version2: 2.0
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS 92:bf:b8:e9:d6:61(on wlan0)
+	TSF: 8510516196602 usec (98d, 12:01:56)
+	freq: 2432.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime RadioMeasure (0x1411)
+	signal: -89.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: RosaVillan
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 18.0 24.0 36.0 54.0 
+	DS Parameter set: channel 5
+	Country: DE	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	TPC report: TX power: 16 dBm
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 9.0 12.0 48.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 1
+		 * channel utilisation: 46/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	HT capabilities:
+		Capabilities: 0x19ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 5
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 1
+		 * HT protection: 20 MHz
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Overlapping BSS scan params:
+		 * passive dwell: 20 TUs
+		 * active dwell: 10 TUs
+		 * channel width trigger scan interval: 300 s
+		 * scan passive total per channel: 200 TUs
+		 * scan active total per channel: 20 TUs
+		 * BSS width channel transition delay factor: 5
+		 * OBSS Scan Activity Threshold: 0.25 %
+	Extended capabilities:
+		 * HT Information Exchange Supported
+		 * Extended Channel Switching
+		 * Event
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * Max Number Of MSDUs In A-MSDU is 
+	802.11u Interworking:
+		Network Options: 0x0
+			Network Type: 0 (Private)
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+	VHT capabilities:
+		VHT Capabilities (0x0f8979b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 7
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	HE capabilities:
+		HE MAC Capabilities (0x000112081000):
+			+HTC HE Supported
+			BSR
+			OM Control
+			Maximum A-MPDU Length Exponent: 2
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x222002c00d41810800cc00):
+			HE40/2.4GHz
+			242 tone RUs/2.4GHz
+			LDPC Coding in Payload
+			NDP with 4x HE-LTF and 3.2us GI
+			Rx HE MU PPDU from Non-AP STA
+			SU Beamformer
+			SU Beamformee
+			Beamformee STS <= 80MHz: 3
+			Sounding Dimensions <= 80MHz: 1
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			PPE Threshold Present
+			Max NC: 1
+			TX 1024-QAM
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x19 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x010004)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 0
+			ER SU Disable
+		BSS Color: 31
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: e15cee3f-0441-6259-0f29-7353e7721f59
+		 * Manufacturer: ASUSTeK Computer Inc.
+		 * Model: Wi-Fi Protected Setup Router
+		 * Model Number: ZenWiFi_XD5
+		 * Serial Number: R8IG06K02918WE8
+		 * Primary Device Type: 6-0050f204-1
+		 * Device name: ZenWiFi_XD5
+		 * Config methods: Label, Keypad
+		 * RF Bands: 0x3
+		 * Version2: 2.0
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS 62:4d:bf:a2:89:5a(on wlan0)
+	TSF: 3341021392656 usec (38d, 16:03:41)
+	freq: 2462.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime RadioMeasure (0x1431)
+	signal: -84.00 dBm
+	last seen: 8228 ms ago
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 
+	DS Parameter set: channel 11
+	TIM: DTIM Count 0 DTIM Period 1 Bitmap Control 0x0 Bitmap[0] 0x0
+	Country: FO	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	TPC report: TX power: 20 dBm
+	ERP: <no flags>
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	RM enabled capabilities:
+		Capabilities: 0x73 0xd0 0x00 0x00 0x0c
+			Link Measurement
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+			Beacon Table Measurement
+			LCI Measurement
+			Transmit Stream/Category Measurement
+			Triggered Transmit Stream/Category
+			FTM Range Report
+			Civic Location Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 4
+	HT capabilities:
+		Capabilities: 0x19ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: No restriction (0x00)
+		HT TX/RX MCS rate indexes supported: 0-31
+	HT operation:
+		 * primary channel: 11
+		 * secondary channel offset: below
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: 20 MHz
+		 * non-GF present: 1
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Overlapping BSS scan params:
+		 * passive dwell: 20 TUs
+		 * active dwell: 10 TUs
+		 * channel width trigger scan interval: 300 s
+		 * scan passive total per channel: 200 TUs
+		 * scan active total per channel: 20 TUs
+		 * BSS width channel transition delay factor: 5
+		 * OBSS Scan Activity Threshold: 0.25 %
+	Extended capabilities:
+		 * HT Information Exchange Supported
+		 * Extended Channel Switching
+		 * TFS
+		 * WNM-Sleep Mode
+		 * TIM Broadcast
+		 * BSS Transition
+		 * SSID List
+		 * Operating Mode Notification
+		 * TWT Responder Support
+		 * Max Number Of MSDUs In A-MSDU is unlimited
+	VHT capabilities:
+		VHT Capabilities (0x338b7992):
+			Max MPDU length: 11454
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			RX antenna pattern consistency
+			TX antenna pattern consistency
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 9
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0xfffc
+	HE capabilities:
+		HE MAC Capabilities (0x010d1a081040):
+			+HTC HE Supported
+			TWT Responder
+			Dynamic BA Fragementation Level: 1
+			Minimum Payload size of 128 bytes: 1
+			BSR
+			OM Control
+			Maximum A-MPDU Length Exponent: 3
+			A-MSDU in A-MPDU
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x026048880f43811c110800):
+			HE40/2.4GHz
+			LDPC Coding in Payload
+			HE SU PPDU with 1x HE-LTF and 0.8us GI
+			STBC Rx <= 80MHz
+			Full Bandwidth UL MU-MIMO
+			DCM Max Constellation Rx: 1
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			Beamformee STS <= 80MHz: 3
+			Sounding Dimensions <= 80MHz: 3
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			PPE Threshold Present
+			HE SU PPDU & HE PPDU 4x HE-LTF 0.8us GI
+			Max NC: 3
+			HE ER SU PPDU 4x HE-LTF 0.8us GI
+			HE ER SU PPDU 1x HE-LTF 0.8us GI
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x1b 0x1c 0xc7 0x71 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x003ff4)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 1023
+		BSS Color: 46
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS a4:11:62:09:c3:36(on wlan0)
+	TSF: 53350137344 usec (0d, 14:49:10)
+	freq: 2462.0
+	beacon interval: 31 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime (0x0431)
+	signal: -86.00 dBm
+	last seen: 8224 ms ago
+	SSID: NTGR_VMB_6736518859
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 
+	DS Parameter set: channel 11
+	TIM: DTIM Count 22 DTIM Period 33 Bitmap Control 0x0 Bitmap[0] 0x0
+	Country: DE	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	ERP: <no flags>
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC MFP-capable (0x008c)
+	HT capabilities:
+		Capabilities: 0x11ed
+			RX LDPC
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 8 usec (0x06)
+		HT TX/RX MCS rate indexes supported: 0-15
+	HT operation:
+		 * primary channel: 11
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 1
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * SSID List
+		 * Operating Mode Notification
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Version2: 2.0
+		 * Device name: NTGRBS
+		 * Primary Device Type: 6-0050f204-1
+BSS 64:20:9f:24:5c:56(on wlan0)
+	TSF: 8510550016010 usec (98d, 12:02:30)
+	freq: 2472.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime RadioMeasure (0x1431)
+	signal: -91.00 dBm
+	last seen: 7684 ms ago
+	SSID: Bahnhof-809950
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 
+	DS Parameter set: channel 13
+	TIM: DTIM Count 1 DTIM Period 2 Bitmap Control 0x0 Bitmap[0] 0x0
+	Country: SE	Environment: Indoor/Outdoor
+		Channels [1 - 13] @ 20 dBm
+	ERP: <no flags>
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	RM enabled capabilities:
+		Capabilities: 0x53 0x0e 0x00 0x00 0x00
+			Link Measurement
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Table Measurement
+			Channel Load
+			Noise Histogram Measurement
+			Statistics Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 81
+	HT capabilities:
+		Capabilities: 0x9ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: No restriction (0x00)
+		HT TX/RX MCS rate indexes supported: 0-23, 32
+	HT operation:
+		 * primary channel: 13
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 1
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Overlapping BSS scan params:
+		 * passive dwell: 20 TUs
+		 * active dwell: 10 TUs
+		 * channel width trigger scan interval: 300 s
+		 * scan passive total per channel: 200 TUs
+		 * scan active total per channel: 20 TUs
+		 * BSS width channel transition delay factor: 5
+		 * OBSS Scan Activity Threshold: 0.25 %
+	Extended capabilities:
+		 * HT Information Exchange Supported
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * SSID List
+		 * WNM-Notification
+		 * Max Number Of MSDUs In A-MSDU is unlimited
+	VHT capabilities:
+		VHT Capabilities (0x00000000):
+			Max MPDU length: 3895
+			Supported Channel Width: neither 160 nor 80+80
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: not supported
+	VHT operation:
+		 * channel width: 0 (20 or 40 MHz)
+		 * center freq segment 1: 13
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0xfffc
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Version2: 2.0
+BSS fc:34:97:9a:c3:94(on wlan0)
+	TSF: 104349618741 usec (1d, 04:59:09)
+	freq: 5180.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy SpectrumMgmt RadioMeasure (0x1111)
+	signal: -83.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: Maverick
+	Supported rates: 6.0* 9.0 12.0 18.0 24.0* 36.0 48.0 54.0 
+	Power constraint: 0 dB
+	TPC report: TX power: 18 dBm
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK SAE
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC MFP-capable (0x008c)
+	BSS Load:
+		 * station count: 3
+		 * channel utilisation: 18/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 128
+		 * operating class: 1
+		 * operating class: 2
+		 * operating class: 22
+		 * operating class: 23
+		 * operating class: 27
+		 * operating class: 28
+		 * operating class: 128
+	HT capabilities:
+		Capabilities: 0x9ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 7935 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 36
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: nonmember
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * TWT Responder Support
+		 * Max Number Of MSDUs In A-MSDU is 
+	VHT capabilities:
+		VHT Capabilities (0x0f8979b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 1 (80 MHz)
+		 * center freq segment 1: 42
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	Transmit Power Envelope:
+		 * Local Maximum Transmit Power For 20 MHz: 18 dBm
+		 * Local Maximum Transmit Power For 40 MHz: 18 dBm
+		 * Local Maximum Transmit Power For 80 MHz: 18 dBm
+	HE capabilities:
+		HE MAC Capabilities (0x000512081000):
+			+HTC HE Supported
+			TWT Responder
+			BSR
+			OM Control
+			Maximum A-MPDU Length Exponent: 2
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x442002c00f418508008c00):
+			HE40/HE80/5GHz
+			242 tone RUs/5GHz
+			LDPC Coding in Payload
+			NDP with 4x HE-LTF and 3.2us GI
+			Rx HE MU PPDU from Non-AP STA
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			Beamformee STS <= 80MHz: 3
+			Sounding Dimensions <= 80MHz: 1
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			Triggered SU Beamforming Feedback
+			PPE Threshold Present
+			Max NC: 1
+			TX 1024-QAM
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x79 0x1c 0xc7 0x71 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x010004)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 0
+			ER SU Disable
+		BSS Color: 13
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+BSS 7c:2e:bd:81:e4:b2(on wlan0)
+	TSF: 146721363270 usec (1d, 16:45:21)
+	freq: 5180.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble RadioMeasure (0x1031)
+	signal: -80.00 dBm
+	last seen: 0 ms ago
+	Information elements from Probe Response frame:
+	SSID: G-1
+	Supported rates: 6.0* 9.0 12.0* 18.0 24.0* 36.0 48.0 54.0 
+	DS Parameter set: channel 36
+	Country: NL	Environment: Indoor/Outdoor
+		Channels [36 - 48] @ 20 dBm
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	RM enabled capabilities:
+		Capabilities: 0x72 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+			Beacon Table Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 128
+	HT capabilities:
+		Capabilities: 0x1ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 8 usec (0x06)
+		HT TX/RX MCS rate indexes supported: 0-15
+	HT operation:
+		 * primary channel: 36
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * SSID List
+		 * Operating Mode Notification
+		 * FTM Responder
+		 * Max Number Of MSDUs In A-MSDU is unlimited
+	VHT capabilities:
+		VHT Capabilities (0x338139b2):
+			Max MPDU length: 11454
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			RX antenna pattern consistency
+			TX antenna pattern consistency
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: not supported
+	VHT operation:
+		 * channel width: 1 (80 MHz)
+		 * center freq segment 1: 42
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0xfffc
+	Transmit Power Envelope:
+		 * Local Maximum Transmit Power For 20 MHz: 20 dBm
+		 * Local Maximum Transmit Power For 40 MHz: 20 dBm
+		 * Local Maximum Transmit Power For 80 MHz: 20 dBm
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS 64:fd:96:b1:3e:fa(on wlan0)
+	TSF: 2708984832072 usec (31d, 08:29:44)
+	freq: 5500.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy SpectrumMgmt RadioMeasure (0x1111)
+	signal: -83.00 dBm
+	last seen: 5028 ms ago
+	SSID: StebelWifi-6
+	Supported rates: 6.0* 9.0 12.0 18.0 24.0* 36.0 48.0 54.0 
+	TIM: DTIM Count 0 DTIM Period 1 Bitmap Control 0x1 Bitmap[0] 0x0
+	Country: SE	Environment: Indoor/Outdoor
+		Channels [36 - 64] @ 23 dBm
+		Channels [100 - 140] @ 30 dBm
+	Power constraint: 0 dB
+	TPC report: TX power: 24 dBm
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 4
+		 * channel utilisation: 24/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x73 0x00 0x00 0x00 0x00
+			Link Measurement
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+			Beacon Table Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 128
+		 * operating class: 1
+		 * operating class: 2
+		 * operating class: 4
+		 * operating class: 22
+		 * operating class: 23
+		 * operating class: 24
+		 * operating class: 27
+		 * operating class: 28
+		 * operating class: 29
+		 * operating class: 128
+		 * operating class: 129
+	HT capabilities:
+		Capabilities: 0x1ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-31
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 100
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: 20 MHz
+		 * non-GF present: 1
+		 * OBSS non-GF present: 1
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * Event
+		 * BSS Transition
+		 * Interworking
+		 * QoS Map
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * TWT Responder Support
+		 * Max Number Of MSDUs In A-MSDU is 
+	802.11u Interworking:
+		Network Options: 0x0
+			Network Type: 0 (Private)
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+	VHT capabilities:
+		VHT Capabilities (0x0f8b69b1):
+			Max MPDU length: 7991
+			Supported Channel Width: neither 160 nor 80+80
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			MU Beamformer
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 1 (80 MHz)
+		 * center freq segment 1: 106
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	Transmit Power Envelope:
+		 * Local Maximum Transmit Power For 20 MHz: 25.5 dBm
+		 * Local Maximum Transmit Power For 40 MHz: 25.5 dBm
+		 * Local Maximum Transmit Power For 80 MHz: 25.5 dBm
+	HE capabilities:
+		HE MAC Capabilities (0x000512181000):
+			+HTC HE Supported
+			TWT Responder
+			BSR
+			Broadcast TWT
+			OM Control
+			Maximum A-MPDU Length Exponent: 2
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x442002c00f43951800cc00):
+			HE40/HE80/5GHz
+			242 tone RUs/5GHz
+			LDPC Coding in Payload
+			NDP with 4x HE-LTF and 3.2us GI
+			Rx HE MU PPDU from Non-AP STA
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			Beamformee STS <= 80MHz: 3
+			Sounding Dimensions <= 80MHz: 3
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			Triggered SU Beamforming Feedback
+			Triggered CQI Feedback
+			PPE Threshold Present
+			Max NC: 3
+			TX 1024-QAM
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x7b 0x1c 0xc7 0x71 0x1c 0xc7 0x71 0x1c 0xc7 0x71 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x018004)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 0
+			Co-Hosted BSS
+			ER SU Disable
+		BSS Color: 33
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		Max Co-Hosted BSSID: 3
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Version2: 2.0
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS fc:34:97:9a:c3:98(on wlan0)
+	TSF: 97209753676 usec (1d, 03:00:09)
+	freq: 5560.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy SpectrumMgmt RadioMeasure (0x1111)
+	signal: -83.00 dBm
+	last seen: 4068 ms ago
+	Supported rates: 6.0* 9.0 12.0 18.0 24.0* 36.0 48.0 54.0 
+	TIM: DTIM Count 0 DTIM Period 1 Bitmap Control 0x0 Bitmap[0] 0x0
+	Power constraint: 0 dB
+	TPC report: TX power: 23 dBm
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: SAE
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC MFP-required MFP-capable (0x00cc)
+	BSS Load:
+		 * station count: 0
+		 * channel utilisation: 12/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x32 0x00 0x00 0x00 0x00
+			Neighbor Report
+			Beacon Passive Measurement
+			Beacon Active Measurement
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 128
+		 * operating class: 4
+		 * operating class: 24
+		 * operating class: 29
+		 * operating class: 121
+		 * operating class: 122
+		 * operating class: 123
+		 * operating class: 128
+		 * operating class: 129
+	HT capabilities:
+		Capabilities: 0x1ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-31
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 112
+		 * secondary channel offset: below
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * TWT Responder Support
+		 * Max Number Of MSDUs In A-MSDU is 
+	VHT capabilities:
+		VHT Capabilities (0x0f8b79b5):
+			Max MPDU length: 7991
+			Supported Channel Width: 160 MHz
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 1 (80 MHz)
+		 * center freq segment 1: 106
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	Transmit Power Envelope:
+		 * Local Maximum Transmit Power For 20 MHz: 23 dBm
+		 * Local Maximum Transmit Power For 40 MHz: 23 dBm
+		 * Local Maximum Transmit Power For 80 MHz: 23 dBm
+	HE capabilities:
+		HE MAC Capabilities (0x000512081000):
+			+HTC HE Supported
+			TWT Responder
+			BSR
+			OM Control
+			Maximum A-MPDU Length Exponent: 2
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x4c2002c06f5b8518008c00):
+			HE40/HE80/5GHz
+			HE160/5GHz
+			242 tone RUs/5GHz
+			LDPC Coding in Payload
+			NDP with 4x HE-LTF and 3.2us GI
+			Rx HE MU PPDU from Non-AP STA
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			Beamformee STS <= 80MHz: 3
+			Beamformee STS > 80MHz: 3
+			Sounding Dimensions <= 80MHz: 3
+			Sounding Dimensions > 80MHz: 3
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			Triggered SU Beamforming Feedback
+			PPE Threshold Present
+			Max NC: 3
+			TX 1024-QAM
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE RX MCS and NSS set 160 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set 160 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x7b 0x1c 0xc7 0x71 0x1c 0xc7 0x71 0x1c 0xc7 0x71 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x018004)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 0
+			Co-Hosted BSS
+			ER SU Disable
+		BSS Color: 54
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		Max Co-Hosted BSSID: 3
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP
+BSS 72:34:97:9a:c3:9e(on wlan0)
+	TSF: 97209754279 usec (1d, 03:00:09)
+	freq: 5560.0
+	beacon interval: 100 TUs
+	capability: ESS Privacy SpectrumMgmt RadioMeasure (0x1111)
+	signal: -84.00 dBm
+	last seen: 4068 ms ago
+	Supported rates: 6.0* 9.0 12.0 18.0 24.0* 36.0 48.0 54.0 
+	TIM: DTIM Count 0 DTIM Period 1 Bitmap Control 0x0 Bitmap[0] 0x0
+	Power constraint: 0 dB
+	TPC report: TX power: 23 dBm
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 16-PTKSA-RC 1-GTKSA-RC (0x000c)
+	BSS Load:
+		 * station count: 0
+		 * channel utilisation: 12/255
+		 * available admission capacity: 0 [*32us]
+	RM enabled capabilities:
+		Capabilities: 0x02 0x00 0x00 0x00 0x00
+			Neighbor Report
+		Nonoperating Channel Max Measurement Duration: 0
+		Measurement Pilot Capability: 0
+	Supported operating classes:
+		 * current operating class: 128
+		 * operating class: 4
+		 * operating class: 24
+		 * operating class: 29
+		 * operating class: 121
+		 * operating class: 122
+		 * operating class: 123
+		 * operating class: 128
+		 * operating class: 129
+	HT capabilities:
+		Capabilities: 0x1ef
+			RX LDPC
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-31
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 112
+		 * secondary channel offset: below
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	Extended capabilities:
+		 * Extended Channel Switching
+		 * BSS Transition
+		 * Interworking
+		 * Operating Mode Notification
+		 * Channel Schedule Management
+		 * Channel Schedule Management
+		 * TWT Responder Support
+		 * Max Number Of MSDUs In A-MSDU is 
+	VHT capabilities:
+		VHT Capabilities (0x0f8b69b5):
+			Max MPDU length: 7991
+			Supported Channel Width: 160 MHz
+			RX LDPC
+			short GI (80 MHz)
+			TX STBC
+			SU Beamformer
+			MU Beamformer
+		VHT RX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT RX highest supported: 0 Mbps
+		VHT TX MCS set:
+			1 streams: MCS 0-9
+			2 streams: MCS 0-9
+			3 streams: MCS 0-9
+			4 streams: MCS 0-9
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		VHT TX highest supported: 0 Mbps
+		VHT extended NSS: supported
+	VHT operation:
+		 * channel width: 1 (80 MHz)
+		 * center freq segment 1: 106
+		 * center freq segment 2: 0
+		 * VHT basic MCS set: 0x0000
+	Transmit Power Envelope:
+		 * Local Maximum Transmit Power For 20 MHz: 23 dBm
+		 * Local Maximum Transmit Power For 40 MHz: 23 dBm
+		 * Local Maximum Transmit Power For 80 MHz: 23 dBm
+	HE capabilities:
+		HE MAC Capabilities (0x000512081000):
+			+HTC HE Supported
+			TWT Responder
+			BSR
+			OM Control
+			Maximum A-MPDU Length Exponent: 2
+			OM Control UL MU Data Disable RX
+		HE PHY Capabilities: (0x4c2002c06f5b8518008c00):
+			HE40/HE80/5GHz
+			HE160/5GHz
+			242 tone RUs/5GHz
+			LDPC Coding in Payload
+			NDP with 4x HE-LTF and 3.2us GI
+			Rx HE MU PPDU from Non-AP STA
+			SU Beamformer
+			SU Beamformee
+			MU Beamformer
+			Beamformee STS <= 80MHz: 3
+			Beamformee STS > 80MHz: 3
+			Sounding Dimensions <= 80MHz: 3
+			Sounding Dimensions > 80MHz: 3
+			Ng = 16 SU Feedback
+			Codebook Size SU Feedback
+			Triggered SU Beamforming Feedback
+			PPE Threshold Present
+			Max NC: 3
+			TX 1024-QAM
+			RX 1024-QAM
+		HE RX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set <= 80 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE RX MCS and NSS set 160 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		HE TX MCS and NSS set 160 MHz
+			1 streams: MCS 0-11
+			2 streams: MCS 0-11
+			3 streams: MCS 0-11
+			4 streams: MCS 0-11
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		PPE Threshold 0x7b 0x1c 0xc7 0x71 0x1c 0xc7 0x71 0x1c 0xc7 0x71 0x1c 0xc7 0x71 
+	HE Operation:
+		HE Operation Parameters: (0x018004)
+			Default PE Duration: 4
+			TXOP Duration RTS Threshold: 0
+			Co-Hosted BSS
+			ER SU Disable
+		BSS Color: 54
+		Basic HE-MCS NSS Set: 0xfffc
+			1 streams: MCS 0-7
+			2 streams: not supported
+			3 streams: not supported
+			4 streams: not supported
+			5 streams: not supported
+			6 streams: not supported
+			7 streams: not supported
+			8 streams: not supported
+		Max Co-Hosted BSSID: 3
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	802.11u Advertisement:
+		Query Response Info: 0x7f
+			Query Response Length Limit: 127
+			ANQP

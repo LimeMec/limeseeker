@@ -10,34 +10,38 @@ LIMESEEKER_NAME="LimeSeeker"
 LIMESEEKER_VERSION="1.4.2"
 LIMESEEKER_AUTHOR="//LimeMec, Markus Carlsson"
 
-# -----------
-# Baskatalog
-# -----------
+# ---------------
+# Base directory
+# ---------------
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# --------------
-# Ladda moduler
-# --------------
+# -------------
+# Load modules
+# -------------
 shopt -s nullglob
 for module in "$BASE_DIR/modules/"*.sh; do
     source "$module"
 done
 shopt -u nullglob
 
-# -------------------
-# Lista över moduler
-# -------------------
+# -------------
+# List modules
+# -------------
 MODULES=(
     local_inventory
     local_security
     system_hardening
     network_vulnerability
     wifi_discovery
+    wifi_analysis
+    wifi_history
+    wifi_baseline_check
+    wifi_baseline_create
 )
 
-# ------------------------
-# Ladda biblioteksfilerna
-# ------------------------
+# ---------------------
+# Load directory files
+# ---------------------
 source "$BASE_DIR/lib/privileges.sh"
 source "$BASE_DIR/lib/colors.sh"
 source "$BASE_DIR/lib/logging.sh"
@@ -46,24 +50,29 @@ source "$BASE_DIR/lib/ui.sh"
 source "$BASE_DIR/lib/menu.sh"
 source "$BASE_DIR/lib/flags.sh"
 
-# --------------
-# Loggning av/på
-# --------------
+# ---------------
+# Logging on/off
+# ---------------
 LOGGING_ENABLED=true
 
-# ----------------
-# Läsa in flaggor
-# ----------------
+# -----------------------
+# Disable Esc key output
+# -----------------------
+disable_esc
+
+# -----------
+# Read flags
+# -----------
 parse_flags "$@"
 
 # -------------
-# Krav på sudo
+# Require sudo
 # -------------
 sudo -k
 require_sudo "$@"
 
 # --------------
-# Loggning på/av
+# Logging on/off
 # ------------- 
 case "$1" in
     -n|--no-log)
@@ -71,9 +80,9 @@ case "$1" in
         ;;
 esac
 
-# --------------
-# Logghantering
-# --------------
+# -------------------
+# Logging management
+# -------------------
 REPORT_DIR="$BASE_DIR/reports"
 
 if [[ "$LOGGING_ENABLED" == true ]]; then
@@ -91,18 +100,18 @@ else
     export REPORT_FILE=""
 fi
 
-# ----------------
-# Signalhantering
-# ----------------
+# ------------------
+# Signal management
+# ------------------
 trap 'ui_echo "\n${YELLOW}Exiting LimeSeeker...${NC}"; sudo -k; exit 0' SIGINT SIGTERM
 
 # -------------
-# Krav på bash
+# Require bash
 #--------------
 require_bash
 
-# --------------
-# Starta script
-# --------------
+# -------------
+# Start script
+# -------------
 show_intro
 main_menu

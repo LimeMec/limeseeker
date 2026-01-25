@@ -58,9 +58,9 @@ system_hardening() {
     log_to_file "▶ Scanning system hardening configuration"
     ui_echo
 
-    # -----------------
+    # --------------
     # SSH hardening
-    # -----------------
+    # --------------
     ui_echo "${GREEN}${BOLD}▶ SSH HARDENING:${NC}"
     log_to_file "▶ SSH HARDENING:"
 
@@ -93,9 +93,9 @@ system_hardening() {
 
     echo
 
-    # -----------------
+    # ----------------
     # Firewall status
-    # -----------------
+    # ----------------
     ui_echo "${GREEN}${BOLD}▶ FIREWALL STATUS:${NC}"
     log_to_file "▶ FIREWALL STATUS:"
 
@@ -138,9 +138,9 @@ system_hardening() {
 
     echo
 
-    # -------------------------
+    # -----------------------
     # Filesystem protections
-    # -------------------------
+    # -----------------------
     ui_echo "${GREEN}${BOLD}▶ FILESYSTEM MOUNT OPTIONS:${NC}"
     log_to_file "▶ FILESYSTEM MOUNT OPTIONS:"
 
@@ -163,9 +163,9 @@ system_hardening() {
 
     echo
 
-    # -------------------------
+    # --------------------
     # Core dumps & ptrace
-    # -------------------------
+    # --------------------
     ui_echo "${GREEN}${BOLD}▶ PROCESS HARDENING:${NC}"
     log_to_file "▶ PROCESS HARDENING:"
 
