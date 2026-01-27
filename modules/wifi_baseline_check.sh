@@ -1,3 +1,17 @@
+# ----------------
+# Module metadata
+# ----------------
+wifi_baseline_check_NAME="WiFi baseline check"
+wifi_baseline_check_DESC="
+Compares current WiFi environment against a stored baseline.
+
+Highlights:
+• Flags new/missing APs and security downgrades
+• Helps detect rogue/unknown networks or misconfigurations
+
+Requires an existing baseline and recent WiFi scan data.
+"
+
 #!/usr/bin/env bash
 
 wifi_baseline_check() {

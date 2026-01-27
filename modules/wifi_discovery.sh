@@ -5,20 +5,12 @@
 # ----------------
 wifi_discovery_NAME="WiFi discovery"
 wifi_discovery_DESC="
-Performs an extensive passive wireless scan and stores
-raw data for later analysis and historical comparison.
+Performs an extensive passive wireless scan and stores raw data.
 
-Collected data includes:
-• SSID / BSSID
-• Signal strength (dBm)
-• Channel & frequency band
-• Encryption & authentication
-• Cipher suites (CCMP/TKIP)
-• PMF (802.11w)
-• WPS status
-• Supported WiFi standards (b/g/n/ac/ax)
-• Hidden networks
-• Regulatory hints
+Highlights:
+• SSID/BSSID, signal, channel/band
+• Security capabilities, ciphers, WPS, PMF, PHY hints
+• Saves raw+metadata for analysis and historical comparison
 
 This module performs NO analysis and NO active attacks.
 "

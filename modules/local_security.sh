@@ -5,19 +5,19 @@
 # ----------------
 local_security_NAME="Local security"
 local_security_DESC="
-The Local security module performs common security-related checks
-on the local system.
+Performs common local security checks (read-only).
 
-This includes:
-  • Package update status
-  • File permission anomalies
-  • SUID/SGID binaries
-  • World-writable files and directories
-  • Common misconfigurations
 
-Purpose:
-To identify local weaknesses that could be abused for privilege
-escalation or persistence.
+Highlights:
+• Sudo users, SSH root login status
+• Available system updates
+• Risky running services
+• Listening ports (root vs user)
+• World-writable files and SUID binaries
+• Optional CVE lookups (searchsploit, if installed)
+
+
+Use this to spot local weaknesses and misconfigurations.
 "
 
 # ---------

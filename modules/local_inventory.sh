@@ -5,18 +5,16 @@
 # ------------------------
 local_inventory_NAME="Local inventory"
 local_inventory_DESC="
-The Local inventory collects detailed information about the local system.
+Collects baseline information about the local system (read-only).
 
-This includes:
-  • Operating system and kernel version
-  • Hardware information (CPU, memory, storage)
-  • Installed packages
-  • Running services
-  • Active users and sessions
 
-Purpose:
-To provide a baseline overview of the system and identify unexpected
-or outdated components.
+Highlights:
+• OS/kernel, hardware, storage, memory
+• Installed packages and running services
+• Active users and sessions
+
+
+Use this to quickly understand what a machine is and what is running on it.
 "
 
 local_inventory() {
