@@ -5,16 +5,14 @@
 # ----------------
 wifi_history_NAME="WiFi history"
 wifi_history_DESC="
-Compares WiFi scan data between runs to identify
-environmental or security-related changes.
+Compares the latest WiFi scan against previous scans.
 
 Highlights:
-• New or disappeared networks
-• Encryption changes
-• Signal strength shifts
-• Duplicate SSIDs over time
-"
+• Detects new/missing APs and notable changes over time
+• Helps spot roaming, spoofing, or environment drift
 
+Requires prior scans to exist. No active attacks.
+"
 wifi_history() {
 
     ui_clear

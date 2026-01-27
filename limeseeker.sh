@@ -32,6 +32,8 @@ MODULES=(
     local_security
     system_hardening
     network_vulnerability
+    network_discovery
+    network_ports
     wifi_discovery
     wifi_analysis
     wifi_history
@@ -49,6 +51,8 @@ source "$BASE_DIR/lib/utils.sh"
 source "$BASE_DIR/lib/ui.sh"
 source "$BASE_DIR/lib/menu.sh"
 source "$BASE_DIR/lib/flags.sh"
+source "$BASE_DIR/lib/network_target.sh"
+source "$BASE_DIR/lib/network_profiles.sh"
 
 # ---------------
 # Logging on/off

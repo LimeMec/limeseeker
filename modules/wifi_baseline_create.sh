@@ -1,3 +1,17 @@
+# ----------------
+# Module metadata
+# ----------------
+wifi_baseline_create_NAME="WiFi baseline create"
+wifi_baseline_create_DESC="
+Creates or updates a known-good WiFi baseline for a location.
+
+Highlights:
+• Saves approved APs/settings as a baseline snapshot
+• Supports per-location baselines (and per-interface if configured)
+
+Use this after a trusted scan to establish 'normal'.
+"
+
 #!/usr/bin/env bash
 
 wifi_baseline_create() {

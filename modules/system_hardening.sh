@@ -5,22 +5,18 @@
 # ----------------
 system_hardening_NAME="System hardening"
 system_hardening_DESC="
-Verifies that security controls such as firewalls, kernel protections,
-authentication policies and service restrictions are properly enabled
-and configured according to best practices.
+Validates hardening best practices and secure defaults (read-only).
 
-Includes:
-  • SSH hardening configuration
-  • Firewall status
-  • Kernel security parameters (sysctl)
-  • Filesystem mount protections
-  • Core dump and ptrace restrictions
 
-Purpose:
-To reduce attack surface and validate baseline security posture.
+Highlights:
+• SSH hardening recommendations
+• Firewall status (ufw/firewalld)
+• Kernel/sysctl protections
+• Filesystem mount protections
+• Core dump and ptrace restrictions
 
-Note:
-This module performs read-only checks only.
+
+Use this to reduce attack surface and verify baseline security posture.
 "
 
 # -----------------------

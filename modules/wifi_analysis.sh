@@ -5,12 +5,16 @@
 # ----------------
 wifi_analysis_NAME="WiFi analysis"
 wifi_analysis_DESC="
-WiFi analysis processes previously collected wireless scan data and
-identifies insecure encryption, open networks, channel congestion, and
-other wireless security concerns.
+Analyzes collected WiFi scan data and highlights risks and policy issues.
 
-All analysis is performed offline without interacting with access points."
+Highlights:
+• Weak security (OPEN/WEP/TKIP), WPS detection
+• Channel congestion overview
+• Duplicate SSIDs and suspicious changes
+• Recommendations for hardening
 
+Requires WiFi discovery data. No active attacks.
+"
 # --------------
 # wifi_analysis
 # --------------
