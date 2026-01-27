@@ -20,9 +20,9 @@ To identify local weaknesses that could be abused for privilege
 escalation or persistence.
 "
 
-# ------------
+# ---------
 # CVE scan
-# ------------
+# ---------
 check_cve() {
 
     if ! command -v searchsploit &>/dev/null; then
@@ -54,6 +54,9 @@ check_cve() {
     log_to_file "    → Manual validation required"
 }
 
+#----------------
+# local_security
+# ---------------
 local_security() {
 
     if declare -F ui_clear >/dev/null; then
@@ -61,19 +64,17 @@ local_security() {
     fi
 
     #-------------------
-    # Rubrik för modul
+    # Header module
     # ----------------- 
-    sleep 0.3
     echo
     ui_echo "${CYAN}${BOLD}Scanning local security...${NC}"
     log_to_file "▶ Scanning local security..."
     echo
     echo
 
-    # ----------------
-    # Sudo användare
-    # ----------------
-    sleep 0.5
+    # ----------
+    # Sudo user
+    # ----------
     ui_echo "${GREEN}${BOLD}▶ USERS WITH SUDO ACCESS:${NC}"
     log_to_file "▶ USERS WITH SUDO ACCESS:"
     
@@ -90,10 +91,9 @@ local_security() {
     fi
     echo
 
-    # -----------------
+    # ---------------
     # Root SSH login
-    # -----------------
-    sleep 0.5
+    # ---------------
     ui_echo "${GREEN}${BOLD}▶ ROOT SSH LOGIN:${NC}"
     log_to_file "▶ ROOT SSH LOGIN:"
     local ROOT_SSH
@@ -123,9 +123,9 @@ local_security() {
     esac
     echo
 
-    # ----------------------
-    # Systemuppdateringar
-    # ----------------------
+    # ---------------
+    # System updates
+    # ---------------
     sleep 0.5
     ui_echo "${RED}${BOLD}▶ UNPATCHED PACKAGES (SECURITY RISK):${NC}"
     log_to_file "▶ AVAILABLE SYSTEM UPDATES:"
@@ -152,10 +152,9 @@ local_security() {
     fi
     echo
 
-    # ----------------------
-    # Riskfyllda tjänster
-    # ----------------------
-    sleep 0.5
+    # ---------------
+    # Risky services
+    # ---------------
     ui_echo "${GREEN}${BOLD}▶ RUNNING SERVICES (RISKY):${NC}"
     log_to_file "▶ RUNNING SERVICES (RISKY):"
 
@@ -173,10 +172,9 @@ local_security() {
     fi
     echo
 
-    # --------------------------------
-    # Lyssnande portar och processer
-    # --------------------------------
-    sleep 0.5
+    # ---------------------------
+    # Listening ports & processes
+    # ---------------------------
     ui_echo "${GREEN}${BOLD}▶ LISTENING PORTS & SECURITY:${NC}"
     log_to_file "▶ LISTENING PORTS & SECURITY:"
 
@@ -192,28 +190,25 @@ local_security() {
 
     echo
 
-    # ---------------------
-    # Global skrivåtkomst
-    # ---------------------
-    sleep 0.5
+    # --------------------
+    # Global write access
+    # --------------------
     ui_echo "${GREEN}${BOLD}▶ WORLD-WRITABLE FILES (TOP 10):${NC}"
     log_to_file "▶ WORLD-WRITABLE FILES (TOP 10):"
     find / -xdev -type f -perm -0002 2>/dev/null | head -n 10
     echo
 
-    # ---------------
-    # SUID binärer
-    # ---------------
-    sleep 0.5
+    # --------------
+    # SUID binaries
+    # --------------
     ui_echo "${GREEN}${BOLD}▶ SUID BINARIES (TOP 10):${NC}"
     log_to_file "▶ SUID BINARIES (TOP 10):"
     find / -xdev -perm -4000 -type f 2>/dev/null | head -n 10
     echo
 
-    # -----------
+    # ----------
     # CVE check
-    # -----------
-    sleep 0.5
+    # ----------
     ui_echo "${GREEN}${BOLD}▶ CVE CHECK (COMMON PACKAGES):${NC}"
     log_to_file "▶ CVE CHECK (COMMON PACKAGES):"
 

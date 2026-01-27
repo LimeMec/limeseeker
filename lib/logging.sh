@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# -----------------------------------
-# Initiera variabel om den inte finns
-# -----------------------------------
+# ---------------------
+# Initiating variables
+# ---------------------
 LOGGING_PAUSED=${LOGGING_PAUSED:-0}
 
 # ---------------------------------------------
-# Kontrollera om loggning är aktiv och tillåten
+# Check logging allowed
 # ---------------------------------------------
 logging_enabled() {
     [[ "$LOGGING_ENABLED" == "false" ]] && return 1
@@ -14,16 +14,16 @@ logging_enabled() {
     return 0
 }
 
-# -------------------------------
-# Intern: ta bort ANSI-färgkoder
-# ------------------------------
+# ------------------
+# Strip ANSI-colors
+# ------------------
 _strip_colors() {
     sed -r 's/\x1B\[[0-9;]*[mK]//g'
 }
 
-# -----------------------
-# Loggrubrik
-# -----------------------
+# ---------------
+# Header logging
+# ---------------
 log_header() {
     logging_enabled || return
     {
@@ -49,28 +49,26 @@ log_footer() {
     } | _strip_colors >> "$REPORT_FILE"
 }
 
-# ---------------------------------------------------------
-# log_event: Den primära funktionen för att skriva till logg
-# ---------------------------------------------------------
+# -------------
+# Write to log
+# # -----------
 log_event() {
     [[ "$LOGGING_PAUSED" -eq 1 ]] && return
     logging_enabled || return
     
-    # Skriver till loggfilen med tidstämpel
     printf "[%s] %s\n" "$(date '+%H:%M:%S')" "$*" | _strip_colors >> "$REPORT_FILE"
 }
 
-# ---------------------------------------------------------
-# log_to_file: Fixar felmeddelanden i local_inventory.sh
-# ---------------------------------------------------------
+# ------------------------
+# log_to_file: Fix errors
+# ------------------------
 log_to_file() {
-    # Vi skickar detta vidare till log_event
     log_event "$@"
 }
 
-# ----------------------
-# Sektion / modulrubrik
-# ----------------------
+# ------------------------
+# Section / header module
+# ------------------------
 log_section() {
     [[ "$LOGGING_PAUSED" -eq 1 ]] && return
     logging_enabled || return
@@ -82,9 +80,9 @@ log_section() {
     } | _strip_colors >> "$REPORT_FILE"
 }
 
-# -------------------------------------------------
-# Pausa / återuppta loggning (används av menu.sh)
-# -------------------------------------------------
+# ---------------
+# Pause / resume
+# ---------------
 log_pause() {
     LOGGING_PAUSED=1
 }

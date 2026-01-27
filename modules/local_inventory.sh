@@ -21,36 +21,33 @@ or outdated components.
 
 local_inventory() {
 
-    #-------------------------------
-    # Rensa terminalen, inte logg 
-    # ------------------------------
+    #---------------
+    # Clear terminal 
+    # --------------
     if declare -F ui_clear >/dev/null; then
         ui_clear
     fi
 
-    #--------------------
-    # Rubrik för modul
-    # -------------------
-    sleep 0.3
+    #----------------------
+    # Header running module
+    # ---------------------
     echo
     ui_echo "${CYAN}${BOLD}Scanning local inventory...${NC}"
     log_to_file "▶ Scanning local inventory..."
     echo
     echo
     
-    #---------------------
-    # Systemets upptid
-    # --------------------
-    sleep 1
+    #--------------
+    # System uptime
+    # -------------
     ui_echo "${GREEN}${BOLD}▶ SYSTEM UPTIME:${NC}"
     log_to_file "▶ SYSTEM UPTIME:"
     uptime -p
     echo
     
-    #-------------------
+    #----------------
     # BIOS / Firmware
-    # ------------------
-    sleep 0.5
+    # ---------------
     ui_echo "${GREEN}${BOLD}▶ BIOS / FIRMWARE:${NC}"
     log_to_file "▶ BIOS / FIRMWARE:"
     if command -v dmidecode &>/dev/null; then
@@ -60,10 +57,9 @@ local_inventory() {
     fi
     echo
     
-    #-----------------
-    # Operativsystem
-    # ----------------
-    sleep 0.5
+    #----
+    # OS
+    # ---
     ui_echo "${GREEN}${BOLD}▶ OPERATING SYSTEM:${NC}"
     log_to_file "▶ OPERATING SYSTEM:"
     echo "OS:               $(uname -o)"
@@ -73,10 +69,9 @@ local_inventory() {
     echo "Architecture:     $(uname -m)"
     echo
     
-    #--------------
-    # Grafikkort
-    # -------------
-    sleep 0.5
+    #----
+    # GPU
+    # ---
     ui_echo "${GREEN}${BOLD}▶ GPU:${NC}"
     log_to_file "▶ GPU:"
     if command -v lspci &>/dev/null; then
@@ -86,10 +81,9 @@ local_inventory() {
     fi
     echo
 
-    #-------------
-    # Processor
-    # ------------
-    sleep 0.5
+    #-----
+    # CPU
+    # ----
     ui_echo "${GREEN}${BOLD}▶ CPU:${NC}"
     log_to_file "▶ CPU:"
     lscpu | grep -E "Model name|Vendor ID|Architecture|CPU\(s\)|Core\(s\) per socket|Thread\(s\) per core|Socket\(s\)"
@@ -99,28 +93,25 @@ local_inventory() {
         awk 'NR==1{min=$1} END{print "Min MHz:", min "\nMax MHz:", $1}'
     echo
 
-    #-------------
-    # RAM-minne
-    # ------------
-    sleep 0.5
+    #--------
+    # Memory
+    # -------
     ui_echo "${GREEN}${BOLD}▶ MEMORY:${NC}"
     log_to_file "▶ MEMORY:"
     free -h
     echo
 
-    #-------------
-    # Hårddisk
-    # ------------
-    sleep 0.5
+    #------------
+    # Hard drive
+    # -----------
     ui_echo "${GREEN}${BOLD}▶ DISK SPACE:${NC}"
     log_to_file "▶ DISK SPACE:"
     df -h --exclude-type=tmpfs --exclude-type=devtmpfs
     echo
 
-    #-----------
-    # Nätverk
-    # ----------
-    sleep 0.5
+    #---------
+    # Network
+    # --------
     ui_echo "${GREEN}${BOLD}▶ NETWORK:${NC}"
     log_to_file "▶ NETWORK:"
 

@@ -53,7 +53,7 @@ LimeSeeker är utformat för att svara på frågan:
 
 LimeSeeker är avsett för att:
 
--  **Samla in** system- och hårdvaruinformation
+-  Samla in system- och hårdvaruinformation
 -  Bedömning av säkerhetsstatus
 -  Identifiera och analysera aktiva enheter
 -  Analysera nätverksmiljöer inom tillåtna ramar

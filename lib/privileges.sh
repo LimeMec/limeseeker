@@ -2,15 +2,15 @@
 
 require_sudo() {
 
-    #-------------------------------
-    # Rensa terminalen, inte logg 
-    # ------------------------------
+    #----------------
+    # Clear terminal 
+    # ---------------
     if [[ $EUID -eq 0 ]]; then
 	return 0
     fi
-    # ------------------------------------------
-    # Information och krav för att starta scipt
-    # ------------------------------------------
+    # -----------------------------------
+    # Info & requierments to start scipt
+    # -----------------------------------
     clear
     ui_echo
     ui_echo "${CYAN}${BOLD}_    _ _  _ ____ ____ ____ ____ _  _ ____ ____ ${NC}"
@@ -40,9 +40,9 @@ Proceeding indicates acceptance of these terms."
     ui_echo
     ui_echo "Continue by enter your sudo password:"
         
-    #---------------------------
-    # Tvinga ange sudo-lösenord
-    # --------------------------
+    #---------------
+    # Sudo password
+    # --------------
     if sudo -v; then
 	exec sudo "$SCRIPT_PATH" "$@"  
         ui_echo
@@ -62,7 +62,7 @@ Proceeding indicates acceptance of these terms."
 }
 
 # -----------------------
-# Rensar sudo-behörighet
+# Clear sudo privileges
 # -----------------------
 cleanup() {
     sudo -k >/dev/null 2>&1

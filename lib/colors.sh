@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Färger endast ut till terminal
+# ----------------
+#  Colors terminal
+#  ---------------
 if [[ -t 1 || -t 2 || -e /dev/tty ]]; then
     RED="\e[31m"
     GREEN="\e[32m"

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# ------------
-# Flaggstatus
-# ------------
+# -------------
+# Status flags
+# -------------
 FLAG_HANDLED=false
 
 # ---------------
-# Loggning av/på
+# Logging on/off
 # ---------------
 LIME_NO_LOG=0
 
@@ -134,7 +134,7 @@ show_modules() {
         
         echo -e "${BOLD}$display_name${NC}"
         
-        echo -e "  ${!DESC_VAR:-Ingen beskrivning tillgänglig.}"
+        echo -e "  ${!DESC_VAR:-No description available.}"
         
         
         if [[ -n "${!PRIV_VAR}" ]]; then

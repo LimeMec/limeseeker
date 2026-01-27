@@ -2,7 +2,7 @@
 
 
 # -------------
-# Krav på bash
+# Require bash
 # -------------
 require_bash() {
     [[ -n "$BASH_VERSION" ]] || {
